@@ -1,12 +1,73 @@
 .nav {
-    background-color: purple;
+    background-color: #4B5868;
     height: 5rem;
+    color: #F0F5FC;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: row;
 
-    &__home {
+    &__icon {
+        height: 2.75rem;
+        display: flex;
 
+        &-fill {
+            fill: #F0F5FC;
+        }
+    }
+    
+    &__link {
+        padding: 1rem;
+        margin-left: 5.75rem;
+        // background-color: pink;
+        text-transform: uppercase;
+        color: #F0F5FC;
+        font-size: 2rem;
+        display: flex;
+        font-weight: 800;
+
+        &:hover {
+            color: white;
+        }
+        
+    }
+}
+
+
+
+.span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &-main {
+        display: block;
     }
 
-    &__nav {
-        
+    &-underline {
+        background-color: #F87F72;
+        display: block;
+        height: .5rem;
+        width: 12.75rem;
+    }
+}
+
+.search {
+    width: 24.5rem;
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__bar {
+
+        &-input {
+            width: 22.5rem;
+            height: 2.75rem;
+            border-radius: 2rem;
+            outline: none;
+            box-shadow: none;
+            border: none;
+            border: 1px solid #4B5868;
+        }
     }
 }
