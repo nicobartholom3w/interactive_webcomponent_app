@@ -1,14 +1,28 @@
 .nav {
     background-color: #4B5868;
-    height: 5rem;
+    height: 6rem;
     color: #F0F5FC;
     font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    padding: .75rem 0;
+    box-sizing: border-box;
+
+    &__title {
+        font-size: 1.25rem;
+        min-width: 17.75rem;
+        line-height: 1.25rem;
+        font-weight: 500;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
 
     &__icon {
-        height: 2.75rem;
+        height: 2.5rem;
         display: flex;
+        margin-right: 1rem;
 
         &-fill {
             fill: #F0F5FC;
@@ -16,19 +30,31 @@
     }
     
     &__link {
-        padding: 1rem;
-        margin-left: 5.75rem;
-        // background-color: pink;
-        text-transform: uppercase;
+        padding: 0 1rem;
+        // margin-left: 4.75rem;
         color: #F0F5FC;
-        font-size: 2rem;
         display: flex;
-        font-weight: 800;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all .3s;
 
         &:hover {
             color: white;
-        }
-        
+            background-color:  #494754;
+
+            .nav__icon-fill {
+                fill: white;
+            }
+            .span__underline {
+                background-color:  #F87F72;
+            }
+        } 
+    }
+
+    &__bottom {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
     }
 }
 
@@ -41,6 +67,9 @@
     align-items: center;
 
     &-main {
+        text-transform: uppercase;
+        font-size: 1.75rem;
+        font-weight: 800;
         display: block;
     }
 
@@ -48,26 +77,30 @@
         background-color: #F87F72;
         display: block;
         height: .5rem;
-        width: 12.75rem;
+        width: 11rem;
     }
 }
 
 .search {
     width: 24.5rem;
+    margin-right: 5.75rem;
     background-color: pink;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 2.75rem;
+
     &__bar {
 
         &-input {
             width: 22.5rem;
-            height: 2.75rem;
+            height: 2.5rem;
             border-radius: 2rem;
             outline: none;
             box-shadow: none;
             border: none;
             border: 1px solid #4B5868;
+            padding-left: 1rem;
         }
     }
 }
