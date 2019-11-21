@@ -3,11 +3,15 @@
     height: 6rem;
     color: #F0F5FC;
     font-family: 'Montserrat', sans-serif;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: .75rem 0;
-    box-sizing: border-box;
+
+    &__content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        max-width: 70rem;
+        margin: auto;
+        height: 100%;
+    }
 
     &__title {
         font-size: 1.25rem;
@@ -27,23 +31,31 @@
         &-fill {
             fill: #F0F5FC;
         }
+
+        &-search {
+            fill: #F87F72;
+            position: absolute;
+            bottom: .5rem;
+            left: 16.75rem;
+            height: 2rem;
+        }
     }
     
     &__link {
-        padding: 0 1rem;
-        // margin-left: 4.75rem;
+        padding: 1rem;
         color: #F0F5FC;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         transition: all .3s;
+        margin-left: -1rem;
 
         &:hover {
-            color: white;
+            color: #FBF9FF;
             background-color:  #494754;
 
             .nav__icon-fill {
-                fill: white;
+                fill: #FBF9FF;
             }
             .span__underline {
                 background-color:  #F87F72;
@@ -82,25 +94,28 @@
 }
 
 .search {
-    width: 24.5rem;
-    margin-right: 5.75rem;
-    background-color: pink;
+    // width: 23.75rem;
+    // margin-right: 5.75rem;
+    // background-color: pink;
+    position: relative;
+    // height: 2.75rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 2.75rem;
+    align-items: flex-end;
+    margin-bottom: 1rem;
 
     &__bar {
 
         &-input {
-            width: 22.5rem;
+            min-width: 18rem;
+            max-width: 22.5rem;
             height: 2.5rem;
             border-radius: 2rem;
             outline: none;
             box-shadow: none;
             border: none;
-            border: 1px solid #4B5868;
+            border: 1px solid #F87F72;
             padding-left: 1rem;
+            font-family: 'Montserrat', sans-serif;
         }
     }
 }
