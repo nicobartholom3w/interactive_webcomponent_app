@@ -1,0 +1,12 @@
+.directory {
+    background-color: purple;
+
+    &__container {
+        max-width: 65rem;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        
+    }
+}

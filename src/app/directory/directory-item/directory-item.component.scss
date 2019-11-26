@@ -1,0 +1,14 @@
+:host {
+    display: block;
+    margin: 1.5rem .55rem 0 .55rem;
+}
+
+.item {
+    
+    &__content {
+        
+        height: 11.05rem;
+        width: 15.05rem;
+        background: pink;
+    }
+}
