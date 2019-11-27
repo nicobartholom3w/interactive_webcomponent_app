@@ -36,11 +36,12 @@
             fill: #F87F72;
             position: absolute;
             top: 2.6rem;
-            right: .63rem;
+            right: 1.25rem;
             height: 2rem;
             cursor: pointer;
             padding: .28rem;
             padding-right: .65rem;
+            padding-left: .65rem;
             margin-right: 0rem;
             border-radius: 0 47% 47% 0;
 
@@ -58,7 +59,7 @@
         flex-direction: column;
         justify-content: space-between;
         transition: all .3s;
-        margin-left: -.5rem;
+        // margin-left: -.5rem;
 
         &:hover {
             color: #FBF9FF;
@@ -116,7 +117,8 @@
         width: 50%;
         min-width: 13rem;
         height: 2.5rem;
-        padding-right: 1.75rem;
+        // padding-right: 1.75rem;
+        padding-right: 2.25rem;
         
         &-input {
             width: 100%;
