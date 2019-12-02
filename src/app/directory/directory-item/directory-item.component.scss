@@ -1,6 +1,6 @@
 :host {
     display: block;
-    margin: 3rem 0 0 0;
+    margin: 2rem 0 0 0;
 }
 
 .item {
@@ -8,10 +8,8 @@
 
     &__content {
         background-color: rgba(132, 154, 171, .5);
-        margin-left: 1.05rem;
-        margin-right: 1.05rem;
-        height: 11.05rem;
-        width: 15.05rem;
+        height: 12.05rem;
+        width: 16.75rem;
 
         &-desc {
             background-color: rgba(132, 154, 171, .75);

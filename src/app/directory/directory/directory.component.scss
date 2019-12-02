@@ -1,9 +1,10 @@
 .directory {
-
+    max-width: 65rem;
+    margin: auto;
     &__container {
-        max-width: 65rem;
-        margin: auto;
         
+        margin-left: 1.05rem;
+        margin-right: 1.05rem;
     }
     &__items {
         display: flex;
