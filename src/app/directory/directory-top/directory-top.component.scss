@@ -1,0 +1,38 @@
+.button {
+    outline: none;
+    border: 1px solid transparent;
+    background-color: rgba(121, 143, 160, .95);
+    color: rgb(251, 249, 255);
+    display: flex;
+    justify-content: space-between;
+    float: right;
+    margin: 2rem;
+    margin-right: 1.1rem;
+    box-sizing: border-box;
+    padding: .5rem 1rem;
+    cursor: pointer;
+    transition: all .5s;
+
+    &:hover {
+        background-color: #4B5868;
+        color: white;
+        border: 1px solid rgba(248, 127, 114, 1);
+        .button__icon {
+            fill: white;
+        }
+    }
+    &__content {
+        display: flex;
+    }
+    &__text {
+        font-size: 2.25rem;
+    }
+
+    &__icon {
+        height: 3rem;
+        fill: rgb(251, 249, 255);
+        margin-left: .25rem;
+        margin-right: -.55rem;
+        transition: all .5s;
+    }
+}

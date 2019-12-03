@@ -30,7 +30,8 @@
         flex-direction: column;
         justify-content: flex-end;
         transition: all .5s;
-
+        box-sizing: border-box;
+        
         &-img {
             background: no-repeat center url("src/assets/images/preview-imgs/app_img.png");
             background-size: cover;
@@ -38,6 +39,7 @@
             width: 16.75rem;
             border: 1px solid rgba(248, 127, 114, 1);
             transition: all .5s;
+            box-sizing: border-box;
         }
     }
 
@@ -50,6 +52,7 @@
         color: rgb(75, 88, 104);
         font-weight: 600;
         transition: all .5s;
+        box-sizing: border-box;
 
         &-desc {
             margin: 1rem;
