@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 import { DirectoryComponent } from './directory/directory.component';
 import { DirectoryTopComponent } from './directory-top/directory-top.component';
 import { DirectoryItemComponent } from './directory-item/directory-item.component';
+import { RouterModule } from '@angular/router';
 
 
 
 @NgModule({
   declarations: [DirectoryComponent, DirectoryTopComponent, DirectoryItemComponent],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [DirectoryComponent]
 })

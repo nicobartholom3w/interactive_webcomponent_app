@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DirectoryModule } from './directory/directory.module';
+import { ChallengesModule } from './challenges/challenges.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { DirectoryModule } from './directory/directory.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    DirectoryModule
+    DirectoryModule,
+    ChallengesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

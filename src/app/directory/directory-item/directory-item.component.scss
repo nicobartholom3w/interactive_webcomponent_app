@@ -4,27 +4,56 @@
 }
 
 .item {
+    cursor: pointer;
     
 
+    &:hover {
+        .item {
+            &__background {
+                background-color: rgba(121, 143, 160, .15);
+            }
+            &__content {
+                // background-color: rgba(255, 255, 255, 1);
+                background-color: rgba(121, 143, 160, .88);
+                color: white;
+            }
+        }
+
+    }
+
     &__background {
-        background-color: rgb(121, 143, 160);
-        height: 12.05rem;
-        width: 16.75rem;
-        border: 1px solid rgb(248, 127, 114);
+        background-color: rgba(121, 143, 160, .55);
+        // background: url("src/assets/images/preview-imgs/app_img.png");
+        height: 100%;
+        width: 100%;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        transition: all .5s;
+
+        &-img {
+            background: no-repeat center url("src/assets/images/preview-imgs/app_img.png");
+            background-size: cover;
+            height: 12.05rem;
+            width: 16.75rem;
+            border: 1px solid rgba(248, 127, 114, 1);
+            transition: all .5s;
+        }
     }
 
     &__content {
         // background-color: rgba(132, 154, 171, .75);
-        background-color: rgb(251, 249, 255);
+        background-color: rgba(251, 249, 255, .95);
         border: 1px solid rgb(248, 127, 114);
         height: 40%;
+        transition: all .3s;
+        color: rgb(75, 88, 104);
+        font-weight: 600;
+        transition: all .5s;
 
         &-desc {
-            color: rgb(75, 88, 104);
-            margin-left: 1rem;
+            margin: 1rem;
+            
         }
     }
 }
