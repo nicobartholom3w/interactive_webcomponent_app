@@ -2,7 +2,6 @@
     background-color: #4B5868;
     height: 6rem;
     color: #F0F5FC;
-    font-family: 'Montserrat', sans-serif;
 
     &__content{
         display: flex;
@@ -25,9 +24,13 @@
 
     &__icon {
         height: 2.5rem;
-        display: flex;
-        margin-right: 1rem;
-
+        top: 0;
+        left: 0.3rem;
+        right: 0;
+        bottom: 0;
+        // background: purple;
+        // margin-right: 1rem;
+        position: absolute;
         &-fill {
             fill: #F0F5FC;
         }
@@ -35,21 +38,18 @@
         &-search {
             fill: #F87F72;
             position: absolute;
-            // top: 2.6rem;
             bottom: 0.1rem;
-            right: 1.12rem;
-            height: 2rem;
+            width: 3rem;
+            right: 1.18rem;
+            height: 2.55rem;
             cursor: pointer;
-            padding: .28rem;
-            padding-right: .65rem;
-            padding-left: .65rem;
-            margin-right: 0rem;
-            border-radius: 0 47% 47% 0;
-
+            padding: 1rem;
+            border-radius: 0 45% 45% 0;
+            border: none;
+            background-color: transparent;
             &:hover {
                 background-color: #F0F5FC;
                 fill: #F96A56;
-               
             }
            
             &-hover {

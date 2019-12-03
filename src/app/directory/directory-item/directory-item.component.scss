@@ -6,13 +6,25 @@
 .item {
     
 
-    &__content {
-        background-color: rgba(132, 154, 171, .5);
+    &__background {
+        background-color: rgb(121, 143, 160);
         height: 12.05rem;
         width: 16.75rem;
+        border: 1px solid rgb(248, 127, 114);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+    }
+
+    &__content {
+        // background-color: rgba(132, 154, 171, .75);
+        background-color: rgb(251, 249, 255);
+        border: 1px solid rgb(248, 127, 114);
+        height: 40%;
 
         &-desc {
-            background-color: rgba(132, 154, 171, .75);
+            color: rgb(75, 88, 104);
+            margin-left: 1rem;
         }
     }
 }
