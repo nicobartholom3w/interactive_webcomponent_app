@@ -24,13 +24,19 @@
 
     &__icon {
         height: 2.5rem;
-        top: 0;
-        left: 0.3rem;
-        right: 0;
-        bottom: 0;
-        // background: purple;
-        // margin-right: 1rem;
-        position: absolute;
+
+        &-magnify {
+            top: 0;
+            left: 0.3rem;
+            right: 0;
+            bottom: 0;
+            position: absolute;
+        }
+        &-main {
+            margin-right: 1rem;
+            transition: all .3s;
+        }
+
         &-fill {
             fill: #F0F5FC;
         }
@@ -65,7 +71,6 @@
         flex-direction: column;
         justify-content: space-between;
         transition: all .3s;
-        // margin-left: -.5rem;
 
         &:hover {
             color: #FBF9FF;
