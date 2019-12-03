@@ -1,0 +1,10 @@
+.container {
+    height: 100%;
+    width: 100%;
+    background: rgb(116, 185, 255);
+
+    &__content {
+        max-width: 65rem;
+        margin: auto;
+    }
+}
