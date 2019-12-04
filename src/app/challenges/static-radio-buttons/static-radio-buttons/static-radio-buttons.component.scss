@@ -12,8 +12,10 @@
         width: 28rem;
         border-radius: .25rem;
         background: white;
+        display: flex;
+        align-items: center;
     }
     &__buttons {
-        margin: 1rem;
+        margin: 0 1rem;
     }
 }

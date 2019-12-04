@@ -1,13 +1,22 @@
 .button {
     margin: 0;
     outline: none;
-    border: 1px solid blue;
-    
-    &__radio {
-
-    }
+    border: 1px solid rgb(89, 149, 255);
+    padding: 1rem .75rem;
+    transition: all .3s;
+    margin-right: -1px;
+    cursor: pointer;
 
     &__text {
+        text-transform: capitalize;
+    }
+    
+    &__active {
+        color: white;
+        background: rgb(89, 149, 255);
+    }
 
+    &:hover {
+        background: rgba(89, 149, 255, .25);
     }
 }
