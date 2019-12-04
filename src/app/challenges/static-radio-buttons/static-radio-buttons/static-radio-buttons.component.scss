@@ -1,10 +1,19 @@
 .container {
-    height: 100%;
+    height: calc(100% - 4.5rem);
     width: 100%;
     background: rgb(116, 185, 255);
+    display: flex;
+    justify-content: center;
 
     &__content {
         max-width: 65rem;
-        margin: auto;
+        margin-top: 5rem;
+        height: 5rem;
+        width: 28rem;
+        border-radius: .25rem;
+        background: white;
+    }
+    &__buttons {
+        margin: 1rem;
     }
 }
