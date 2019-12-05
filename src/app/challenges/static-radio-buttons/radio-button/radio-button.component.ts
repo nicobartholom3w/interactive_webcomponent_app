@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ButtonsService } from '../buttons.service';
 
 @Component({
   selector: 'app-radio-button',
@@ -6,11 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./radio-button.component.scss']
 })
 export class RadioButtonComponent implements OnInit {
+  buttons: String[];
 
-  constructor() { }
+  constructor(private buttonService: ButtonsService) { }
 
   ngOnInit() {
-    
+    this.buttons = this.buttonService.getButtons();
   }
 
 }
