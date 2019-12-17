@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./challenges.component.scss']
 })
 export class ChallengesComponent implements OnInit {
+  titleArr: String[] = ["Static Radio Buttons"];
 
   constructor() { }
 
