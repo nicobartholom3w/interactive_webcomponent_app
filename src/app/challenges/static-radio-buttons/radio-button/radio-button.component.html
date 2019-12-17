@@ -1,6 +1,9 @@
 <button
+    (click)="buttonSelect(i)"
     *ngFor="let b of buttonsText; let i = index"
-    [ngClass]="{'button__left-end': i === 0, 'button__right-end': i === length}"
+    [ngClass]="{'button__left-end': i === 0, 
+                'button__right-end': i === length}"
+    [class.button__active]="selectStatus[i]"
     class="button">         
     <div class="button__text">{{ b }}</div>
 </button>

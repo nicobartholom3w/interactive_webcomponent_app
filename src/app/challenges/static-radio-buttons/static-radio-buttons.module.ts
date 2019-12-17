@@ -18,8 +18,6 @@ export class StaticRadioButtonsModule {
 
 
 
-  buttonSelect() {
-    
-  }
+
 
 }
