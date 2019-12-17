@@ -7,12 +7,14 @@ import { ButtonsService } from '../buttons.service';
   styleUrls: ['./radio-button.component.scss']
 })
 export class RadioButtonComponent implements OnInit {
-  buttons: String[];
+  buttonsText: String[];
+  length: number;
 
   constructor(private buttonService: ButtonsService) { }
 
   ngOnInit() {
-    this.buttons = this.buttonService.getButtons();
+    this.buttonsText = this.buttonService.getButtons();
+    this.length = this.buttonsText.length - 1;
   }
 
 }
