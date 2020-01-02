@@ -1,10 +1,13 @@
 <div class="directory">
     <div class="directory__container">
         <div class="directory__items">
-            <app-directory-item [routerLink]="['challenges/static-radio-buttons']"></app-directory-item>
+            <app-directory-item [routerLink]="[challenge.link]"
+            *ngFor="let challenge of challengesArr; let i = index"></app-directory-item>
+            <!-- <app-directory-item [routerLink]="['challenges/static-radio-buttons']"
+            *ngFor="let challenge of challengesArr"></app-directory-item> -->
+            <!-- <app-directory-item [routerLink]="['challenges']"></app-directory-item>
             <app-directory-item [routerLink]="['challenges']"></app-directory-item>
-            <app-directory-item [routerLink]="['challenges']"></app-directory-item>
-            <app-directory-item [routerLink]="['challenges']"></app-directory-item>          
+            <app-directory-item [routerLink]="['challenges']"></app-directory-item>           -->
         </div>
     </div>
     <app-directory-top [routerLink]="['']"></app-directory-top>
