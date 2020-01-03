@@ -14,13 +14,13 @@ import { ChallengesComponent } from '../challenges/challenges.component';
   exports: [ChallengeModule]
 })
 export class ChallengeModule { 
-  public name: string;
-  public imagePath: string;
-  public link: string;
+  // public name: string;
+  // public imagePath: string;
+  // public link: string;
 
-  constructor(name: string, imagePath: string, link: string) {
-    this.name = name;
-    this.imagePath = imagePath;
-    this.link = link;
-  }
+  // constructor(name: string, imagePath: string, link: string) {
+    // this.name = name;
+    // this.imagePath = imagePath;
+    // this.link = link;
+  // }
 }

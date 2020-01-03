@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { DirectoryModule } from './directory/directory.module';
 import { ChallengesModule } from './challenges/challenges.module';
 import { StaticRadioButtonsModule } from './challenges/static-radio-buttons/static-radio-buttons.module';
+import { TabIndexNavigationModule } from './challenges/tab-index-navigation/tab-index-navigation.module';
 
 
 
@@ -23,6 +24,7 @@ import { StaticRadioButtonsModule } from './challenges/static-radio-buttons/stat
     DirectoryModule,
     ChallengesModule,
     StaticRadioButtonsModule,
+    TabIndexNavigationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -4,6 +4,7 @@ import { DirectoryModule } from './directory/directory.module';
 import { DirectoryComponent } from './directory/directory/directory.component';
 import { ChallengesComponent } from './challenges/challenges/challenges.component';
 import { StaticRadioButtonsComponent } from './challenges/static-radio-buttons/static-radio-buttons/static-radio-buttons.component';
+import { TabIndexNavigationComponent } from './challenges/tab-index-navigation/tab-index-navigation.component';
 
 
 const routes: Routes = [
@@ -18,10 +19,16 @@ const routes: Routes = [
   {
     path: 'challenges',
     component: ChallengesComponent,
-    children: [{
-      path: 'static-radio-buttons',
-      component: StaticRadioButtonsComponent
-    }]
+    children: [
+      {
+        path: 'static-radio-buttons',
+        component: StaticRadioButtonsComponent
+      },
+      {
+        path: 'tab-index-navigation',
+        component: TabIndexNavigationComponent
+      }
+  ]
   }
 ];
 
