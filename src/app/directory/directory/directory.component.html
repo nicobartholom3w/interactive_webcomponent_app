@@ -5,7 +5,6 @@
                 [routerLink]="['challenges', challenge.link]"
                 [queryParams]="{'challenge': challenge.link}"
                 [challengeItem]= challenge
-                (click)="challengeSelected(challenge)"
                 *ngFor="let challenge of challengesArr; let challengeId = index"></app-directory-item>
             <!-- <app-directory-item [routerLink]="['challenges/static-radio-buttons']"
             *ngFor="let challenge of challengesArr"></app-directory-item> -->

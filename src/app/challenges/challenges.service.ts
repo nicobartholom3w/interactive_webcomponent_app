@@ -20,21 +20,17 @@ export class ChallengesService {
   constructor(private route: ActivatedRoute) { 
 
     this.route.queryParamMap.subscribe( (queryParams: ParamMap) => {
-      queryParams.get('challenge');
+      let routeName = queryParams.get('challenge');
+      let currentChallenge = this.challengesArr.find((challenge: Challenge) => {
+        return challenge.link === routeName;
+      });
+      this.selectedChallenge.next(currentChallenge);
     });
     
   }
 
   getChallengesArr() {
     return this.challengesArr.slice();
-  }
-
-  onChallengeSelected(challenge: Challenge) {
-    this.selectedChallenge.next(challenge);
-  }
-
-  getSelectedChallenge() {
-
   }
 
 }

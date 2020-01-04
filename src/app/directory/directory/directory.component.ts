@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { ChallengesService } from 'src/app/challenges/challenges.service';
-import { Subject } from 'rxjs';
 import { Challenge } from 'src/app/challenges/challenge/challenge.interface';
+import { ChallengesService } from 'src/app/challenges/challenges.service';
 
 @Component({
   selector: 'app-directory',
   templateUrl: './directory.component.html',
   styleUrls: ['./directory.component.scss']
 })
+
 export class DirectoryComponent implements OnInit {
-  challengesArr: Challenge [];
+  challengesArr: Challenge[];
 
   constructor(private challengesService: ChallengesService) { }
 
@@ -17,7 +17,5 @@ export class DirectoryComponent implements OnInit {
     this.challengesArr = this.challengesService.getChallengesArr();
   }
 
-  challengeSelected(challengeInfo: Challenge) {
-    this.challengesService.onChallengeSelected(challengeInfo);
-  }
+
 }
