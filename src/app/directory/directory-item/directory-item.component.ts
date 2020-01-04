@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ChallengeModule } from 'src/app/challenges/challenge/challenge.module';
 import { ChallengesService } from 'src/app/challenges/challenges.service';
+import { Challenge } from 'src/app/challenges/challenge/challenge.interface';
 
 @Component({
   selector: 'app-directory-item',
@@ -8,7 +8,7 @@ import { ChallengesService } from 'src/app/challenges/challenges.service';
   styleUrls: ['./directory-item.component.scss']
 })
 export class DirectoryItemComponent implements OnInit {
-  @Input() challengeItem: ChallengeModule;
+  @Input() challengeItem: Challenge;
 
   constructor(private challengesService: ChallengesService) { }
 

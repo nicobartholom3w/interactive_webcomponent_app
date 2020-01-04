@@ -2,7 +2,8 @@
     <div class="directory__container">
         <div class="directory__items">
             <app-directory-item 
-                [routerLink]="[challenge.link]"
+                [routerLink]="['challenges', challenge.link]"
+                [queryParams]="{'challenge': challenge.link}"
                 [challengeItem]= challenge
                 (click)="challengeSelected(challenge)"
                 *ngFor="let challenge of challengesArr; let challengeId = index"></app-directory-item>

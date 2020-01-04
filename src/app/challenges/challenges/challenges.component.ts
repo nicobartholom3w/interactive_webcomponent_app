@@ -15,18 +15,19 @@ challengeArr: Challenge[] = this.challengesService.getChallengesArr();
 
   constructor(private challengesService: ChallengesService,
               private activeRoute: ActivatedRoute) {
-    // this.challengesService.selectedChallenge
-    //   .subscribe(
-    //     (currentChallenge: Challenge) => {
-    //       this.challengeInfo = currentChallenge;
-    //     }
-    //   )
+    this.challengesService.selectedChallenge
+      .subscribe(
+        (currentChallenge: Challenge) => {
+          this.challengeInfo = currentChallenge;
+        }
+      )
   }
 
   ngOnInit() {
-    this.activeRoute.paramMap.subscribe(params => {
-      this.challengeInfo = this.challengeArr[Number(params.get('link'))];
-    })
+    // this.activeRoute.paramMap.subscribe(params => {
+      // params.get('link')
+      // this.challengeInfo = this.challengeArr[];
+    // })
   }
 
 }
