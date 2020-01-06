@@ -1,0 +1,38 @@
+
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1rem;
+
+    &__content {
+        width: 12rem;
+        border: none;
+        border-bottom: solid 1px rgb(222, 222, 222);
+        font-size: .6rem;
+        line-height: 1.75rem;
+        outline: none;
+        transition: all .3s;
+
+        &:focus {
+            border-bottom: solid 1px black;
+        }
+    }
+
+    &__button {
+        border: none;
+        font-size: .6rem;
+        background-color: rgb(241, 241, 241);
+        padding: .5rem .5rem;
+        cursor: pointer;
+        outline: none;
+        transition: all .3s;
+        
+        &:focus {
+            background-color: rgb(232, 232, 232);
+        }
+        &:hover {
+            background-color: rgb(232, 232, 232);
+        }
+    }
+}

@@ -9,13 +9,15 @@ import { DirectoryModule } from './directory/directory.module';
 import { ChallengesModule } from './challenges/challenges.module';
 import { StaticRadioButtonsModule } from './challenges/static-radio-buttons/static-radio-buttons.module';
 import { TabIndexNavigationModule } from './challenges/tab-index-navigation/tab-index-navigation.module';
+import { InputComponent } from './tab-index-navigation/input/input.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,
