@@ -19,7 +19,7 @@ export class NavigationTabsComponent implements OnInit {
   ngOnInit() {
     this.tabsArr = this.tabIndexService.getTabNames();
     this.isSelectedArr = this.tabIndexService.getIsSelectedArr(this.tabsArr);
-    this.tabIndexService.tabSelected
+    this.tabIndexService.activeTab
       .subscribe((selectedTab: Tab) => {
         this.currentTab = selectedTab;
         this.changeTab(this.currentTab);
@@ -27,6 +27,14 @@ export class NavigationTabsComponent implements OnInit {
   }
 
   changeTab(tab: Tab) {
+    for(let i = 0; i < this.tabsArr.length; i++) {
+      if(i != tab.id) {
+        this.isSelectedArr[i] = false;
+      }
+      else {
+        this.isSelectedArr[tab.id] = !this.isSelectedArr[tab.id];
+      }
+    }
     
   }
 

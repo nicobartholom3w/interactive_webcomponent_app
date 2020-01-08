@@ -6,7 +6,8 @@ import { Tab } from './tab';
   providedIn: 'root'
 })
 export class TabIndexNavigationService {
-  tabSelected = new Subject<object>();
+  activeTab = new Subject<Tab>();
+  currentTab: Tab;
   tabNames: string[] = ["positive", "negative", "neutral"];
   tabContent: string[] = ["Positive content", "Negative content", "Neutral content"];
 
@@ -30,7 +31,8 @@ export class TabIndexNavigationService {
   }
 
   onTabSelected(tab: Tab) {
-    this.tabSelected.next(tab);
+    this.currentTab = tab;
+    this.activeTab.next(tab);
   }
 
 }

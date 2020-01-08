@@ -7,7 +7,7 @@
                     *ngFor="let tab of tabNames; let i = index"
                     [tabName]="tab"
                     [index]="i"
-                    (click)="tabClicked({name: tab, index: i})"
+                    (click)="tabClicked({name: tab, id: i})"
                     ></app-navigation-tabs
                     >
             </div>
