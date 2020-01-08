@@ -4,11 +4,12 @@ import { TabIndexNavigationComponent } from './tab-index-navigation.component';
 import { RouterModule } from '@angular/router';
 import { InputComponent } from './input/input.component';
 import { NavigationTabsComponent } from './navigation-tabs/navigation-tabs.component';
+import { SelectedTabComponent } from './selected-tab/selected-tab.component';
 
 
 
 @NgModule({
-  declarations: [TabIndexNavigationComponent, InputComponent, NavigationTabsComponent],
+  declarations: [TabIndexNavigationComponent, InputComponent, NavigationTabsComponent, SelectedTabComponent],
   imports: [
     CommonModule,
     RouterModule

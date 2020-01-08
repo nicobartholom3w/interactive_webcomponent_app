@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TabIndexNavigationService } from './tab-index-navigation.service';
+import { Tab } from './tab';
 
 @Component({
   selector: 'app-tab-index-navigation',
@@ -6,10 +8,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./tab-index-navigation.component.scss']
 })
 export class TabIndexNavigationComponent implements OnInit {
+  tabNames: string[];
+  tabContent: string[];
 
-  constructor() { }
+  constructor(private tabIndexService: TabIndexNavigationService) { }
 
   ngOnInit() {
+    this.tabNames = this.tabIndexService.getTabNames();
+    this.tabContent = this.tabIndexService.getTabContent();
   }
 
+  tabClicked(tab: Tab) {
+    this.tabIndexService.onTabSelected(tab);
+  }
 }

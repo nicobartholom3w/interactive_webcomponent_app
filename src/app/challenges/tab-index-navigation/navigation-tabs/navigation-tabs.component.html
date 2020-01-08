@@ -1,3 +1,5 @@
-<button class="tab" role="tab">positive</button>
-<button class="tab" role="tab">NEGATIVE</button>
-<button class="tab" role="tab">NEUTRAL</button>
+<button 
+    onclick="this.blur()" 
+    [class.active]="isSelectedArr[index]"
+    class="tab" role="tab">{{ tabName }}</button>
+

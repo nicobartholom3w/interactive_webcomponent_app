@@ -3,7 +3,19 @@
         <div class="card__content">
             <app-input></app-input>
             <div class="tabs">
-                <app-navigation-tabs></app-navigation-tabs>
+                <app-navigation-tabs
+                    *ngFor="let tab of tabNames; let i = index"
+                    [tabName]="tab"
+                    [index]="i"
+                    (click)="tabClicked({name: tab, index: i})"
+                    ></app-navigation-tabs
+                    >
+            </div>
+            <div class="selected__tab">
+                <app-selected-tab
+                    *ngIf="selected"
+                    ></app-selected-tab
+                    >
             </div>
         </div>
     </div>
