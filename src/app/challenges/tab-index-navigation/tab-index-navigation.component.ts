@@ -9,7 +9,6 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./tab-index-navigation.component.scss']
 })
 export class TabIndexNavigationComponent implements OnInit {
-  selected: boolean = false;
   tabsArr: Tab[] = [
     {index: 1, name: "positive", text: "Positive content", active: false},
     {index: 2, name: "negative", text: "Negative content", active: false},
@@ -42,12 +41,6 @@ export class TabIndexNavigationComponent implements OnInit {
       }
       else {
         tab.active = !tab.active;
-        if(tab.active) {
-          this.selected = true;
-        }
-        else {
-          this.selected = false;
-        }
       }
     }
   }

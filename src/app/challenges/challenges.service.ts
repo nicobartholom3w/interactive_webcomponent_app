@@ -13,7 +13,7 @@ export class ChallengesService {
 
   challengesArr: Challenge[] = [
     { name: 'Static Radio Buttons', imagePath: 'assets/images/challenges_imgs/static_radio_buttons.png', link: 'static-radio-buttons' },
-    { name: 'Tab Index Navigation', imagePath: 'assets/images/challenges_imgs/static_radio_buttons.png', link: 'tab-index-navigation' },
+    { name: 'Tab Index Navigation', imagePath: 'assets/images/challenges_imgs/tab_index_navigation.png', link: 'tab-index-navigation' },
     
   ]
 
