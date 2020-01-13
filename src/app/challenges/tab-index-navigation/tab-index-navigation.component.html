@@ -1,9 +1,23 @@
 <div class="container">
     <div class="card">
         <div class="card__content">
-            <div class="tabs"></div>
-            <div class="selected__tab">
+            <div class="input">
+                <input 
+                [(ngModel)]="index" 
+                type="number" 
+                required
+                class="input__content"
+                placeholder="Enter tab index">
+                <button 
+                type="submit" 
+                class="input__button" onclick="this.blur();">Change tab</button>
             </div>
+            <div class="tabs">
+                <button class="tabs__tab" onclick="this.blur();">Positive</button>
+                <button class="tabs__tab" onclick="this.blur();">Negative</button>
+                <button class="tabs__tab" onclick="this.blur();">Neutral</button>
+            </div>
+            <div class="tabs__text">Positive content</div>
         </div>
     </div>
 </div>

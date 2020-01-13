@@ -4,6 +4,7 @@
     background-color: rgba(44, 128, 185, 1);
     display: flex;
     justify-content: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 .card {
@@ -19,11 +20,76 @@
         margin-right: .75rem;
     }
 }
+
+.input {
+    margin-top: .85rem;
+    &__content {
+        font-family: 'Roboto', sans-serif;
+        border: none;
+        outline: none;
+        border-bottom: solid 1px rgb(222, 222, 222);
+        font-size: .6rem;
+        line-height: 1.55rem;
+        width: 12rem;
+        margin-right: .5rem;
+        transition: all .3s;
+
+        &:focus {
+            border-bottom: solid 1px black;
+        }
+    }
+
+    &__button {
+        font-family: 'Roboto', sans-serif;
+        border: none;
+        font-size: .6rem;
+        background-color: rgb(241, 241, 241);
+        padding: .5rem;
+        cursor: pointer;
+        transition: all .3s;
+
+        &:hover {
+            background-color: rgb(232, 232, 232);
+        }
+        &:focus {
+            background-color: rgb(232, 232, 232);         
+        }
+    }
+}
 .tabs {
-    margin-top: .25rem;
+    margin-top: .65rem;
+    display: flex;
     
+    &__tab {
+        border: none;
+        outline: none;
+        font-size: .5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        transition: all .3s;
+        color: rgb(204, 204, 204);
+        padding: 0rem;
+        margin-right: .5rem;
+        margin-top: .25rem;
+        cursor: pointer;
+
+        &:hover {
+            color: black;
+            background-color: rgb(232, 232, 232);
+        }
+        &:focus {
+            color: black;
+            background-color: rgb(232, 232, 232);
+        }
+
+        &-active {
+            color: black;
+        }
+    }
+
+    &__text {
+        margin-top: .85rem;
+        font-size: .6rem;
+    }
 }
 
-.selected__tab {
-    margin-top: .5rem;
-}

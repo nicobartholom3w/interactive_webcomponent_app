@@ -8,17 +8,17 @@ import { Tab } from './tab';
   styleUrls: ['./tab-index-navigation.component.scss']
 })
 export class TabIndexNavigationComponent implements OnInit {
-  tabNames: string[];
-  tabContent: string[];
+  index: number;
+  tabsArr: Tab[] = [
 
+  ];
   constructor(private tabIndexService: TabIndexNavigationService) { }
 
   ngOnInit() {
-    this.tabNames = this.tabIndexService.getTabNames();
-    this.tabContent = this.tabIndexService.getTabContent();
+   
   }
 
   tabClicked(tab: Tab) {
-    this.tabIndexService.onTabSelected(tab);
+    
   }
 }

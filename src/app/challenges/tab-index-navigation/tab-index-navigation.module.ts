@@ -2,17 +2,17 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TabIndexNavigationComponent } from './tab-index-navigation.component';
 import { RouterModule } from '@angular/router';
-import { InputComponent } from './input/input.component';
-import { NavigationTabsComponent } from './navigation-tabs/navigation-tabs.component';
-import { SelectedTabComponent } from './selected-tab/selected-tab.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 
 @NgModule({
-  declarations: [TabIndexNavigationComponent, InputComponent, NavigationTabsComponent, SelectedTabComponent],
+  declarations: [TabIndexNavigationComponent],
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ],
   exports: [TabIndexNavigationComponent]
 })

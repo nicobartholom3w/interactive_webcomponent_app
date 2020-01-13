@@ -9,7 +9,7 @@ import { DirectoryModule } from './directory/directory.module';
 import { ChallengesModule } from './challenges/challenges.module';
 import { StaticRadioButtonsModule } from './challenges/static-radio-buttons/static-radio-buttons.module';
 import { TabIndexNavigationModule } from './challenges/tab-index-navigation/tab-index-navigation.module';
-
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -25,7 +25,8 @@ import { TabIndexNavigationModule } from './challenges/tab-index-navigation/tab-
     DirectoryModule,
     ChallengesModule,
     StaticRadioButtonsModule,
-    TabIndexNavigationModule
+    TabIndexNavigationModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
