@@ -1,21 +1,28 @@
 <div class="container">
     <div class="card">
         <div class="card__content">
-            <div class="input">
-                <input 
-                [(ngModel)]="index" 
-                type="number" 
-                required
-                class="input__content"
-                placeholder="Enter tab index">
-                <button 
-                type="submit" 
-                class="input__button" onclick="this.blur();">Change tab</button>
-            </div>
+            <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+                <div class="input">
+                    <input 
+                        type="number" 
+                        name="index"
+                        required
+                        ngModel
+                        class="input__content"
+                        placeholder="Enter tab index">
+                    <button 
+                        type="submit" 
+                        class="input__button" 
+                        onclick="this.blur();">Change tab</button>
+                </div>
+            </form>
             <div class="tabs">
-                <button class="tabs__tab" onclick="this.blur();">Positive</button>
-                <button class="tabs__tab" onclick="this.blur();">Negative</button>
-                <button class="tabs__tab" onclick="this.blur();">Neutral</button>
+                <button 
+                    *ngFor="let tab of tabsArr; let i = index"
+                    (click)="onTabSelect(i)"
+                    [ngClass]="tab.active ? 'tabs__tab-active': 'inactive'"
+                    class="tabs__tab" 
+                    onclick="this.blur();">{{ tab.name }}</button>
             </div>
             <div class="tabs__text">Positive content</div>
         </div>
