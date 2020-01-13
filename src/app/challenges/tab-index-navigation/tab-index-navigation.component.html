@@ -24,7 +24,11 @@
                     class="tabs__tab" 
                     onclick="this.blur();">{{ tab.name }}</button>
             </div>
-            <div class="tabs__text">Positive content</div>
+            <div
+                *ngFor="let tab of tabsArr"
+                class="tabs__text">
+                    <span *ngIf="tab.active">{{ tab.text }}</span>
+                </div>
         </div>
     </div>
 </div>
