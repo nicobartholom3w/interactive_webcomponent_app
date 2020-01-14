@@ -11,6 +11,7 @@ import { StaticRadioButtonsModule } from './challenges/static-radio-buttons/stat
 import { TabIndexNavigationModule } from './challenges/tab-index-navigation/tab-index-navigation.module';
 import { FormsModule } from '@angular/forms';
 import { RandomSwitchesModule } from './challenges/random-switches/random-switches.module';
+import { ProgressNavigationModule } from './challenges/progress-navigation/progress-navigation.module';
 
 
 
@@ -28,6 +29,7 @@ import { RandomSwitchesModule } from './challenges/random-switches/random-switch
     StaticRadioButtonsModule,
     TabIndexNavigationModule,
     RandomSwitchesModule,
+    ProgressNavigationModule,
     FormsModule
   ],
   providers: [],
