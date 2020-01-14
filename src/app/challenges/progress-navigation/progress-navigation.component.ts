@@ -20,10 +20,38 @@ export class ProgressNavigationComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSelectOption(o: Option) {
+  onSelectOption(clickedOpt: Option) {
+    let previousOption = this.optionsArr[clickedOpt.index - 2];
+    let nextOption: Option = this.optionsArr[clickedOpt.index];
+      if(clickedOpt.index === 1) {
+        for(let i = 1; i <= this.optionsArr.length; i++) {
+          let otherOption = this.optionsArr[i];
+          otherOption.active = false;
+          otherOption.current = false;
+        }
+        return;
+      }
+      else if(clickedOpt.index === this.optionsArr.length) {
+        if(previousOption.active === true) {
+          clickedOpt.active = true;
+          clickedOpt.current = true;
+          previousOption.current = false;
+        }
+      }
+      else {
+        if(nextOption.current === true) {
+          nextOption.current = false;
+          nextOption.active = false;
+        }
+        clickedOpt.active = true;
+        clickedOpt.current = true;
+      }
+  }
+
+  onButtonClick(btn: string){
 
   }
-  
+
   onSubmit(f: NgForm) {
 
   }

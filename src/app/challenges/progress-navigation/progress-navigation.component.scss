@@ -37,10 +37,19 @@
         align-items: center;
         cursor: pointer;
         color: rgb(128, 128, 128);
+
         &:hover {
             color: black;
             .menu__option-num-circle {
                 background-color: rgb(240, 240, 240);;
+            }
+        }
+        &-active {
+            &:hover {
+                
+                .menu__option-num-circle {
+                    background-color: rgb(44, 128, 185);
+                }
             }
         }
         &-num {
@@ -59,6 +68,12 @@
                     color: white;
                     background-color: rgb(44, 128, 185);
                 }
+            }
+        }
+        &-text {
+
+            &-active {
+                color: black;
             }
         }
        
