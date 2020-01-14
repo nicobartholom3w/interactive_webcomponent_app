@@ -10,6 +10,7 @@ import { ChallengesModule } from './challenges/challenges.module';
 import { StaticRadioButtonsModule } from './challenges/static-radio-buttons/static-radio-buttons.module';
 import { TabIndexNavigationModule } from './challenges/tab-index-navigation/tab-index-navigation.module';
 import { FormsModule } from '@angular/forms';
+import { RandomSwitchesModule } from './challenges/random-switches/random-switches.module';
 
 
 
@@ -26,6 +27,7 @@ import { FormsModule } from '@angular/forms';
     ChallengesModule,
     StaticRadioButtonsModule,
     TabIndexNavigationModule,
+    RandomSwitchesModule,
     FormsModule
   ],
   providers: [],

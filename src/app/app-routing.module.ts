@@ -5,6 +5,7 @@ import { DirectoryComponent } from './directory/directory/directory.component';
 import { ChallengesComponent } from './challenges/challenges/challenges.component';
 import { StaticRadioButtonsComponent } from './challenges/static-radio-buttons/static-radio-buttons/static-radio-buttons.component';
 import { TabIndexNavigationComponent } from './challenges/tab-index-navigation/tab-index-navigation.component';
+import { RandomSwitchesComponent } from './challenges/random-switches/random-switches.component';
 
 
 const routes: Routes = [
@@ -27,6 +28,10 @@ const routes: Routes = [
       {
         path: 'tab-index-navigation',
         component: TabIndexNavigationComponent
+      },
+      {
+        path: 'random-switches',
+        component: RandomSwitchesComponent
       }
   ]
   }
