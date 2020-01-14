@@ -9,15 +9,21 @@ import { Option } from './option';
 })
 export class ProgressNavigationComponent implements OnInit {
   optionsArr: Option[] = [
-    {index: 1, name: "Choose title", active: true, current: true},
-    {index: 2, name: "Choose description", active: false, current: false},
-    {index: 3, name: "Confirm data", active: false, current: false}
+    {index: 1, name: "Choose title", title: "Choose title content", buttons: ["Submit title"], active: true, current: true},
+    {index: 2, name: "Choose description", title: "Choose description content", buttons: ["Back", "Submit description"], active: false, current: false},
+    {index: 3, name: "Confirm data", title: "Are you happy now?", buttons: ["No, go back", "Yes, go ahead"], active: false, current: false}
   ]
+  currentOption: Option = this.optionsArr[0];
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  onSelectOption(o: Option) {
+
+  }
+  
   onSubmit(f: NgForm) {
 
   }

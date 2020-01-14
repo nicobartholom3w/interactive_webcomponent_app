@@ -2,19 +2,26 @@
     <div class="card">
         <div class="card__content">
             <div class="menu">
-                <div class="menu__option">
-                    <span class="menu__option-num-circle">
-                        <span class="menu__option-num">1</span>
-                    </span>
-                    <span class="menu__option-text">Choose title</span>
+                <div
+                    *ngFor="let option of optionsArr; let i = index"
+                    (click)="onSelectOption(option)" 
+                    class="menu__option">
+                    <div class="menu__option-num-circle">
+                        <div class="menu__option-num">{{ option.index }}</div>
+                        </div>
+                    <div class="menu__option-text">{{ option.name }}</div>
                 </div>
             </div>
-            
-            
-            
-            
             <form #f="ngForm" (ngSubmit)="onSubmit(f)">
-                
+                <div class="form">
+                    <div class="form__title">{{ currentOption.title }}</div>
+                    <div class="form__buttons">
+                        <button
+                            *ngFor="let button of currentOption.buttons"
+                            class="button" 
+                            type="button">{{ button }}</button>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
