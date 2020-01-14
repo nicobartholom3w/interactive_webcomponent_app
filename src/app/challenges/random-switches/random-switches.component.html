@@ -2,30 +2,16 @@
     <div class="card">
         <div class="card__content">
             <div 
+                *ngFor="let switch of switchStatusArr; let i = index"
                 (click)="onSwitch()"
                 class="switch">
-                <div class="switch__background">
-                    <div class="switch__slider switch__slider-first"></div>
-                </div>
-            </div>
-            <div class="switch">
-                <div class="switch__background switch__slider-first">
-                    <div class="switch__slider"></div>
-                </div>
-            </div>
-            <div class="switch">
-                <div class="switch__background">
-                    <div class="switch__slider"></div>
-                </div>
-            </div>
-            <div class="switch">
-                <div class="switch__background">
-                    <div class="switch__slider"></div>
-                </div>
-            </div>
-            <div class="switch">
-                <div class="switch__background">
-                    <div class="switch__slider"></div>
+                <div
+                    [class.switch__background-on]=switchStatusArr[i]
+                    class="switch__background">
+                    <div
+                        [class.switch__slider-on]=switchStatusArr[i]
+                        class="switch__slider">
+                    </div>
                 </div>
             </div>
         </div>
