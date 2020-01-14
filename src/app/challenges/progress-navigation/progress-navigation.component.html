@@ -18,16 +18,21 @@
                 </div>
             </div>
             <form #f="ngForm" (ngSubmit)="onSubmit(f)">
-                <div class="form">
+                <div
+                    *ngIf="!theEnd" 
+                    class="form">
                     <div class="form__title">{{ currentOption.title }}</div>
                     <div class="form__buttons">
                         <button
-                            *ngFor="let button of currentOption.buttons"
-                            (click)="onButtonClick(button)"
+                            *ngFor="let button of currentOption.buttons; let bIndex = index"
+                            (click)="onButtonClick(bIndex)"
                             class="button" 
                             type="button">{{ button }}</button>
                     </div>
                 </div>
+                <div
+                    *ngIf="theEnd" 
+                    class="form">Ok, we're done. Thanks for sending us your data!</div>
             </form>
         </div>
     </div>

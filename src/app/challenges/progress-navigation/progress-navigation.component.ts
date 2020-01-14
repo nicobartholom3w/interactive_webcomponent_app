@@ -14,7 +14,7 @@ export class ProgressNavigationComponent implements OnInit {
     {index: 3, name: "Confirm data", title: "Are you happy now?", buttons: ["No, go back", "Yes, go ahead"], active: false, current: false}
   ]
   currentOption: Option = this.optionsArr[0];
-
+  theEnd: boolean = false;
   constructor() { }
 
   ngOnInit() {
@@ -23,7 +23,9 @@ export class ProgressNavigationComponent implements OnInit {
   onSelectOption(clickedOpt: Option) {
     let previousOption = this.optionsArr[clickedOpt.index - 2];
     let nextOption: Option = this.optionsArr[clickedOpt.index];
+    this.theEnd = false;
       if(clickedOpt.index === 1) {
+        this.currentOption = clickedOpt;
         for(let i = 1; i <= this.optionsArr.length; i++) {
           let otherOption = this.optionsArr[i];
           otherOption.active = false;
@@ -36,6 +38,7 @@ export class ProgressNavigationComponent implements OnInit {
           clickedOpt.active = true;
           clickedOpt.current = true;
           previousOption.current = false;
+          this.currentOption = clickedOpt;
         }
       }
       else {
@@ -45,11 +48,37 @@ export class ProgressNavigationComponent implements OnInit {
         }
         clickedOpt.active = true;
         clickedOpt.current = true;
+        this.currentOption = clickedOpt;
       }
+      
   }
 
-  onButtonClick(btn: string){
-
+  onButtonClick(btn: number){
+    let previousOption = this.optionsArr[this.currentOption.index - 2];
+    let nextOption: Option = this.optionsArr[this.currentOption.index];
+    if(this.currentOption.buttons.length === 1) {
+      nextOption.active = true;
+      nextOption.current = true;
+      this.currentOption = nextOption;
+    }
+    else {
+      if(btn === 0) {
+        previousOption.current = true;
+        this.currentOption.active = false;
+        this.currentOption.current = false;
+        this.currentOption = previousOption;
+      }
+      else {
+        if(this.currentOption.index === this.optionsArr.length){
+          this.theEnd = true;
+          return;
+        }
+        nextOption.current = true;
+        nextOption.active = true;
+        this.currentOption.current = false;
+        this.currentOption = nextOption;
+      }
+    }   
   }
 
   onSubmit(f: NgForm) {
