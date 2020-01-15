@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { RandomSwitchesModule } from './challenges/random-switches/random-switches.module';
 import { ProgressNavigationModule } from './challenges/progress-navigation/progress-navigation.module';
 import { AutoTypeModule } from './challenges/auto-type/auto-type.module';
+import { ThreeDCardModule } from './challenges/three-d-card/three-d-card.module';
 
 
 
@@ -32,6 +33,7 @@ import { AutoTypeModule } from './challenges/auto-type/auto-type.module';
     RandomSwitchesModule,
     ProgressNavigationModule,
     AutoTypeModule,
+    ThreeDCardModule,
     FormsModule
   ],
   providers: [],

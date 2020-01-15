@@ -8,6 +8,7 @@ import { TabIndexNavigationComponent } from './challenges/tab-index-navigation/t
 import { RandomSwitchesComponent } from './challenges/random-switches/random-switches.component';
 import { ProgressNavigationComponent } from './challenges/progress-navigation/progress-navigation.component';
 import { AutoTypeComponent } from './challenges/auto-type/auto-type.component';
+import { ThreeDCardComponent } from './challenges/three-d-card/three-d-card.component';
 
 
 const routes: Routes = [
@@ -42,6 +43,10 @@ const routes: Routes = [
       {
         path: 'auto-type',
         component: AutoTypeComponent
+      },
+      {
+        path: '3d-card',
+        component: ThreeDCardComponent
       }
   ]
   }
