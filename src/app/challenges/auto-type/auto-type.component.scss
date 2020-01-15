@@ -14,9 +14,6 @@
 .text {
     font-size: 1.75rem;
     margin-left: 1rem;
-    &__changing {
-
-    }
 }
 
 .caret {
@@ -27,4 +24,19 @@
     position: relative;
     top: .4rem;
     margin-left: .25rem;
+    animation-name: flashing;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+}
+
+@keyframes flashing {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
