@@ -81,7 +81,5 @@ export class ProgressNavigationComponent implements OnInit {
     }   
   }
 
-  onSubmit(f: NgForm) {
 
-  }
 }

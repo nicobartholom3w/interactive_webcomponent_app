@@ -15,7 +15,9 @@ export class ChallengesService {
     { name: 'Static Radio Buttons', imagePath: 'assets/images/challenges_imgs/static_radio_buttons.png', link: 'static-radio-buttons' },
     { name: 'Tab Index Navigation', imagePath: 'assets/images/challenges_imgs/tab_index_navigation.png', link: 'tab-index-navigation' },
     { name: 'Random Switches', imagePath: 'assets/images/challenges_imgs/random-switches.png', link: 'random-switches' },
-    { name: 'Progress Navigation', imagePath: 'assets/images/challenges_imgs/random-switches.png', link: 'progress-navigation' }
+    { name: 'Progress Navigation', imagePath: 'assets/images/challenges_imgs/progress-navigation.png', link: 'progress-navigation' },
+    { name: 'Auto Type', imagePath: 'assets/images/challenges_imgs/auto-type.png', link: 'auto-type' },
+    { name: 'Progress Navigation', imagePath: 'assets/images/challenges_imgs/progress-navigation.png', link: 'progress-navigation' }
     
   ]
 

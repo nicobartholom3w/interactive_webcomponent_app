@@ -7,6 +7,7 @@ import { StaticRadioButtonsComponent } from './challenges/static-radio-buttons/s
 import { TabIndexNavigationComponent } from './challenges/tab-index-navigation/tab-index-navigation.component';
 import { RandomSwitchesComponent } from './challenges/random-switches/random-switches.component';
 import { ProgressNavigationComponent } from './challenges/progress-navigation/progress-navigation.component';
+import { AutoTypeComponent } from './challenges/auto-type/auto-type.component';
 
 
 const routes: Routes = [
@@ -37,6 +38,10 @@ const routes: Routes = [
       {
         path: 'progress-navigation',
         component: ProgressNavigationComponent
+      },
+      {
+        path: 'auto-type',
+        component: AutoTypeComponent
       }
   ]
   }

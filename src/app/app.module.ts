@@ -12,6 +12,7 @@ import { TabIndexNavigationModule } from './challenges/tab-index-navigation/tab-
 import { FormsModule } from '@angular/forms';
 import { RandomSwitchesModule } from './challenges/random-switches/random-switches.module';
 import { ProgressNavigationModule } from './challenges/progress-navigation/progress-navigation.module';
+import { AutoTypeModule } from './challenges/auto-type/auto-type.module';
 
 
 
@@ -30,6 +31,7 @@ import { ProgressNavigationModule } from './challenges/progress-navigation/progr
     TabIndexNavigationModule,
     RandomSwitchesModule,
     ProgressNavigationModule,
+    AutoTypeModule,
     FormsModule
   ],
   providers: [],
