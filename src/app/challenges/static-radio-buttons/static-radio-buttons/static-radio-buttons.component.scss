@@ -1,5 +1,5 @@
 .container {
-    height: calc(100% - 4.5rem);
+    min-height: 100%;
     width: 100%;
     background: rgb(116, 185, 255);
     display: flex;
@@ -8,7 +8,7 @@
 
     &__content {
         max-width: 65rem;
-        margin-top: 5rem;
+        margin-top: 8rem;
         height: 5rem;
         width: 28rem;
         min-width: 20.5rem;

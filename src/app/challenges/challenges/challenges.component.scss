@@ -1,18 +1,27 @@
+:host {
+    // position: relative;
+    
+    height: 100%;
+    width: 100%;
+}
 .header {
     margin: auto;
-    max-width: 65rem;
+    // max-width: 65rem;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     color: rgb(75, 89, 105);
     min-height: 3.5rem;
     padding: .5rem 0;
-    
+    position: fixed;
+    background-color: white;
+
+    z-index: 100;
 }
 
 @media screen and (max-width: 580px) {
     .header {
-        margin-left: 1rem;
-        // height: 4.5rem;
+        padding-left: 1rem;
     }
 }
