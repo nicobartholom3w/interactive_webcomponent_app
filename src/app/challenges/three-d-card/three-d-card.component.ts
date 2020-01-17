@@ -16,8 +16,14 @@ export class ThreeDCardComponent implements OnInit {
           let xHalf = this.container.nativeElement.clientWidth / 2;
           let yHalf = this.container.nativeElement.clientHeight / 2;
           let x = e.clientX - xHalf;
-          let y = e.clientY - yHalf;
+          let y = (e.clientY - 183 - yHalf);
           this.renderer.setStyle(this.card.nativeElement, 'transform', `rotateY(${x / 30}deg) rotateX(${-y / 30}deg)`);
+          console.log("clienty= " + e.clientY);
+          console.log("ydeg= " + -y);
+          console.log("xdeg= " + x);
+        }
+        else {
+          console.log(e.target);
         }
       }
     }
