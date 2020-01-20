@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-show-on-scroll',
@@ -6,8 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./show-on-scroll.component.scss']
 })
 export class ShowOnScrollComponent implements OnInit {
+  isHiddenArr: boolean[] = [false, true, true, true, true];
+  @ViewChild('element', {static: false}) element: ElementRef;
 
-  constructor() { }
+  @HostListener('document:scroll', ['$event'])
+  onScroll() {
+    // const componentPosition = this.el.nativeElement.offsetTop;
+    // const scrollPosition = window.pageYOffset;
+
+    for(let boolean of this.isHiddenArr) {
+      
+    }
+  }
+
+  constructor(public el: ElementRef) { }
 
   ngOnInit() {
   }
