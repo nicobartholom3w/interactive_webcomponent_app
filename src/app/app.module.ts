@@ -14,6 +14,7 @@ import { RandomSwitchesModule } from './challenges/random-switches/random-switch
 import { ProgressNavigationModule } from './challenges/progress-navigation/progress-navigation.module';
 import { AutoTypeModule } from './challenges/auto-type/auto-type.module';
 import { ThreeDCardModule } from './challenges/three-d-card/three-d-card.module';
+import { ShowOnScrollModule } from './challenges/show-on-scroll/show-on-scroll.module';
 
 
 
@@ -34,6 +35,7 @@ import { ThreeDCardModule } from './challenges/three-d-card/three-d-card.module'
     ProgressNavigationModule,
     AutoTypeModule,
     ThreeDCardModule,
+    ShowOnScrollModule,
     FormsModule
   ],
   providers: [],

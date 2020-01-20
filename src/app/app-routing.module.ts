@@ -9,6 +9,7 @@ import { RandomSwitchesComponent } from './challenges/random-switches/random-swi
 import { ProgressNavigationComponent } from './challenges/progress-navigation/progress-navigation.component';
 import { AutoTypeComponent } from './challenges/auto-type/auto-type.component';
 import { ThreeDCardComponent } from './challenges/three-d-card/three-d-card.component';
+import { ShowOnScrollComponent } from './challenges/show-on-scroll/show-on-scroll.component';
 
 
 const routes: Routes = [
@@ -47,6 +48,10 @@ const routes: Routes = [
       {
         path: '3d-card',
         component: ThreeDCardComponent
+      },
+      {
+        path: 'show-on-scroll',
+        component: ShowOnScrollComponent
       }
   ]
   }
