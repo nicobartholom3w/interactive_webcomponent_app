@@ -10,6 +10,7 @@ import { ProgressNavigationComponent } from './challenges/progress-navigation/pr
 import { AutoTypeComponent } from './challenges/auto-type/auto-type.component';
 import { ThreeDCardComponent } from './challenges/three-d-card/three-d-card.component';
 import { ShowOnScrollComponent } from './challenges/show-on-scroll/show-on-scroll.component';
+import { SideMenuComponent } from './challenges/side-menu/side-menu.component';
 
 
 const routes: Routes = [
@@ -52,6 +53,10 @@ const routes: Routes = [
       {
         path: 'show-on-scroll',
         component: ShowOnScrollComponent
+      },
+      {
+        path: 'side-menu',
+        component: SideMenuComponent
       }
   ]
   }

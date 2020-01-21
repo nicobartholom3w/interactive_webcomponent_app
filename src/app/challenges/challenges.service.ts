@@ -18,7 +18,8 @@ export class ChallengesService {
     { name: 'Progress Navigation', imagePath: 'assets/images/challenges_imgs/progress-navigation.png', link: 'progress-navigation' },
     { name: 'Auto Type', imagePath: 'assets/images/challenges_imgs/auto-type.png', link: 'auto-type' },
     { name: '3D Card', imagePath: 'assets/images/challenges_imgs/3d-card.png', link: '3d-card' },
-    { name: 'Show On Scroll', imagePath: 'assets/images/challenges_imgs/show-on-scroll.png', link: 'show-on-scroll' }
+    { name: 'Show On Scroll', imagePath: 'assets/images/challenges_imgs/show-on-scroll.png', link: 'show-on-scroll' },
+    { name: 'Side Menu', imagePath: 'assets/images/challenges_imgs/side-menu.png', link: 'side-menu' }
     
   ]
 

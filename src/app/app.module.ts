@@ -15,6 +15,7 @@ import { ProgressNavigationModule } from './challenges/progress-navigation/progr
 import { AutoTypeModule } from './challenges/auto-type/auto-type.module';
 import { ThreeDCardModule } from './challenges/three-d-card/three-d-card.module';
 import { ShowOnScrollModule } from './challenges/show-on-scroll/show-on-scroll.module';
+import { SideMenuModule } from './challenges/side-menu/side-menu.module';
 
 
 
@@ -36,6 +37,7 @@ import { ShowOnScrollModule } from './challenges/show-on-scroll/show-on-scroll.m
     AutoTypeModule,
     ThreeDCardModule,
     ShowOnScrollModule,
+    SideMenuModule,
     FormsModule
   ],
   providers: [],
