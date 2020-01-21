@@ -2,8 +2,7 @@
     <div class="sections">
         <div 
             #element
-            *ngFor="let bool of isHiddenArr; let i = index"
-            [class.hidden]=bool
-            class="div"></div>
+            *ngFor="let div of isHiddenArr"
+            class="div hidden"></div>
     </div>
 </div>
