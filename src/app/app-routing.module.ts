@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { DirectoryModule } from './directory/directory.module';
 import { DirectoryComponent } from './directory/directory/directory.component';
 import { ChallengesComponent } from './challenges/challenges/challenges.component';
 import { StaticRadioButtonsComponent } from './challenges/static-radio-buttons/static-radio-buttons/static-radio-buttons.component';
@@ -11,6 +10,7 @@ import { AutoTypeComponent } from './challenges/auto-type/auto-type.component';
 import { ThreeDCardComponent } from './challenges/three-d-card/three-d-card.component';
 import { ShowOnScrollComponent } from './challenges/show-on-scroll/show-on-scroll.component';
 import { SideMenuComponent } from './challenges/side-menu/side-menu.component';
+import { StickyComponent } from './challenges/sticky/sticky.component';
 
 
 const routes: Routes = [
@@ -57,6 +57,10 @@ const routes: Routes = [
       {
         path: 'side-menu',
         component: SideMenuComponent
+      },
+      {
+        path: 'sticky',
+        component: StickyComponent
       }
   ]
   }

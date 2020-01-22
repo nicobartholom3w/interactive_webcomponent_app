@@ -1,0 +1,35 @@
+.container {
+    min-height: 100%;
+    width: 100%;
+    background-color: rgba(255, 239, 213, .5);
+    font-family: 'Roboto', sans-serif;
+
+    &__content {
+        padding: 6rem 1rem 0 1rem;
+    }
+}
+
+.block {
+    border-radius: .25rem;
+}
+
+.small {
+    background-color: rgb(248, 131, 121);
+    margin-top: 6rem;
+    height: 8rem;
+    width: 10rem;
+    float: left;
+}
+
+.big {
+    background-color: rgb(114, 238, 184);
+    height: 40rem;
+    width: 16rem;
+    position: relative;
+    left: 12rem;
+}
+
+.sticky {
+    margin-top: 0;
+    position: fixed;
+}
