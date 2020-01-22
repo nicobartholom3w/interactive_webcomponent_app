@@ -28,6 +28,7 @@
     margin: .1rem;
     cursor: pointer;
     transition: all .3s;
+    outline: none;
     &:hover {
         background: rgb(225, 225, 225);
     }
@@ -41,9 +42,10 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    visibility: hidden;
     transition: all .3s;
+    z-index: -1;
     &__active {
+        z-index: 1;
         opacity: .7;
     }
 }
@@ -65,6 +67,7 @@
     visibility: hidden;
 
     &__active {
+        visibility: visible;
         transform: translateX(0rem);
     }
     &__text {

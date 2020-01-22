@@ -9,27 +9,31 @@ export class SideMenuComponent implements OnInit {
   isOverlayActive: boolean = false;
   search: string = "Search";
   run: string = "Run";
-  sideMenu: object[] = [
-    {text: "Whoah! You found me!", button: "Hide back"},
-    {text: "Pleast don't run!", button: "Close" }
-  ]
+  sideMenuText: string;
+  sideMenuButton: string;
   constructor() { }
 
   ngOnInit() {
   }
 
-  onClickButton(type: string) {
+  onActivateOverlay(type: string) {
     if(!this.isOverlayActive) {
       this.isOverlayActive = true;
       if(type === "Search") {
-        // define sidemenu text/button
+        this.sideMenuText = "Whoah! You found me!";
+        this.sideMenuButton = "Hide back";
       }
       else {
-        // sidemenu text/button is this
+        this.sideMenuText = "Please don't run!";
+        this.sideMenuButton = "Close";
       }
     }
     else {
       this.isOverlayActive = false;
     }
+  }
+
+  onRemoveOverlay() {
+    this.isOverlayActive = false;
   }
 }

@@ -1,13 +1,26 @@
 <div class="container">
-    <div class="menu">
-        <div class="menu__text">Whoah! You found me!</div>
-        <button class="button">Hide back</button>
+    <div 
+        class="menu"
+        [class.menu__active]="isOverlayActive">
+        <div 
+            class="menu__text">{{ sideMenuText }}</div>
+        <button 
+            (click)="onRemoveOverlay()" 
+            class="button">{{ sideMenuButton }}</button>
     </div>
-    <div class="overlay"></div>
+    <div 
+        class="overlay"
+        (click)="onRemoveOverlay()"
+        [class.overlay__active]="isOverlayActive">
+    </div>
     
     <div class="card">
-        <button (click)="onClickButton(search)" class="button">{{ search }}</button>
-        <button (click)="onClickButton(run)" class="button">{{ run }}</button>
+        <button 
+            (click)="onActivateOverlay(search)" 
+            class="button">{{ search }}</button>
+        <button 
+            (click)="onActivateOverlay(run)" 
+            class="button">{{ run }}</button>
     </div>
     
 </div>
