@@ -40,7 +40,6 @@ export class DraggableCardComponent implements OnInit {
     this.initY = e.clientY;
     this.initTop = this.card.nativeElement.getBoundingClientRect().top; 
     this.initLeft = this.card.nativeElement.getBoundingClientRect().left;
-    // console.log('initX', this.initX, 'initY', this.initY, 'initTop', this.initTop, 'initLeft', this.initLeft);
   }
 
   onMoveCard(e: any) {
@@ -52,7 +51,6 @@ export class DraggableCardComponent implements OnInit {
       let moveY =  this.currentY - this.initY;
       this.card.nativeElement.style.top =  (this.initTop + moveY - this.headerHeight) + 'px';
       this.card.nativeElement.style.left = (this.initLeft + moveX) + 'px';
-      // console.log('curX', currentX, 'curY', currentY, 'distMovedX', moveX, 'distMovedY', moveY, 'newTop', (this.initTop - moveY) + 'px', 'newLeft', (this.initLeft + moveX) + 'px')
     }
   }
 }
