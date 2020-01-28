@@ -11,6 +11,7 @@ import { ThreeDCardComponent } from './challenges/three-d-card/three-d-card.comp
 import { ShowOnScrollComponent } from './challenges/show-on-scroll/show-on-scroll.component';
 import { SideMenuComponent } from './challenges/side-menu/side-menu.component';
 import { StickyComponent } from './challenges/sticky/sticky.component';
+import { DraggableCardComponent } from './challenges/draggable-card/draggable-card.component';
 
 
 const routes: Routes = [
@@ -61,6 +62,10 @@ const routes: Routes = [
       {
         path: 'sticky',
         component: StickyComponent
+      },
+      {
+        path: 'draggable-card',
+        component: DraggableCardComponent
       }
   ]
   }

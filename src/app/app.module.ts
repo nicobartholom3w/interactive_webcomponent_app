@@ -17,6 +17,7 @@ import { ThreeDCardModule } from './challenges/three-d-card/three-d-card.module'
 import { ShowOnScrollModule } from './challenges/show-on-scroll/show-on-scroll.module';
 import { SideMenuModule } from './challenges/side-menu/side-menu.module';
 import { StickyModule } from './challenges/sticky/sticky.module';
+import { DraggableCardModule } from './challenges/draggable-card/draggable-card.module';
 
 
 
@@ -40,6 +41,7 @@ import { StickyModule } from './challenges/sticky/sticky.module';
     ShowOnScrollModule,
     SideMenuModule,
     StickyModule,
+    DraggableCardModule,
     FormsModule
   ],
   providers: [],

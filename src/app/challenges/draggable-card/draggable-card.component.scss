@@ -1,0 +1,25 @@
+.container {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(103, 114, 230, 1);
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.card {
+    width: 10rem;
+    height: 10rem;
+    border-radius: .15rem;
+    background-color: white;
+    box-shadow: 0 1px 2px -1px rgba(0, 0, 0, .5);
+    position: absolute;
+    top: 8rem;
+    left: 3rem;
+    overflow: hidden;
+    cursor: move;
+    transition: all .3s;
+    &:hover {
+        background-color: rgb(241, 241, 241); 
+    }
+}

@@ -20,7 +20,8 @@ export class ChallengesService {
     { name: '3D Card', imagePath: 'assets/images/challenges_imgs/3d-card.png', link: '3d-card' },
     { name: 'Show On Scroll', imagePath: 'assets/images/challenges_imgs/show-on-scroll.png', link: 'show-on-scroll' },
     { name: 'Side Menu', imagePath: 'assets/images/challenges_imgs/side-menu.png', link: 'side-menu' },
-    { name: 'Sticky', imagePath: 'assets/images/challenges_imgs/sticky.png', link: 'sticky' }
+    { name: 'Sticky', imagePath: 'assets/images/challenges_imgs/sticky.png', link: 'sticky' },
+    { name: 'Draggable Card', imagePath: 'assets/images/challenges_imgs/draggable-card.png', link: 'draggable-card' }
     
   ]
 
