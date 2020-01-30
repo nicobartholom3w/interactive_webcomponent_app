@@ -6,25 +6,44 @@
                 <div class="form__body">
                     <input 
                         class="form__input"
-                        type="text">
+                        type="text"
+                        #input
+                        maxlength="1"
+                        (keyup)="onKey($event, 0)"
+                        >
                     <input 
-                    class="form__input"
-                    type="text">
-                    <input 
-                    class="form__input"
-                    type="text">
-                    <div class="dash"></div>
+                        class="form__input form__input-fix"
+                        type="text"
+                        #input
+                        (keyup)="onKey($event, 1)"
+                        [attr.disabled] = "isActive[1] ? null : 'disabled'">
                     <input 
                         class="form__input"
-                        type="text">
+                        type="text"
+                        #input
+                        (keyup)="onKey($event, 2)"
+                        [attr.disabled] = "isActive[2] ? null : 'disabled'">
+                    <div class="dash"></div>
                     <input 
-                    class="form__input"
-                    type="text">
+                        class="form__input form__input-fix"
+                        type="text"
+                        #input
+                        (keyup)="onKey($event, 3)"
+                        [attr.disabled] = "isActive[3] ? null : 'disabled'">
                     <input 
-                    class="form__input"
-                    type="text">
+                        class="form__input form__input-fix"
+                        type="text"
+                        #input
+                        (keyup)="onKey($event, 4)"
+                        [attr.disabled] = "isActive[4] ? null : 'disabled'">
+                    <input 
+                        class="form__input"
+                        type="text"
+                        #input
+                        (keyup)="onKey($event, 5)"
+                        [attr.disabled] = "isActive[5] ? null : 'disabled'">
                 </div>
-                <button class="button">Submit</button>
+                <button type="submit" class="button">Submit</button>
             </div>
         </form>
     </div>
