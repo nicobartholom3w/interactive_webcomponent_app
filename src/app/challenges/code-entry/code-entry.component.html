@@ -1,26 +1,34 @@
 <div class="container">
     <div class="card">
-        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <form 
+            #f="ngForm" 
+            (ngSubmit)="onSubmit(f)"
+            >
             <div class="form">
                 <h1 class="form__header">Enter code:</h1>
-                <div class="form__body">
+                <div 
+                    class="form__body"
+                    (click)="selectActiveInput()">
                     <input 
                         class="form__input"
                         type="text"
                         #input
                         maxlength="1"
                         (keyup)="onKey($event, 0)"
+                        [attr.disabled] = "isActive[0] ? null : 'disabled'"
                         >
                     <input 
                         class="form__input form__input-fix"
                         type="text"
                         #input
+                        maxlength="1"
                         (keyup)="onKey($event, 1)"
                         [attr.disabled] = "isActive[1] ? null : 'disabled'">
                     <input 
                         class="form__input"
                         type="text"
                         #input
+                        maxlength="1"
                         (keyup)="onKey($event, 2)"
                         [attr.disabled] = "isActive[2] ? null : 'disabled'">
                     <div class="dash"></div>
@@ -28,18 +36,21 @@
                         class="form__input form__input-fix"
                         type="text"
                         #input
+                        maxlength="1"
                         (keyup)="onKey($event, 3)"
                         [attr.disabled] = "isActive[3] ? null : 'disabled'">
                     <input 
                         class="form__input form__input-fix"
                         type="text"
                         #input
+                        maxlength="1"
                         (keyup)="onKey($event, 4)"
                         [attr.disabled] = "isActive[4] ? null : 'disabled'">
                     <input 
                         class="form__input"
                         type="text"
                         #input
+                        maxlength="1"
                         (keyup)="onKey($event, 5)"
                         [attr.disabled] = "isActive[5] ? null : 'disabled'">
                 </div>
