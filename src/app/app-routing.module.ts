@@ -13,6 +13,7 @@ import { SideMenuComponent } from './challenges/side-menu/side-menu.component';
 import { StickyComponent } from './challenges/sticky/sticky.component';
 import { DraggableCardComponent } from './challenges/draggable-card/draggable-card.component';
 import { CodeEntryComponent } from './challenges/code-entry/code-entry.component';
+import { MultiSelectComponent } from './challenges/multi-select/multi-select.component';
 
 
 const routes: Routes = [
@@ -71,6 +72,10 @@ const routes: Routes = [
       {
         path: 'code-entry',
         component: CodeEntryComponent
+      },
+      {
+        path: 'multi-select',
+        component: MultiSelectComponent
       }
   ]
   }

@@ -19,6 +19,7 @@ import { SideMenuModule } from './challenges/side-menu/side-menu.module';
 import { StickyModule } from './challenges/sticky/sticky.module';
 import { DraggableCardModule } from './challenges/draggable-card/draggable-card.module';
 import { CodeEntryModule } from './challenges/code-entry/code-entry.module';
+import { MultiSelectModule } from './challenges/multi-select/multi-select.module';
 
 
 
@@ -44,6 +45,7 @@ import { CodeEntryModule } from './challenges/code-entry/code-entry.module';
     StickyModule,
     DraggableCardModule,
     CodeEntryModule,
+    MultiSelectModule,
     FormsModule
   ],
   providers: [],
