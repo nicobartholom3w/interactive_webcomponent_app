@@ -20,6 +20,7 @@ import { StickyModule } from './challenges/sticky/sticky.module';
 import { DraggableCardModule } from './challenges/draggable-card/draggable-card.module';
 import { CodeEntryModule } from './challenges/code-entry/code-entry.module';
 import { MultiSelectModule } from './challenges/multi-select/multi-select.module';
+import { CardSliderModule } from './challenges/card-slider/card-slider.module';
 
 
 
@@ -46,6 +47,7 @@ import { MultiSelectModule } from './challenges/multi-select/multi-select.module
     DraggableCardModule,
     CodeEntryModule,
     MultiSelectModule,
+    CardSliderModule,
     FormsModule
   ],
   providers: [],

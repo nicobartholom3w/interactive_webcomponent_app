@@ -14,6 +14,7 @@ import { StickyComponent } from './challenges/sticky/sticky.component';
 import { DraggableCardComponent } from './challenges/draggable-card/draggable-card.component';
 import { CodeEntryComponent } from './challenges/code-entry/code-entry.component';
 import { MultiSelectComponent } from './challenges/multi-select/multi-select.component';
+import { CardSliderComponent } from './challenges/card-slider/card-slider.component';
 
 
 const routes: Routes = [
@@ -76,6 +77,10 @@ const routes: Routes = [
       {
         path: 'multi-select',
         component: MultiSelectComponent
+      },
+      {
+        path: 'card-slider',
+        component: CardSliderComponent
       }
   ]
   }

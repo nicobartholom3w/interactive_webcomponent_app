@@ -23,7 +23,8 @@ export class ChallengesService {
     { name: 'Sticky', imagePath: 'assets/images/challenges_imgs/sticky.png', link: 'sticky' },
     { name: 'Draggable Card', imagePath: 'assets/images/challenges_imgs/draggable-card.png', link: 'draggable-card' },
     { name: 'Code Entry', imagePath: 'assets/images/challenges_imgs/code-entry.png', link: 'code-entry' },
-    { name: 'Multi-Select', imagePath: 'assets/images/challenges_imgs/multi-select.png', link: 'multi-select' }
+    { name: 'Multi-Select', imagePath: 'assets/images/challenges_imgs/multi-select.png', link: 'multi-select' },
+    { name: 'Card Slider', imagePath: 'assets/images/challenges_imgs/card-slider.png', link: 'card-slider' }
     
   ]
 
