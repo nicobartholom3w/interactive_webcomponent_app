@@ -29,11 +29,13 @@ export class MultiSelectComponent implements OnInit {
     
     if(option.index > 0){
       option.isSelected = !option.isSelected;
+      // checking for selected items
       for(let i = 0; i < optionsRefArr.length; i++) {
         if(this.optionsArr[i].isSelected === true) {
           this.numberChecked++;
         }
       }
+      // select checkall if all options manually selected
       if(this.numberChecked === 4) {
         this.optionsArr[0].isSelected = true;
       }
@@ -42,6 +44,7 @@ export class MultiSelectComponent implements OnInit {
         this.numberChecked = 0;
       }
     }
+    // if select checkall
     else {
       let newStatus: boolean;
       if(option.isSelected === false) {
@@ -60,12 +63,14 @@ export class MultiSelectComponent implements OnInit {
 
   changeOrderText() {
     let currentOrderTextArr: string[] = [];
+    // add current order item names to arr except checkall
     for(let i = 0; i < this.optionsArr.length; i++) {
       if(this.optionsArr[i].isSelected && this.optionsArr[i].name !== 'Check all') {
         currentOrderTextArr.push(this.optionsArr[i].name);
       }
     }
     let orderLength = currentOrderTextArr.length;
+    // create string representing order dependent on how many items
     if(orderLength > 0) {
       this.orderText = currentOrderTextArr[0];
       if(orderLength > 1) {
@@ -76,6 +81,7 @@ export class MultiSelectComponent implements OnInit {
         this.orderText += ` and ${extra} more`;
       }
     }
+    // no order items text
     else {
       this.orderText = 'Please, select your food';
     }
