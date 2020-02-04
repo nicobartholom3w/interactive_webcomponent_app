@@ -1,18 +1,24 @@
 <div class="container">
     <div class="card">
         <div class="card__content">
-            <div class="select">Please, select your food</div>
+            <div class="select">{{ orderText }}</div>
             <div class="br"></div>
-            <div class="select__options">
-                <div class="select__options-li select__options-li-all">Check all
-                    <label class="label" for="check-all" class="input">
-                        <input class="input" type="checkbox" id=check-all name="check-all">
+            <div 
+                *ngFor="let option of optionsArr; let i = index"
+                class="select__options">
+                <div 
+                    
+                    (click)="onSelect(option)"
+                    [class.select__options-li-all]=isFirst(i)
+                    [class.checked]=option.isSelected
+                    class="select__options-li"
+                    >{{ option.name }}
+                    <label class="label" for="{{option.id}}" class="input">
+                        <input 
+                            #choice 
+                            class="input" type="checkbox" id="{{option.id}}" name="{{option.id}}">
                     </label>
                 </div>
-                <div class="select__options-li">Ice-cream</div>
-                <div class="select__options-li">Hot-dog</div>
-                <div class="select__options-li">Popcorn</div>
-                <div class="select__options-li">Cookie</div>
             </div>
         </div>
     </div>
