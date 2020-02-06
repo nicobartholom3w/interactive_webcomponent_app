@@ -22,13 +22,15 @@
         height: 100%;
         width: 100%;
         overflow: hidden;
-
+        
         &-blocks {
+            background: pink;
             height: 100%;
             width: 35.5rem;
             display: flex;
             align-items: center;
             padding: 0 .25rem;
+            transition: all .3s;
         }
     }
 }
@@ -45,6 +47,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all .3s;
+    outline: none;
+    z-index: 2;
     &:before {
         content: "";
         height: .5rem;
@@ -81,4 +86,8 @@
         width: 8rem;
         background-color: rgb(157, 157, 157);
     }
+}
+
+.hidden {
+    opacity: 0;
 }

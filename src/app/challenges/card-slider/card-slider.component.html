@@ -1,16 +1,22 @@
 <div class="container">
     <div class="card">
-        <button class="button button__left"></button>
-        <button class="button button__right"></button>
+        <button 
+            (click)="scroll('left')"
+            class="button button__left hidden"
+            [class.hidden]=hideLeftButton></button>
+        <button 
+            (click)="scroll('right')"
+            class="button button__right"
+            [class.hidden]=hideRightButton></button>
         <div class="card__content">
-            <div class="card__content-blocks">
-                <div class="block block__medium"></div>
-                <div class="block block__large"></div>
-                <div class="block block__small"></div>
-                <div class="block block__large"></div>
-                <div class="block block__medium"></div>
-                <div class="block block__medium"></div>
-                <div class="block block__small"></div>   
+            <div #blockContainer class="card__content-blocks">
+                <div #block class="block block__medium"></div>
+                <div #block class="block block__large"></div>
+                <div #block class="block block__small"></div>
+                <div #block class="block block__large"></div>
+                <div #block class="block block__medium"></div>
+                <div #block class="block block__medium"></div>
+                <div #block class="block block__small"></div>   
             </div>
         </div>
     </div>
