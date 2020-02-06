@@ -8,11 +8,13 @@ import { Component, OnInit, ViewChildren, ElementRef, QueryList, ViewChild } fro
 export class CardSliderComponent implements OnInit {
   @ViewChildren('block') blockRefs: QueryList <ElementRef>;
   @ViewChild('blockContainer', {static: false}) blockContainer: ElementRef;
+  @ViewChild('container', {static: false}) container: ElementRef;
   isFarLeftBlock: boolean[] = [true, false, false, false, false, false, false];
   hideLeftButton: boolean = true;
   hideRightButton: boolean = false;
   moveNum: number = 0;
   marginPx: number = 8;
+  
 
   constructor() { }
 
@@ -29,14 +31,17 @@ export class CardSliderComponent implements OnInit {
         currentBlockRef = blockRefsArr[i];
         previousBlockRef = blockRefsArr[i - 1]
         if(direction === 'right') {
-          if(i !== 4) {
+          if(i < 3) {
             this.isFarLeftBlock[i] = false;
             this.isFarLeftBlock[i + 1] = true;
             this.moveNum -= currentBlockRef.nativeElement.clientWidth + this.marginPx;
             this.hideLeftButton = false;
           }
-          if(this.isFarLeftBlock[4]) {
+          else {
             this.hideRightButton = true;
+            let containerSizeDiff: number = this.blockContainer.nativeElement.clientWidth - this.container.nativeElement.clientWidth;
+            containerSizeDiff += this.moveNum;
+            this.moveNum -= containerSizeDiff;
           }
         }
         else if(direction === 'left') {
@@ -54,11 +59,6 @@ export class CardSliderComponent implements OnInit {
       } 
     }
     this.blockContainer.nativeElement.style.transform = `translateX(${this.moveNum}px)`;
-    // this.blockContainer.nativeElement.style.transform = "translate(-64)";
-
-    // move blockContainer based off of block width & margin
-    // update current visible left block
-    // if isFarLeftBlock[0] === true leftbutton is hidden if isFarLeftBlock[6] === true rightbutton is hidden
   }
 
 
