@@ -15,6 +15,7 @@ import { DraggableCardComponent } from './challenges/draggable-card/draggable-ca
 import { CodeEntryComponent } from './challenges/code-entry/code-entry.component';
 import { MultiSelectComponent } from './challenges/multi-select/multi-select.component';
 import { CardSliderComponent } from './challenges/card-slider/card-slider.component';
+import { ValidationFormComponent } from './challenges/validation-form/validation-form.component';
 
 
 const routes: Routes = [
@@ -81,6 +82,10 @@ const routes: Routes = [
       {
         path: 'card-slider',
         component: CardSliderComponent
+      },
+      {
+        path: 'validation-form',
+        component: ValidationFormComponent
       }
   ]
   }

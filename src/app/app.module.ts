@@ -21,6 +21,7 @@ import { DraggableCardModule } from './challenges/draggable-card/draggable-card.
 import { CodeEntryModule } from './challenges/code-entry/code-entry.module';
 import { MultiSelectModule } from './challenges/multi-select/multi-select.module';
 import { CardSliderModule } from './challenges/card-slider/card-slider.module';
+import { ValidationFormModule } from './challenges/validation-form/validation-form.module';
 
 
 
@@ -48,6 +49,7 @@ import { CardSliderModule } from './challenges/card-slider/card-slider.module';
     CodeEntryModule,
     MultiSelectModule,
     CardSliderModule,
+    ValidationFormModule,
     FormsModule
   ],
   providers: [],
