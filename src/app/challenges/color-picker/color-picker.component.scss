@@ -33,8 +33,12 @@
     margin-left: -12rem;
     margin-top: 2rem;
     border-radius: .15rem;
-    
+    // opacity: 0;
+    transition: all .3s;
 
+    &-active {
+        opacity: 1;
+    }
     &__content {
         height: 100%;
         // width: 100%;
@@ -52,11 +56,15 @@
         &-border {
             height: 4.25rem;
             width: 4.25rem;
-            background-color: white;
+            background-color: rgba(255, 255, 255, 0);
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: .25rem;
         }
     }
+}
+
+.highlighted {
+    background-color: rgba(255, 255, 255, 1);
 }

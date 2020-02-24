@@ -2,23 +2,14 @@
     <div class="card">Press Shift + Tab to choose color.</div>
     <div class="popup">
         <div class="popup__content">
-    
-            <div class="popup__color-border">
-                <div class="popup__color"></div>    
+            <div
+                *ngFor="let box of colorsArr; let i = index"
+                [ngClass]="{'highlighted': box.isCurrentlyHighlighted}"
+                class="popup__color-border">
+                <div 
+                    class="popup__color"
+                    [ngStyle]="{'background-color': box.backgroundColor}"></div>    
             </div>
-            <div class="popup__color-border">
-                <div class="popup__color popup__color-blue"></div>    
-            </div>
-            <div class="popup__color-border">
-                <div class="popup__color popup__color-blue"></div>    
-            </div>
-            <div class="popup__color-border">
-                <div class="popup__color popup__color-blue"></div>    
-            </div>
-            <div class="popup__color-border">
-                <div class="popup__color popup__color-blue"></div>    
-            </div>
-            
         </div>
     </div>
 </div>
