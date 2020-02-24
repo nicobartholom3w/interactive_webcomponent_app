@@ -26,7 +26,8 @@ export class ChallengesService {
     { name: 'Multi-Select', imagePath: 'assets/images/challenges_imgs/multi-select.png', link: 'multi-select' },
     { name: 'Card Slider', imagePath: 'assets/images/challenges_imgs/card-slider.png', link: 'card-slider' },
     { name: 'Validation Form', imagePath: 'assets/images/challenges_imgs/validation-form.png', link: 'validation-form' },
-    { name: 'Color Picker', imagePath: 'assets/images/challenges_imgs/color-picker.png', link: 'color-picker' }
+    { name: 'Color Picker', imagePath: 'assets/images/challenges_imgs/color-picker.png', link: 'color-picker' },
+    { name: 'Boiling Timers', imagePath: 'assets/images/challenges_imgs/boiling-timers.png', link: 'boiling-timers' }
     
   ]
 
