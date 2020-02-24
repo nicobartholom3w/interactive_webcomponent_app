@@ -1,14 +1,19 @@
-<div class="container">
+<div #container class="container">
     <div class="card">Press Shift + Tab to choose color.</div>
-    <div class="popup">
+    <div
+        #popup
+        tabindex="-1"
+        [class.popup-active]="isPopupVisible"
+        class="popup">
         <div class="popup__content">
             <div
                 *ngFor="let box of colorsArr; let i = index"
-                [ngClass]="{'highlighted': box.isCurrentlyHighlighted}"
+                [class.highlighted]="box.isCurrentlyHighlighted"
                 class="popup__color-border">
                 <div 
                     class="popup__color"
-                    [ngStyle]="{'background-color': box.backgroundColor}"></div>    
+                    [style.background-color]="box.backgroundColor"
+                    ></div>    
             </div>
         </div>
     </div>
