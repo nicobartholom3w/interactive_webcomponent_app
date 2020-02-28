@@ -1,8 +1,18 @@
 <div class="container">
     <div class="card">
-        <div class="card__content">
-            <input class="input" type="number" placeholder="Enter boiling timer">
+        <form 
+            (ngSubmit)="onSubmit(timerForm)"
+            #timerForm="ngForm"
+            class="card__content">
+            <input 
+                [(ngModel)]="timer"
+                name="timer"
+                class="input" 
+                type="number" placeholder="Enter boiling timer" max="99">
             <button class="button">Start boiling</button>    
+        </form>
+        <div #timers class="timers">
+    
         </div>
     </div>
 </div>
