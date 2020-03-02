@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./custom-scroll.component.scss']
 })
 export class CustomScrollComponent implements OnInit {
-
+  blocksArr: string[] = ['', '', '', '', '', ''];
   constructor() { }
 
   ngOnInit() {
