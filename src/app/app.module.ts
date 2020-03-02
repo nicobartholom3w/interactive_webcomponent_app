@@ -24,6 +24,7 @@ import { CardSliderModule } from './challenges/card-slider/card-slider.module';
 import { ValidationFormModule } from './challenges/validation-form/validation-form.module';
 import { ColorPickerModule } from './challenges/color-picker/color-picker.module';
 import { BoilingTimersModule } from './challenges/boiling-timers/boiling-timers.module';
+import { CustomScrollModule } from './challenges/custom-scroll/custom-scroll.module';
 
 
 
@@ -54,6 +55,7 @@ import { BoilingTimersModule } from './challenges/boiling-timers/boiling-timers.
     ValidationFormModule,
     ColorPickerModule,
     BoilingTimersModule,
+    CustomScrollModule,
     FormsModule
   ],
   providers: [],

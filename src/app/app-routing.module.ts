@@ -18,6 +18,8 @@ import { CardSliderComponent } from './challenges/card-slider/card-slider.compon
 import { ValidationFormComponent } from './challenges/validation-form/validation-form.component';
 import { ColorPickerComponent } from './challenges/color-picker/color-picker.component';
 import { BoilingTimersComponent } from './challenges/boiling-timers/boiling-timers.component';
+import { CustomScrollModule } from './challenges/custom-scroll/custom-scroll.module';
+import { CustomScrollComponent } from './challenges/custom-scroll/custom-scroll.component';
 
 
 const routes: Routes = [
@@ -96,6 +98,10 @@ const routes: Routes = [
       {
         path: 'boiling-timers',
         component: BoilingTimersComponent
+      },
+      {
+        path: 'custom-scroll',
+        component: CustomScrollComponent
       }
   ]
   }
