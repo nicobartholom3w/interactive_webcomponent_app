@@ -1,0 +1,89 @@
+.container {
+    max-height: 100%;
+    min-height: calc(100% - 4rem);
+    width: 100%;
+    background-color: rgb(250, 250, 250);
+    font-family: 'Roboto', sans-serif;
+    padding-top: 4rem;
+    position: relative;
+}
+
+.card {
+    width: 20rem;
+    height: 13rem;
+    margin: 6rem auto 0;
+    border-radius: .15rem;
+    background-color: rgb(75, 55, 124);
+    box-shadow: 0 1px 2px -1px rgba(0, 0, 0, .5); 
+    overflow: hidden; 
+    position: relative;
+}
+
+.video {
+    width: 100%;
+    cursor: pointer;
+
+    &__overlay {
+        height: 11rem;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .4);
+        position: absolute;
+        top: 0;
+        cursor: pointer;
+        transition: all .3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        &:hover {
+            background-color: rgba(0, 0, 0, .6);
+
+            .play-icon {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__controls {
+        height: 1.75rem;
+        display: flex;
+        align-items: center;
+        margin: 0 .25rem;
+        margin-top: -.25rem;
+        
+        &-button {
+            background-color: transparent;
+            border: none;
+            outline: none;
+            color: rgba(255, 255, 255, .7);
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: .5rem;
+            height: 100%;
+            transition: all .3s;
+            padding: 0 .5rem;
+            cursor: pointer;
+
+            &:hover {
+                color: rgba(255, 255, 255, 1);
+            }
+        }
+
+        &-progress {
+            width: 9rem;
+            margin-left: .5rem;
+        }
+    }
+}
+
+.play-icon {
+    fill: white;
+    opacity: .8;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.hidden {
+    opacity: 0;
+    z-index: -2;
+}

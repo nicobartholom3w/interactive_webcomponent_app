@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="card">
+        <video 
+            #videoPlayer
+            (click)="videoToggle($event)"
+            class="video">
+            <source src="/assets/videos/peru.mp4" type="video/mp4">
+        </video>
+        <div 
+            [class.hidden]="isPlaying"
+            (click)="videoToggle($event)"
+            class="video__overlay">
+            <div class="video__controls-play">
+                <svg
+                    [class.hidden]="isPlaying"
+                    (click)="videoToggle($event)" 
+                    class="play-icon" height="60" viewBox="0 0 24 24" width="60">
+                    <path d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M10 16.5l6-4.5-6-4.5v9zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                </svg>
+            </div>
+        </div>
+        <div class="video__controls">
+            <button class="video__controls-button">back 10s</button>
+            <button class="video__controls-button"> skip 10s</button>
+            <button class="video__controls-button">reset</button>
+            <progress class="video__controls-progress" value="0" min="0"></progress>
+        </div>
+    </div>
+</div>

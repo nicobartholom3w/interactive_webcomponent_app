@@ -25,6 +25,7 @@ import { ValidationFormModule } from './challenges/validation-form/validation-fo
 import { ColorPickerModule } from './challenges/color-picker/color-picker.module';
 import { BoilingTimersModule } from './challenges/boiling-timers/boiling-timers.module';
 import { CustomScrollModule } from './challenges/custom-scroll/custom-scroll.module';
+import { VideoPlayerModule } from './challenges/video-player/video-player.module';
 
 
 
@@ -56,6 +57,7 @@ import { CustomScrollModule } from './challenges/custom-scroll/custom-scroll.mod
     ColorPickerModule,
     BoilingTimersModule,
     CustomScrollModule,
+    VideoPlayerModule,
     FormsModule
   ],
   providers: [],

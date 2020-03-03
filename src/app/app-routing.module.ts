@@ -20,6 +20,7 @@ import { ColorPickerComponent } from './challenges/color-picker/color-picker.com
 import { BoilingTimersComponent } from './challenges/boiling-timers/boiling-timers.component';
 import { CustomScrollModule } from './challenges/custom-scroll/custom-scroll.module';
 import { CustomScrollComponent } from './challenges/custom-scroll/custom-scroll.component';
+import { VideoPlayerComponent } from './challenges/video-player/video-player.component';
 
 
 const routes: Routes = [
@@ -102,6 +103,10 @@ const routes: Routes = [
       {
         path: 'custom-scroll',
         component: CustomScrollComponent
+      },
+      {
+        path: 'video-player',
+        component: VideoPlayerComponent
       }
   ]
   }
