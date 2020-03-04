@@ -16,11 +16,11 @@ challengeArr: Challenge[] = this.challengesService.getChallengesArr();
   constructor(private challengesService: ChallengesService,
               private activeRoute: ActivatedRoute) {
     this.challengesService.selectedChallenge
-      .subscribe(
-        (currentChallenge: Challenge) => {
+      .subscribe({
+        next: (currentChallenge: Challenge) => {
           this.challengeInfo = currentChallenge;
         }
-      )
+      })
   }
 
   ngOnInit() {

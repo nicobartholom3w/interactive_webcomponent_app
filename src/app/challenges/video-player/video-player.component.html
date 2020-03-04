@@ -21,10 +21,10 @@
             </div>
         </div>
         <div class="video__controls">
-            <button class="video__controls-button">back 10s</button>
-            <button class="video__controls-button"> skip 10s</button>
-            <button class="video__controls-button">reset</button>
-            <progress class="video__controls-progress" value="0" min="0"></progress>
+            <button (click)="skip('back')" class="video__controls-button">back {{ skipTimeSec }}s</button>
+            <button (click)="skip('forward')" class="video__controls-button"> skip {{ skipTimeSec }}s</button>
+            <button (click)="reset()" class="video__controls-button">reset</button>
+            <progress #progressBar class="video__controls-progress" value="{{ progressValue }}" min="0" max="100"></progress>
         </div>
     </div>
 </div>

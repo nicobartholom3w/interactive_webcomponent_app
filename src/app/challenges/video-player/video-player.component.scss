@@ -24,7 +24,7 @@
     cursor: pointer;
 
     &__overlay {
-        height: 11rem;
+        height: 11.25rem;
         width: 100%;
         background-color: rgba(0, 0, 0, .4);
         position: absolute;
@@ -71,7 +71,20 @@
 
         &-progress {
             width: 9rem;
+            height: .15rem;
             margin-left: .5rem;
+            background-color: white;
+            opacity: .6;
+            border-top-left-radius: .15rem;
+            border-bottom-right-radius: .15rem;
+            display: block;
+            border: none;
+            &::-webkit-progress-value { 
+                background: white; 
+            }
+            &::-moz-progress-bar { 
+                background: white; 
+            }
         }
     }
 }
