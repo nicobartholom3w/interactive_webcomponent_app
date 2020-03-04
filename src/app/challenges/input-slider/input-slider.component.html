@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="card">
+        <div class="card__content">
+            <label class="slider__label" for="slider">{{ value }}</label>
+            <div class="slider__progress-container">
+                <div #sliderProgress class="slider__progress"></div>
+            </div>
+            <input 
+                #sliderInput
+                min="0"
+                max="100"
+                value="{{ value }}"
+                class="slider" 
+                name="slider" 
+                type="range">
+            
+        </div>
+    </div>
+</div>

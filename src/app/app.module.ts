@@ -26,6 +26,8 @@ import { ColorPickerModule } from './challenges/color-picker/color-picker.module
 import { BoilingTimersModule } from './challenges/boiling-timers/boiling-timers.module';
 import { CustomScrollModule } from './challenges/custom-scroll/custom-scroll.module';
 import { VideoPlayerModule } from './challenges/video-player/video-player.module';
+import { InputSliderComponent } from './challenges/input-slider/input-slider.component';
+import { InputSliderModule } from './challenges/input-slider/input-slider.module';
 
 
 
@@ -58,6 +60,7 @@ import { VideoPlayerModule } from './challenges/video-player/video-player.module
     BoilingTimersModule,
     CustomScrollModule,
     VideoPlayerModule,
+    InputSliderModule,
     FormsModule
   ],
   providers: [],

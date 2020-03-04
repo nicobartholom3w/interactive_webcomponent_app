@@ -21,6 +21,7 @@ import { BoilingTimersComponent } from './challenges/boiling-timers/boiling-time
 import { CustomScrollModule } from './challenges/custom-scroll/custom-scroll.module';
 import { CustomScrollComponent } from './challenges/custom-scroll/custom-scroll.component';
 import { VideoPlayerComponent } from './challenges/video-player/video-player.component';
+import { InputSliderComponent } from './challenges/input-slider/input-slider.component';
 
 
 const routes: Routes = [
@@ -107,6 +108,10 @@ const routes: Routes = [
       {
         path: 'video-player',
         component: VideoPlayerComponent
+      },
+      {
+        path: 'input-slider',
+        component: InputSliderComponent
       }
   ]
   }

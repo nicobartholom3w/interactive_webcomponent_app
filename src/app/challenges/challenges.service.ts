@@ -29,7 +29,8 @@ export class ChallengesService {
     { name: 'Color Picker', imagePath: 'assets/images/challenges_imgs/color-picker.png', link: 'color-picker' },
     { name: 'Boiling Timers', imagePath: 'assets/images/challenges_imgs/boiling-timers.png', link: 'boiling-timers' },
     { name: 'Custom Scroll', imagePath: 'assets/images/challenges_imgs/custom-scroll.png', link: 'custom-scroll' },
-    { name: 'Video Player', imagePath: 'assets/images/challenges_imgs/video-player.png', link: 'video-player' }
+    { name: 'Video Player', imagePath: 'assets/images/challenges_imgs/video-player.png', link: 'video-player' },
+    { name: 'Input Slider', imagePath: 'assets/images/challenges_imgs/input-slider.png', link: 'input-slider' }
     
   ]
 
