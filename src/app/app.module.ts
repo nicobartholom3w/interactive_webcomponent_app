@@ -28,6 +28,7 @@ import { CustomScrollModule } from './challenges/custom-scroll/custom-scroll.mod
 import { VideoPlayerModule } from './challenges/video-player/video-player.module';
 import { InputSliderComponent } from './challenges/input-slider/input-slider.component';
 import { InputSliderModule } from './challenges/input-slider/input-slider.module';
+import { AccordionModule } from './challenges/accordion/accordion.module';
 
 
 
@@ -61,6 +62,7 @@ import { InputSliderModule } from './challenges/input-slider/input-slider.module
     CustomScrollModule,
     VideoPlayerModule,
     InputSliderModule,
+    AccordionModule,
     FormsModule
   ],
   providers: [],

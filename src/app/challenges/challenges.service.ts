@@ -30,7 +30,8 @@ export class ChallengesService {
     { name: 'Boiling Timers', imagePath: 'assets/images/challenges_imgs/boiling-timers.png', link: 'boiling-timers' },
     { name: 'Custom Scroll', imagePath: 'assets/images/challenges_imgs/custom-scroll.png', link: 'custom-scroll' },
     { name: 'Video Player', imagePath: 'assets/images/challenges_imgs/video-player.png', link: 'video-player' },
-    { name: 'Input Slider', imagePath: 'assets/images/challenges_imgs/input-slider.png', link: 'input-slider' }
+    { name: 'Input Slider', imagePath: 'assets/images/challenges_imgs/input-slider.png', link: 'input-slider' },
+    { name: 'Accordion', imagePath: 'assets/images/challenges_imgs/accordion.png', link: 'accordion' }
     
   ]
 

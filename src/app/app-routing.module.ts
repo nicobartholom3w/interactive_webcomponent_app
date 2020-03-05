@@ -22,6 +22,7 @@ import { CustomScrollModule } from './challenges/custom-scroll/custom-scroll.mod
 import { CustomScrollComponent } from './challenges/custom-scroll/custom-scroll.component';
 import { VideoPlayerComponent } from './challenges/video-player/video-player.component';
 import { InputSliderComponent } from './challenges/input-slider/input-slider.component';
+import { AccordionComponent } from './challenges/accordion/accordion.component';
 
 
 const routes: Routes = [
@@ -112,6 +113,10 @@ const routes: Routes = [
       {
         path: 'input-slider',
         component: InputSliderComponent
+      },
+      {
+        path: 'accordion',
+        component: AccordionComponent
       }
   ]
   }
