@@ -1,19 +1,28 @@
 <div class="container">
     <div class="card">
-        <form class="form">
+        <form
+            #f="ngForm"
+            (ngSubmit)="onSubmit(f)" 
+            class="form">
             <div class="form__input-section">
                 <input 
+                    [(ngModel)]="todoInput"
+                    name="todoInput"
                     placeholder="Enter task name"
                     class="form__input" 
                     type="text">
-                <button class="form__button">Add task</button>
+                <button type="submit" class="form__button">Add task</button>
             </div>
             <div class="form__bottom">
-                <button class="form__button">Reset tasks</button>
+                <button (click)="clearStorage()" type="button" class="form__button form__button-reset">Reset tasks</button>
             </div>
         </form>
-        <div class="list" role="list">
-
+        <div
+            *ngFor="let item of todoArr"
+            class="list" role="list">
+            <div 
+                *ngIf="item"
+                class="list-item">{{ item }}</div>
         </div>
     </div>
 </div>
