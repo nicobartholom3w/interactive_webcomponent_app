@@ -23,6 +23,7 @@ import { CustomScrollComponent } from './challenges/custom-scroll/custom-scroll.
 import { VideoPlayerComponent } from './challenges/video-player/video-player.component';
 import { InputSliderComponent } from './challenges/input-slider/input-slider.component';
 import { AccordionComponent } from './challenges/accordion/accordion.component';
+import { TodoLocalStorageComponent } from './challenges/todo-local-storage/todo-local-storage.component';
 
 
 const routes: Routes = [
@@ -117,6 +118,10 @@ const routes: Routes = [
       {
         path: 'accordion',
         component: AccordionComponent
+      },
+      {
+        path: 'todo-local-storage',
+        component: TodoLocalStorageComponent
       }
   ]
   }

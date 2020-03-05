@@ -29,6 +29,7 @@ import { VideoPlayerModule } from './challenges/video-player/video-player.module
 import { InputSliderComponent } from './challenges/input-slider/input-slider.component';
 import { InputSliderModule } from './challenges/input-slider/input-slider.module';
 import { AccordionModule } from './challenges/accordion/accordion.module';
+import { TodoLocalStorageModule } from './challenges/todo-local-storage/todo-local-storage.module';
 
 
 
@@ -63,6 +64,7 @@ import { AccordionModule } from './challenges/accordion/accordion.module';
     VideoPlayerModule,
     InputSliderModule,
     AccordionModule,
+    TodoLocalStorageModule,
     FormsModule
   ],
   providers: [],

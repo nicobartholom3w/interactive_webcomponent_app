@@ -31,7 +31,8 @@ export class ChallengesService {
     { name: 'Custom Scroll', imagePath: 'assets/images/challenges_imgs/custom-scroll.png', link: 'custom-scroll' },
     { name: 'Video Player', imagePath: 'assets/images/challenges_imgs/video-player.png', link: 'video-player' },
     { name: 'Input Slider', imagePath: 'assets/images/challenges_imgs/input-slider.png', link: 'input-slider' },
-    { name: 'Accordion', imagePath: 'assets/images/challenges_imgs/accordion.png', link: 'accordion' }
+    { name: 'Accordion', imagePath: 'assets/images/challenges_imgs/accordion.png', link: 'accordion' },
+    { name: 'To-do Local Storage', imagePath: 'assets/images/challenges_imgs/todo-local-storage.png', link: 'todo-local-storage' }
     
   ]
 
