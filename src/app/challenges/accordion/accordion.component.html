@@ -1,20 +1,6 @@
 <div class="container">
     <div class="card">
-        <div class="accordion" *ngFor="let section of accordionArr; let i = index" >
-            <!-- <div class="accordion__section">
-                <h3 class="accordion__section-header">1. Hotel facilities</h3>
-                <div class="accordion__section-desc">We've got everything you need covered, from hairdryer to ski storage at the lobby. Don't worry about that!</div>
-            </div>
-            <div class="br"></div>
-            <div class="accordion__section">
-                <h3 class="accordion__section-header">2. Closest Beach</h3>
-                <div class="accordion__section-desc">We've got no real beach anywhere closely to ou hotel. There are mountains though!</div>
-            </div>
-            <div class="br"></div>
-            <div class="accordion__section">
-                <h3 class="accordion__section-header">3. How to get here</h3>
-                <div class="accordion__section-desc">By plane, you silly.</div>
-            </div> -->
+        <div class="accordion" *ngFor="let section of accordionArr; let i = index">
             <div
                 (click)="openSection(section, i)"
                 [class.accordion__open]="section.active"
