@@ -31,6 +31,7 @@ import { InputSliderModule } from './challenges/input-slider/input-slider.module
 import { AccordionModule } from './challenges/accordion/accordion.module';
 import { TodoLocalStorageModule } from './challenges/todo-local-storage/todo-local-storage.module';
 import { DotContainerModule } from './challenges/dot-container/dot-container.module';
+import { WeeklyCalendarModule } from './challenges/weekly-calendar/weekly-calendar.module';
 
 
 
@@ -67,6 +68,7 @@ import { DotContainerModule } from './challenges/dot-container/dot-container.mod
     AccordionModule,
     TodoLocalStorageModule,
     DotContainerModule,
+    WeeklyCalendarModule,
     FormsModule,
     ReactiveFormsModule
   ],

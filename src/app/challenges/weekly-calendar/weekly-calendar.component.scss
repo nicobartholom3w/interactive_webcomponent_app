@@ -1,0 +1,78 @@
+.container {
+    min-height: 100%;
+    width: 100%;
+    background-color: rgba(142, 68, 173, 1);
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card {
+    width: 24rem;
+    height: 4rem;
+    border-radius: .15rem;
+    background-color: white;
+    margin-top: 9rem;
+    box-shadow: 0 1px 4px -1px rgba(0, 0, 0, .5);
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.button {
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background-color: rgb(222, 222, 222);
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .3s;
+    &__inner {
+        height: 6px;
+        width: 6px;
+        background-color: black;
+        border-radius: 50%;
+        transition: all .3s;
+    }
+
+    &:hover {
+        background-color: rgb(212, 212, 212);
+
+        .button__inner {
+            background-color: rgb(173, 68, 99);
+        }
+    }
+}
+.calendar {
+    display: flex;
+    justify-content: space-between;
+    width: 17rem;
+    font-size: .65rem;
+    
+}
+
+.date {
+    background-color: rgb(232, 232, 232);
+    padding: .25rem;
+    border-radius: .15rem;
+    cursor: pointer;
+    transition: all .3s;
+    
+
+    &-current {
+        color: rgb(173, 68, 99);
+        font-weight: 700;
+        background-color: rgb(227, 227, 227);    
+    }
+    &:hover {
+        background-color: rgb(222, 222, 222);
+    }
+}
+
