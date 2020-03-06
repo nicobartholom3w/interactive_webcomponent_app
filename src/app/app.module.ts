@@ -30,6 +30,7 @@ import { InputSliderComponent } from './challenges/input-slider/input-slider.com
 import { InputSliderModule } from './challenges/input-slider/input-slider.module';
 import { AccordionModule } from './challenges/accordion/accordion.module';
 import { TodoLocalStorageModule } from './challenges/todo-local-storage/todo-local-storage.module';
+import { DotContainerModule } from './challenges/dot-container/dot-container.module';
 
 
 
@@ -65,6 +66,7 @@ import { TodoLocalStorageModule } from './challenges/todo-local-storage/todo-loc
     InputSliderModule,
     AccordionModule,
     TodoLocalStorageModule,
+    DotContainerModule,
     FormsModule,
     ReactiveFormsModule
   ],
