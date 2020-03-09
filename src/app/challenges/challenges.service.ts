@@ -34,7 +34,8 @@ export class ChallengesService {
     { name: 'Accordion', imagePath: 'assets/images/challenges_imgs/accordion.png', link: 'accordion' },
     { name: 'To-do Local Storage', imagePath: 'assets/images/challenges_imgs/todo-local-storage.png', link: 'todo-local-storage' },
     { name: 'Dot Container', imagePath: 'assets/images/challenges_imgs/dot-container.png', link: 'dot-container' },
-    { name: 'Weekly Calendar', imagePath: 'assets/images/challenges_imgs/weekly-calendar.png', link: 'weekly-calendar' }
+    { name: 'Weekly Calendar', imagePath: 'assets/images/challenges_imgs/weekly-calendar.png', link: 'weekly-calendar' },
+    { name: 'Toast', imagePath: 'assets/images/challenges_imgs/toast.png', link: 'toast' }
     
   ]
 

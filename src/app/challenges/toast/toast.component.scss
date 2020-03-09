@@ -1,0 +1,36 @@
+.container {
+    min-height: 100%;
+    width: 100%;
+    background-color: rgba(33, 140, 116, 1);
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.card {
+    width: 16rem;
+    height: 6rem;
+    border-radius: .15rem;
+    background-color: white;
+    margin-top: 12rem;
+    box-shadow: 0 1px 4px -1px rgba(0, 0, 0, .5);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.button {
+    border: none;
+    outline: none;
+    background-color: rgb(232, 232, 232);
+    padding: .5rem;
+    transition: all .3s;
+    margin: .25rem;
+    cursor: pointer;
+    &:hover {
+        background-color: rgb(222, 222, 222);
+    }
+}

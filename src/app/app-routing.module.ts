@@ -25,6 +25,7 @@ import { AccordionComponent } from './challenges/accordion/accordion.component';
 import { TodoLocalStorageComponent } from './challenges/todo-local-storage/todo-local-storage.component';
 import { DotContainerComponent } from './challenges/dot-container/dot-container.component';
 import { WeeklyCalendarComponent } from './challenges/weekly-calendar/weekly-calendar.component';
+import { ToastComponent } from './challenges/toast/toast.component';
 
 
 const routes: Routes = [
@@ -131,6 +132,10 @@ const routes: Routes = [
       {
         path: 'weekly-calendar',
         component: WeeklyCalendarComponent
+      },
+      {
+        path: 'toast',
+        component: ToastComponent
       }
   ]
   }
