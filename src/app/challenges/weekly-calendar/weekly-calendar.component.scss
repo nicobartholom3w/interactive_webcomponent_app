@@ -53,8 +53,8 @@
 .calendar {
     display: flex;
     justify-content: space-between;
-    width: 17rem;
-    font-size: .65rem;
+    width: 18rem;
+    font-size: .6rem;
     
 }
 
@@ -63,7 +63,10 @@
     padding: .25rem;
     border-radius: .15rem;
     cursor: pointer;
-    transition: all .3s;
+    transition: background-color .3s;
+    width: 2.5rem;
+    box-sizing: border-box;
+    text-align: center;
     
 
     &-current {

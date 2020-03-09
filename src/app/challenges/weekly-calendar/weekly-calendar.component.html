@@ -1,18 +1,19 @@
 <div class="container">
     <div class="card">
-        <button class="button">
+        <button 
+            (click)="changeWeek('back')"
+            class="button">
             <div class="button__inner"></div>
         </button>
         <div class="calendar">
-            <div class="date">Mar 1</div>
-            <div class="date">Mar 2</div>
-            <div class="date">Mar 3</div>
-            <div class="date">Mar 4</div>
-            <div class="date">Mar 5</div>
-            <div class="date date-current">Mar 6</div>
-            <div class="date">Mar 7</div>
+            <div
+                [class.date-current]="date.isToday" 
+                *ngFor="let date of currentWeekArr; let i = index" 
+                class="date">{{ date.month }} {{ date.date }}</div>
         </div>
-        <button class="button">
+        <button 
+            (click)="changeWeek('next')"
+            class="button">
             <div class="button__inner"></div>
         </button>
     </div>
