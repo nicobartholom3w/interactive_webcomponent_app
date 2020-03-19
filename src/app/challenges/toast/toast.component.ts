@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastService } from './toast.service';
+import { Toast } from './toast.interface';
 
 @Component({
   selector: 'app-toast',
@@ -6,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./toast.component.scss']
 })
 export class ToastComponent implements OnInit {
-
-  constructor() { }
+  toastArr: Toast[];
+  constructor(private toastService: ToastService) { }
 
   ngOnInit() {
+    this.toastArr = this.toastService.getToast();
   }
 
 }

@@ -1,8 +1,9 @@
 <div class="container">
     <app-toast-notification></app-toast-notification>    
     <div class="card">
-        <button class="button">Toast Message</button>
-        <button class="button">Toast Alert</button>
-    </div>
-    
+        <button 
+            *ngFor="let button of toastArr"
+            (click)="popToast(button.label)"
+            class="button">{{ button.label }}</button>
+    </div>  
 </div>
