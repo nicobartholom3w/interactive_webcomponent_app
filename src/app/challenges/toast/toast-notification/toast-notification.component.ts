@@ -8,6 +8,9 @@ import { Toast } from '../toast.interface';
 })
 export class ToastNotificationComponent implements OnInit {
   @Input() theToast: Toast;
+  @Input() toastText: string;
+  @Input() toastActive: string;
+  @Input() toastRed: string;
   
   constructor() { }
 

@@ -1,7 +1,8 @@
-<div class="card">
+<div 
+    class="card"
+    [class.card__popout]="toastActive"
+    [class.alert]="toastRed">
     <div
-        [class.card__popout]=""
-        [class.card__hidden]=""
-        [class.alert]="" 
-        class="card__text">Just usual message</div>
+        class="card__text">{{ toastText }}
+    </div>
 </div>

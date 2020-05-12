@@ -1,5 +1,9 @@
 <div class="container">
-    <app-toast-notification></app-toast-notification>    
+    <app-toast-notification
+        [toastText]="currentToastText"
+        [toastActive]="isActive"
+        [toastRed]="isRed"
+    ></app-toast-notification>    
     <div class="card">
         <button 
             *ngFor="let button of toastArr"

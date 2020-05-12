@@ -4,10 +4,7 @@
 }
 
 .card {
-    top: 6rem;
-    top: 10rem;
-    // top: 3rem;
-    // bottom: 10rem;
+    top: 4rem;
     position: relative;
     background: rgb(51, 51, 51);
     color: white;
@@ -16,17 +13,25 @@
     border-bottom-right-radius: .15rem;
     border-bottom-left-radius: .15rem;
     box-shadow: 0 1px 4px -1px rgba(0, 0, 0, .5);
-    transition: all .3s;
+    transition: top .3s;
+    visibility: hidden;
 
     &__popout {
         top: 6rem;
+        visibility: visible;
     }
-    &__hidden {
-        visibility: hidden;
-    }
+
 }
 
 .alert {
     background: rgb(238, 82, 83);
 }
 
+@media screen and (max-width: 580px) {
+    .card {
+        top: 8rem;
+        &__popout {
+            top: 10rem;
+        }
+    }
+}

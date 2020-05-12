@@ -12,7 +12,8 @@ export class ToastService {
 
   constructor() { }
 
-  getToast() {
+  getToastArr() {
     return this.toastArr.slice();
   }
+
 }
