@@ -11,9 +11,12 @@ import { stringify } from 'querystring';
 export class ToastComponent implements OnInit {
   toastArr: Toast[];
   currentToast: Toast;
+  currentLabel: string;
   currentToastText: string = "";
+  okayToToast: boolean = true;
   isActive: boolean = false;
   isRed: boolean = false;
+  toastTimeout: any;
   constructor(private toastService: ToastService) { }
 
   ngOnInit() {
@@ -21,20 +24,25 @@ export class ToastComponent implements OnInit {
   }
 
   popToast(label: string) {
-    // setTimeout for events
-    for(let toast of this.toastArr) {
-      if(toast.label === label) {
-        this.currentToast = toast;
-        this.currentToastText = this.currentToast.text;
-        this.isActive = true;
-        if(label == "Toast Alert") {
-          this.isRed = true;
-        }
-        else {
-          this.isRed = false;
+    if(this.okayToToast){
+      this.currentLabel = label;
+      this.okayToToast = false;
+      for(let toast of this.toastArr) {
+        if(toast.label === this.currentLabel) {
+          this.currentToast = toast;
+          this.currentToastText = this.currentToast.text;
+          this.isActive = true;
+          if(this.currentLabel === "Toast Alert") {
+            this.isRed = true;
+          }
+          else {
+            this.isRed = false;
+          }
         }
       }
-    }
-
+      this.toastTimeout = setTimeout(() => {this.isActive = false;}, 5000);
+      let toastHiddenTimeout = setTimeout(() => {this.okayToToast = true}, 5300);
+    }  
   }
+
 }
