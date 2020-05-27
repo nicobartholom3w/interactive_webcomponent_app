@@ -26,6 +26,7 @@ import { TodoLocalStorageComponent } from './challenges/todo-local-storage/todo-
 import { DotContainerComponent } from './challenges/dot-container/dot-container.component';
 import { WeeklyCalendarComponent } from './challenges/weekly-calendar/weekly-calendar.component';
 import { ToastComponent } from './challenges/toast/toast.component';
+import { PagingComponent } from './challenges/paging/paging.component';
 
 
 const routes: Routes = [
@@ -136,6 +137,10 @@ const routes: Routes = [
       {
         path: 'toast',
         component: ToastComponent
+      },
+      {
+        path: 'paging',
+        component: PagingComponent
       }
   ]
   }

@@ -33,6 +33,7 @@ import { TodoLocalStorageModule } from './challenges/todo-local-storage/todo-loc
 import { DotContainerModule } from './challenges/dot-container/dot-container.module';
 import { WeeklyCalendarModule } from './challenges/weekly-calendar/weekly-calendar.module';
 import { ToastModule } from './challenges/toast/toast.module';
+import { PagingModule } from './challenges/paging/paging.module';
 
 
 
@@ -71,6 +72,7 @@ import { ToastModule } from './challenges/toast/toast.module';
     DotContainerModule,
     WeeklyCalendarModule,
     ToastModule,
+    PagingModule,
     FormsModule,
     ReactiveFormsModule
   ],

@@ -1,0 +1,22 @@
+.container {
+    min-height: 100%;
+    width: 100%;
+    background-color: rgba(33, 140, 116, 1);
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.button {
+    margin: 8rem auto 0rem;
+    width: 20rem;
+    padding: .5rem;
+    border-radius: .25rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all .3s;
+    &:hover {
+        background-color: rgb(225, 225, 225);
+    }
+}
