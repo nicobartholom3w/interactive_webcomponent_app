@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { PagingService } from './paging.service';
+import { Config } from 'protractor';
 
 @Component({
   selector: 'app-paging',
@@ -6,10 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./paging.component.scss']
 })
 export class PagingComponent implements OnInit {
-
-  constructor() { }
+  pagingInfo: Config;
+  numberOfItems: number = 10;
+  namesArr: string[] = [];
+  currentCount: number = 0;
+  constructor(private pagingService: PagingService) { }
 
   ngOnInit() {
+  }
+
+  showPagingInfo() {
+    this.pagingService.getPagingInfo()
+      .subscribe((data: Config) => {
+        for(let i = 0; i < this.numberOfItems; i++) {
+          this.namesArr.push(data.results[this.currentCount].name);
+          this.currentCount++;
+        }
+      });
   }
 
 }

@@ -1,5 +1,13 @@
 <div class="container">
     <div class="card">
-        <button class="button">Load Cards</button>
+        <div class="card__info">
+            <div 
+                *ngFor="let pokemon of namesArr"
+                class="card__info-name">{{ pokemon }}</div>
+        </div>
+        <button 
+            (click)="showPagingInfo()"
+            class="button">Load Cards</button> 
     </div>
+    
 </div>
