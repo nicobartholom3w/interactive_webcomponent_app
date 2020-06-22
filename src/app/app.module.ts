@@ -34,6 +34,7 @@ import { DotContainerModule } from './challenges/dot-container/dot-container.mod
 import { WeeklyCalendarModule } from './challenges/weekly-calendar/weekly-calendar.module';
 import { ToastModule } from './challenges/toast/toast.module';
 import { PagingModule } from './challenges/paging/paging.module';
+import { OnboardingModule } from './challenges/onboarding/onboarding.module';
 
 
 
@@ -74,6 +75,7 @@ import { PagingModule } from './challenges/paging/paging.module';
     WeeklyCalendarModule,
     ToastModule,
     PagingModule,
+    OnboardingModule,
     FormsModule,
     ReactiveFormsModule
   ],

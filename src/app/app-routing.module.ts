@@ -27,6 +27,7 @@ import { DotContainerComponent } from './challenges/dot-container/dot-container.
 import { WeeklyCalendarComponent } from './challenges/weekly-calendar/weekly-calendar.component';
 import { ToastComponent } from './challenges/toast/toast.component';
 import { PagingComponent } from './challenges/paging/paging.component';
+import { OnboardingComponent } from './challenges/onboarding/onboarding.component';
 
 
 const routes: Routes = [
@@ -141,6 +142,10 @@ const routes: Routes = [
       {
         path: 'paging',
         component: PagingComponent
+      },
+      {
+        path: 'onboarding',
+        component: OnboardingComponent
       }
   ]
   }

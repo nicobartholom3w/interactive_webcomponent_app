@@ -36,7 +36,8 @@ export class ChallengesService {
     { name: 'Dot Container', imagePath: 'assets/images/challenges_imgs/dot-container.png', link: 'dot-container' },
     { name: 'Weekly Calendar', imagePath: 'assets/images/challenges_imgs/weekly-calendar.png', link: 'weekly-calendar' },
     { name: 'Toast', imagePath: 'assets/images/challenges_imgs/toast.png', link: 'toast' },
-    { name: 'Paging', imagePath: 'assets/images/challenges_imgs/paging.png', link: 'paging' }
+    { name: 'Paging', imagePath: 'assets/images/challenges_imgs/paging.png', link: 'paging' },
+    { name: 'Onboarding', imagePath: 'assets/images/challenges_imgs/onboarding.png', link: 'onboarding' }
     
   ]
 

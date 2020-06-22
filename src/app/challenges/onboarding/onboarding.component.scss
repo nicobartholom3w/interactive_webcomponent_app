@@ -1,0 +1,31 @@
+.container {
+    min-height: 100%;
+    width: 100%;
+    background-color: rgba(250, 250, 250, 1);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.button {
+
+}
+
+.rectangle {
+
+    &__green {
+
+    }
+
+    &__blue {
+
+    }
+}
+
+.circle {
+
+    &__red {
+        
+    }
+}
