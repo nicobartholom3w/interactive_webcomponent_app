@@ -10,6 +10,7 @@
 .button {
     margin: 0 auto 0rem;
     margin-bottom: 1rem;
+    background-color: white;
     width: 20rem;
     padding: .5rem;
     border-radius: .15rem;
@@ -18,11 +19,21 @@
     cursor: pointer;
     transition: all .3s;
     box-shadow: 0 1px 4px -1px rgba(0, 0, 0, .5);
+
+    &__loading {
+        animation: .7s ease-in-out infinite loading;
+        cursor: wait;
+    }
     &:hover {
         background-color: rgb(225, 225, 225);
     }
 }
 
+@keyframes loading {
+    0% { opacity: 1; }
+    50% { opacity: .5; }
+    100% { opacity: 1; }
+}
 .card {
     max-width: 20rem;
     min-width: 20rem;
@@ -34,9 +45,12 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+        overflow: hidden;
+        transition: all .3s;
         &-name {
             background-color: white;
             font-size: .65rem;
+            text-transform: capitalize;
             max-width: 8.25rem;
             min-width: 8.25rem;
             border-radius: .15rem;
