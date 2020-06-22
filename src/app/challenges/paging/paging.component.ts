@@ -30,7 +30,7 @@ export class PagingComponent implements OnInit {
               this.namesArr.push(data.results[this.currentCount].name);
               this.currentCount++;
             }
-            this.height += 275;
+            this.height += 15;
             console.log(this.height);
             this.isLoading = false;
           }, 1500);
