@@ -16,7 +16,7 @@
     right: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0, 0, 0, .7);
+    z-index: 1;
 }
 .card {
     position: relative;
@@ -28,7 +28,12 @@
 }
 
 .active {
-    z-index: 2;
+    z-index: 3;
+
+    &__overlay {
+        z-index: 2;
+        background-color: rgba(0, 0, 0, .7);
+    }
 }
 
 .button {
@@ -55,6 +60,7 @@
 .rectangle {
     border-radius: .15rem;
     position: absolute;
+    cursor: pointer;
     &__green {
         top: 2rem;
         height: 4rem;
@@ -74,6 +80,7 @@
 .circle {
     border-radius: 50%;
     position: absolute;
+    cursor: pointer;
     &__red {
         bottom: 2rem;
         left: 14rem;
