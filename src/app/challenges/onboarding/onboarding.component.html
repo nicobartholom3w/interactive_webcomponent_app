@@ -6,19 +6,15 @@
         <button
             (click)="onboarding(0)"
             [class.active]="onboardingActiveArr[0]"
-            class="button">
-                Start onboarding</button>
+            class="button"
+        >
+            Start onboarding
+        </button>
         <div
-            (click)="onboarding(1)" 
-            [class.active]="onboardingActiveArr[1]"
-            class="rectangle rectangle__green"></div>
-        <div
-            (click)="onboarding(2)"
-            [class.active]="onboardingActiveArr[2]"
-            class="rectangle rectangle__blue"></div>
-        <div
-            (click)="onboarding(3)"
-            [class.active]="onboardingActiveArr[3]"
-            class="circle circle__red"></div>
+            *ngFor="let shape of shapes"
+            (click)="onboarding(shape.index)"
+            [class.active]="onboardingActiveArr[shape.index]"
+            class="{{ shape.class }}"
+        ></div>
     </div>
 </div>

@@ -1,0 +1,19 @@
+<div
+    #container
+    (click)="onMouseClick($event)"
+    class="container">
+        <div 
+            #ripple
+            *ngFor="let ripple of clickedArr"
+            class="ripple"
+            [style.left.px]="animationLeftDistance"
+            [style.top.px]="animationTopDistance"
+            >
+        </div>
+        <div 
+            #cursor
+            class="cursor"
+            [style.left.px]="cursorLeftDistance"
+            [style.top.px]="cursorTopDistance">
+        </div>
+</div>

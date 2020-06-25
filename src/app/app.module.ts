@@ -35,6 +35,7 @@ import { WeeklyCalendarModule } from './challenges/weekly-calendar/weekly-calend
 import { ToastModule } from './challenges/toast/toast.module';
 import { PagingModule } from './challenges/paging/paging.module';
 import { OnboardingModule } from './challenges/onboarding/onboarding.module';
+import { RippleCursorModule } from './challenges/ripple-cursor/ripple-cursor.module';
 
 
 
@@ -76,6 +77,7 @@ import { OnboardingModule } from './challenges/onboarding/onboarding.module';
     ToastModule,
     PagingModule,
     OnboardingModule,
+    RippleCursorModule,
     FormsModule,
     ReactiveFormsModule
   ],

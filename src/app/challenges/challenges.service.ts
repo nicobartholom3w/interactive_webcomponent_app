@@ -37,7 +37,8 @@ export class ChallengesService {
     { name: 'Weekly Calendar', imagePath: 'assets/images/challenges_imgs/weekly-calendar.png', link: 'weekly-calendar' },
     { name: 'Toast', imagePath: 'assets/images/challenges_imgs/toast.png', link: 'toast' },
     { name: 'Paging', imagePath: 'assets/images/challenges_imgs/paging.png', link: 'paging' },
-    { name: 'Onboarding', imagePath: 'assets/images/challenges_imgs/onboarding.png', link: 'onboarding' }
+    { name: 'Onboarding', imagePath: 'assets/images/challenges_imgs/onboarding.png', link: 'onboarding' },
+    { name: 'Ripple Cursor', imagePath: 'assets/images/challenges_imgs/ripple-cursor.png', link: 'ripple-cursor' }
     
   ]
 

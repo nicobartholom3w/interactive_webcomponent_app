@@ -1,0 +1,42 @@
+.container {
+    min-height: 100%;
+    width: 100%;
+    background-color: rgba(250, 250, 250, 1);
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    position: relative;
+    cursor: none;
+    position: relative;
+}
+
+.cursor {
+    position: absolute;
+    height: 8px;
+    width: 8px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+.ripple {
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    color: red;
+    border: 1px solid;
+    border-radius: 50%;
+    opacity: 0;
+    animation: 1s clicked;
+}
+
+@keyframes clicked {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+

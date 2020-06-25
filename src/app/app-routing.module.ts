@@ -28,6 +28,7 @@ import { WeeklyCalendarComponent } from './challenges/weekly-calendar/weekly-cal
 import { ToastComponent } from './challenges/toast/toast.component';
 import { PagingComponent } from './challenges/paging/paging.component';
 import { OnboardingComponent } from './challenges/onboarding/onboarding.component';
+import { RippleCursorComponent } from './challenges/ripple-cursor/ripple-cursor.component';
 
 
 const routes: Routes = [
@@ -146,6 +147,10 @@ const routes: Routes = [
       {
         path: 'onboarding',
         component: OnboardingComponent
+      },
+      {
+        path: 'ripple-cursor',
+        component: RippleCursorComponent
       }
   ]
   }
