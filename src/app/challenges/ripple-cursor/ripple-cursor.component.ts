@@ -12,9 +12,6 @@ export class RippleCursorComponent implements OnInit {
       event.stopPropagation();
       this.cursorLeftDistance = event.clientX - this.cursorCenter;
       this.cursorTopDistance = event.clientY - this.cursorCenter - this.container.nativeElement.offsetTop;
-      if(this.clickedArr.length > 0) {
-        this.setRippleLocation(event);
-      }
     }
   cursorLeftDistance: number;
   cursorTopDistance: number;
