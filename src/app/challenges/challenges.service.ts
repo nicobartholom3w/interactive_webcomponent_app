@@ -38,7 +38,8 @@ export class ChallengesService {
     { name: 'Toast', imagePath: 'assets/images/challenges_imgs/toast.png', link: 'toast' },
     { name: 'Paging', imagePath: 'assets/images/challenges_imgs/paging.png', link: 'paging' },
     { name: 'Onboarding', imagePath: 'assets/images/challenges_imgs/onboarding.png', link: 'onboarding' },
-    { name: 'Ripple Cursor', imagePath: 'assets/images/challenges_imgs/ripple-cursor.png', link: 'ripple-cursor' }
+    { name: 'Ripple Cursor', imagePath: 'assets/images/challenges_imgs/ripple-cursor.png', link: 'ripple-cursor' },
+    { name: 'Poke Suggest', imagePath: 'assets/images/challenges_imgs/poke-suggest.png', link: 'poke-suggest' }
     
   ]
 

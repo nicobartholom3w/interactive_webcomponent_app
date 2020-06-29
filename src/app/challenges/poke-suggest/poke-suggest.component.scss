@@ -1,0 +1,45 @@
+.container {
+    min-height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.card { 
+    background-color: rgb(253, 202, 8);
+    height: 3rem;
+    width: 16rem;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    &__border {
+        margin-top: 8rem;
+        background-color: rgb(50, 100, 172);
+        height: 3.75rem;
+        width: 16.75rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+    }
+
+    &__input {
+        border: none;
+        outline: none;
+        background-color: transparent;
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+        width: 14.5rem;
+        font-size: .6rem;
+        padding-bottom: .5rem;
+        margin-top: .25rem;
+    }
+}
+
+.ball {
+
+}

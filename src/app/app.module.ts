@@ -36,6 +36,7 @@ import { ToastModule } from './challenges/toast/toast.module';
 import { PagingModule } from './challenges/paging/paging.module';
 import { OnboardingModule } from './challenges/onboarding/onboarding.module';
 import { RippleCursorModule } from './challenges/ripple-cursor/ripple-cursor.module';
+import { PokeSuggestModule } from './challenges/poke-suggest/poke-suggest.module';
 
 
 
@@ -78,6 +79,7 @@ import { RippleCursorModule } from './challenges/ripple-cursor/ripple-cursor.mod
     PagingModule,
     OnboardingModule,
     RippleCursorModule,
+    PokeSuggestModule,
     FormsModule,
     ReactiveFormsModule
   ],

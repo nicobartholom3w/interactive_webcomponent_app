@@ -29,6 +29,7 @@ import { ToastComponent } from './challenges/toast/toast.component';
 import { PagingComponent } from './challenges/paging/paging.component';
 import { OnboardingComponent } from './challenges/onboarding/onboarding.component';
 import { RippleCursorComponent } from './challenges/ripple-cursor/ripple-cursor.component';
+import { PokeSuggestComponent } from './challenges/poke-suggest/poke-suggest.component';
 
 
 const routes: Routes = [
@@ -151,6 +152,10 @@ const routes: Routes = [
       {
         path: 'ripple-cursor',
         component: RippleCursorComponent
+      },
+      {
+        path: 'poke-suggest',
+        component: PokeSuggestComponent
       }
   ]
   }
