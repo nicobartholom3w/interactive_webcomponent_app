@@ -17,6 +17,7 @@
     justify-content: center;
     align-items: center;
     box-sizing: border-box;
+    position: relative;
     &__border {
         margin-top: 8rem;
         background-color: rgb(50, 100, 172);
@@ -41,5 +42,35 @@
 }
 
 .ball {
+    position: absolute;
+    overflow: hidden;
+    left: 14.75rem;
+    bottom: 1.75rem;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__inside {
+        position: absolute;
+        z-index: 1;
+        height: .6rem;
+        width: .6rem;
+        border-radius: 50%;
+        background-color: white;
+        border: 2px solid black;
+    }
 
+    &__red {
+        position: relative;
+        left: 2.4rem;
+        transform: rotate(-60deg);
+        background-color: red;
+        border: 2px solid black;
+        height: 10rem;
+        width: 10rem;
+    }
 }
