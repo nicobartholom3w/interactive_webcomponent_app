@@ -1,15 +1,64 @@
 import { Component, OnInit } from '@angular/core';
+import { PokeSuggestService } from './poke-suggest.service';
+import { Config } from 'protractor';
+import { SearchFilterPipe } from 'src/app/search-filter.pipe';
+import { fromEvent, Subject } from 'rxjs';
+import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
+import { SimplePokemonBasePayload, SimplePokemonBase } from './poke-suggest.interface';
 
 @Component({
   selector: 'app-poke-suggest',
   templateUrl: './poke-suggest.component.html',
   styleUrls: ['./poke-suggest.component.scss']
 })
+
 export class PokeSuggestComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+  pokeMatchesArr: SimplePokemonBase[] = [];
+  searchText: string;
+  searchTextUpdate = new Subject <string>();
+  
+  constructor(private pokeSuggService: PokeSuggestService) { 
+    // Debounce search
+    this.searchTextUpdate.pipe(
+      debounceTime(400),
+      distinctUntilChanged())
+        .subscribe(value => {
+          this.searchPokemon(value);
+        })
   }
 
+  ngOnInit() {}
+
+  searchPokemon(input: string) {
+    this.pokeSuggService.getPokemon()
+      .subscribe({
+        next: (pokemon: SimplePokemonBasePayload) => {
+          this.narrowDownPokemon(input, pokemon.results);
+        },
+        error: (error) => {
+          alert("This database is currently unavailable.");
+        }
+      });
+  }
+
+  narrowDownPokemon(pokeSearch: string, pokeObjArr: SimplePokemonBase[]): SimplePokemonBase[] {
+    this.pokeMatchesArr = [];
+    for(let i = 0; i < pokeObjArr.length; i++) {
+      let currPokemon: SimplePokemonBase = pokeObjArr[i];
+      for(let k = 0; k < pokeSearch.length; k++) {
+        if(pokeSearch[k] === currPokemon.name[k]) {
+          if(k === pokeSearch.length - 1) {
+            this.pokeMatchesArr.push(currPokemon);
+            break;
+          }
+        }
+        else {
+          break;
+        }
+      }
+    }
+    console.log(this.pokeMatchesArr);
+    return this.pokeMatchesArr;
+    
+  }
 }

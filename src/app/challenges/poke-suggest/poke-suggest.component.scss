@@ -27,6 +27,8 @@
         justify-content: center;
         align-items: center;
         border-radius: 4px;
+
+       
     }
 
     &__input {
@@ -38,6 +40,11 @@
         font-size: .6rem;
         padding-bottom: .5rem;
         margin-top: .25rem;
+        transition: all .3s;
+
+        &:focus {
+            border-bottom: 1px solid rgba(0, 0, 0, 1);
+        }
     }
 }
 
@@ -72,5 +79,28 @@
         border: 2px solid black;
         height: 10rem;
         width: 10rem;
+    }
+}
+
+.results {
+    position: absolute;
+    background-color: white;
+    width: 14.75rem;
+    border-radius: .15rem;
+    box-shadow: 0 .5px 2px .5px rgba(0, 0, 0, .3);
+    top: 2.75rem;
+    padding: .25rem;
+    box-sizing: border-box;
+
+    &__name {
+        font-size: .65rem;
+        padding: .25rem;
+        border-radius: .15rem;
+        transition: all .3s;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(0, 0, 0, .1);
+        }
     }
 }
