@@ -14,15 +14,27 @@
                 <div class="ball__red"></div>
             </div>
             <div
-                *ngIf=false 
+                *ngIf=isMatches 
                 class="results">
                 <div 
-                    *ngFor="let name of pokemon"
-                    class="results__name">{{ name }}</div>
+                    (click)="pokemonSelected(pokemon)"
+                    *ngFor="let pokemon of pokeMatchesArr"
+                    class="results__name">{{ pokemon.name }}</div>
+            </div>
+             <div
+                *ngIf="isPokemonSelected" 
+                class="pokemon">
+                <div class="pokemon__container">
+                    <div class="pokemon__text">You chose {{ selectedPokemonDetails.name | titlecase }}!</div>
+                    <img 
+                        src="{{ selectedPokemonDetails.sprites.front_default }}"
+                        class="pokemon__img">
+                </div>
             </div>
         </div>
+       
     </div>
-
+   
 
     
 </div>

@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { SimplePokemonBasePayload } from './poke-suggest.interface';
+import { SimplePokemonBasePayload, SimplePokemonBaseDetails } from './poke-suggest.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class PokeSuggestService {
   pokeUrl = 'https://pokeapi.co/api/v2/pokemon?offset=0&limit=964';
-  pokeDeetsUrl = "https://pokeapi.co/api/v2/pokemon/";
   
   constructor(private http: HttpClient) { }
 
@@ -20,6 +19,10 @@ export class PokeSuggestService {
       else {
         return;
       }
+    }
+
+    getPokemonDeets(pokeLink: string):Observable<SimplePokemonBaseDetails> {
+      return this.http.get<SimplePokemonBaseDetails>(pokeLink);
     }
   
 }

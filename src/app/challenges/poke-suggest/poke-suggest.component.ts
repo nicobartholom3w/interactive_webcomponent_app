@@ -4,7 +4,7 @@ import { Config } from 'protractor';
 import { SearchFilterPipe } from 'src/app/search-filter.pipe';
 import { fromEvent, Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
-import { SimplePokemonBasePayload, SimplePokemonBase } from './poke-suggest.interface';
+import { SimplePokemonBasePayload, SimplePokemonBase, SimplePokemonBaseDetails } from './poke-suggest.interface';
 
 @Component({
   selector: 'app-poke-suggest',
@@ -14,9 +14,12 @@ import { SimplePokemonBasePayload, SimplePokemonBase } from './poke-suggest.inte
 
 export class PokeSuggestComponent implements OnInit {
   pokeMatchesArr: SimplePokemonBase[] = [];
+  isMatches: boolean = false;
+  isPokemonSelected: boolean = false;
+  selectedPokemonDetails: SimplePokemonBaseDetails;
   searchText: string;
   searchTextUpdate = new Subject <string>();
-  
+
   constructor(private pokeSuggService: PokeSuggestService) { 
     // Debounce search
     this.searchTextUpdate.pipe(
@@ -24,6 +27,9 @@ export class PokeSuggestComponent implements OnInit {
       distinctUntilChanged())
         .subscribe(value => {
           this.searchPokemon(value);
+          if(value.length === 0) {
+            this.isMatches = false;
+          }
         })
   }
 
@@ -49,6 +55,9 @@ export class PokeSuggestComponent implements OnInit {
         if(pokeSearch[k] === currPokemon.name[k]) {
           if(k === pokeSearch.length - 1) {
             this.pokeMatchesArr.push(currPokemon);
+            if(this.pokeMatchesArr.length > 0) {
+              this.isMatches = true;
+            }
             break;
           }
         }
@@ -57,8 +66,22 @@ export class PokeSuggestComponent implements OnInit {
         }
       }
     }
-    console.log(this.pokeMatchesArr);
-    return this.pokeMatchesArr;
-    
+    return this.pokeMatchesArr;  
+  }
+
+  pokemonSelected(selectedPokemon: SimplePokemonBase) {
+    this.pokeSuggService.getPokemonDeets(selectedPokemon.url)
+      .subscribe({
+        next: (pokemonDeets: SimplePokemonBaseDetails) => {
+          console.log(pokemonDeets);
+          this.selectedPokemonDetails = pokemonDeets;
+          this.isPokemonSelected = true;
+          this.isMatches = false;
+          console.log(this.selectedPokemonDetails.name);
+        },
+        error: (error) => {
+          alert("This database is currently unavailable.");
+        }
+      });
   }
 }
