@@ -19,7 +19,7 @@
                 <div 
                     (click)="pokemonSelected(pokemon)"
                     *ngFor="let pokemon of pokeMatchesArr"
-                    class="results__name">{{ pokemon.name }}</div>
+                    class="results__name">{{ pokemon.name | titlecase }}</div>
             </div>
              <div
                 *ngIf="isPokemonSelected" 

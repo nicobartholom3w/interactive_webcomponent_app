@@ -85,13 +85,16 @@
 .results {
     position: absolute;
     background-color: white;
-    width: 14.75rem;
+    width: 14.65rem;
     border-radius: .15rem;
     box-shadow: 0 .5px 2px .5px rgba(0, 0, 0, .3);
     top: 2.75rem;
     padding: .25rem;
     box-sizing: border-box;
     z-index: 2;
+    max-height: 9.25rem;
+    overflow: auto;
+
     &__name {
         font-size: .65rem;
         padding: .25rem;

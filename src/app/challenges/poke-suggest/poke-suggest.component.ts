@@ -73,11 +73,9 @@ export class PokeSuggestComponent implements OnInit {
     this.pokeSuggService.getPokemonDeets(selectedPokemon.url)
       .subscribe({
         next: (pokemonDeets: SimplePokemonBaseDetails) => {
-          console.log(pokemonDeets);
           this.selectedPokemonDetails = pokemonDeets;
           this.isPokemonSelected = true;
           this.isMatches = false;
-          console.log(this.selectedPokemonDetails.name);
         },
         error: (error) => {
           alert("This database is currently unavailable.");
