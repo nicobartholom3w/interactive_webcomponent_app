@@ -4,6 +4,8 @@
             <input 
                 [(ngModel)]="searchText"
                 (ngModelChange)="this.searchTextUpdate.next($event)"
+                (blur)="onBlur()"
+                (focus)="onFocus()"
                 type="text"
                 id="searchText" 
                 class="card__input"

@@ -19,6 +19,7 @@ export class PokeSuggestComponent implements OnInit {
   selectedPokemonDetails: SimplePokemonBaseDetails;
   searchText: string;
   searchTextUpdate = new Subject <string>();
+  
 
   constructor(private pokeSuggService: PokeSuggestService) { 
     // Debounce search
@@ -26,6 +27,7 @@ export class PokeSuggestComponent implements OnInit {
       debounceTime(400),
       distinctUntilChanged())
         .subscribe(value => {
+          value = value.toLowerCase();
           this.searchPokemon(value);
           if(value.length === 0) {
             this.isMatches = false;
@@ -62,9 +64,13 @@ export class PokeSuggestComponent implements OnInit {
           }
         }
         else {
+          
           break;
         }
       }
+    }
+    if(this.pokeMatchesArr.length === 0) {
+      this.isMatches = false;
     }
     return this.pokeMatchesArr;  
   }
@@ -76,10 +82,22 @@ export class PokeSuggestComponent implements OnInit {
           this.selectedPokemonDetails = pokemonDeets;
           this.isPokemonSelected = true;
           this.isMatches = false;
+          this.searchText = "";
         },
         error: (error) => {
           alert("This database is currently unavailable.");
         }
       });
   }
+
+    onBlur() {
+      this.isMatches = false;
+    }
+
+    onFocus() {
+      if(this.searchText.length > 0 && this.pokeMatchesArr.length > 0) {
+        this.isMatches = true;
+      }
+    }
+
 }
