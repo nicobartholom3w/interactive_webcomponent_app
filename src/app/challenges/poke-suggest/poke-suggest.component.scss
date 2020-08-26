@@ -105,6 +105,10 @@
         &:hover {
             background-color: rgba(0, 0, 0, .1);
         }
+
+        &:focus {
+            background-color: rgba(0, 0, 0, .1);
+        }
     }
 }
 
@@ -119,10 +123,11 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-
+        align-items: center;
     }
     &__text {
-
+        text-align: center;
+        max-width: 15rem;
     }
 
     &__img {
@@ -130,4 +135,9 @@
         height: 10rem;
         width: auto;
     }
+}
+
+.nowrap {
+    white-space: nowrap;
+    font-weight: bold;
 }

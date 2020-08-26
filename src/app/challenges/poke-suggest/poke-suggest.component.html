@@ -4,7 +4,6 @@
             <input 
                 [(ngModel)]="searchText"
                 (ngModelChange)="this.searchTextUpdate.next($event)"
-                (blur)="onBlur()"
                 (focus)="onFocus()"
                 type="text"
                 id="searchText" 
@@ -19,6 +18,9 @@
                 *ngIf=isMatches 
                 class="results">
                 <div 
+                    tabindex="0"
+                    role="button"
+                    (keyup.enter)="pokemonSelected(pokemon)"
                     (click)="pokemonSelected(pokemon)"
                     *ngFor="let pokemon of pokeMatchesArr"
                     class="results__name">{{ pokemon.name | titlecase }}</div>
@@ -27,7 +29,7 @@
                 *ngIf="isPokemonSelected" 
                 class="pokemon">
                 <div class="pokemon__container">
-                    <div class="pokemon__text">You chose {{ selectedPokemonDetails.name | titlecase }}!</div>
+                    <div class="pokemon__text">You chose... <span class="nowrap">{{ selectedPokemonDetails.name | titlecase }}!</span></div>
                     <img 
                         src="{{ selectedPokemonDetails.sprites.front_default }}"
                         class="pokemon__img">

@@ -64,7 +64,6 @@ export class PokeSuggestComponent implements OnInit {
           }
         }
         else {
-          
           break;
         }
       }
@@ -82,7 +81,7 @@ export class PokeSuggestComponent implements OnInit {
           this.selectedPokemonDetails = pokemonDeets;
           this.isPokemonSelected = true;
           this.isMatches = false;
-          this.searchText = "";
+          // this.searchText = "";
         },
         error: (error) => {
           alert("This database is currently unavailable.");
@@ -90,14 +89,10 @@ export class PokeSuggestComponent implements OnInit {
       });
   }
 
-    onBlur() {
-      this.isMatches = false;
+  onFocus() {
+    if(this.searchText.length > 0 && this.pokeMatchesArr.length > 0) {
+      this.isMatches = true;
     }
-
-    onFocus() {
-      if(this.searchText.length > 0 && this.pokeMatchesArr.length > 0) {
-        this.isMatches = true;
-      }
-    }
+  }
 
 }
