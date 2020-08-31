@@ -30,6 +30,7 @@ import { PagingComponent } from './challenges/paging/paging.component';
 import { OnboardingComponent } from './challenges/onboarding/onboarding.component';
 import { RippleCursorComponent } from './challenges/ripple-cursor/ripple-cursor.component';
 import { PokeSuggestComponent } from './challenges/poke-suggest/poke-suggest.component';
+import { HighlightHashtagsComponent } from './challenges/highlight-hashtags/highlight-hashtags.component';
 
 
 const routes: Routes = [
@@ -156,6 +157,10 @@ const routes: Routes = [
       {
         path: 'poke-suggest',
         component: PokeSuggestComponent
+      },
+      {
+        path: 'highlight-hashtags',
+        component: HighlightHashtagsComponent
       }
   ]
   }

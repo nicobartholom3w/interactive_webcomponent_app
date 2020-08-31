@@ -38,6 +38,7 @@ import { OnboardingModule } from './challenges/onboarding/onboarding.module';
 import { RippleCursorModule } from './challenges/ripple-cursor/ripple-cursor.module';
 import { PokeSuggestModule } from './challenges/poke-suggest/poke-suggest.module';
 import { SearchFilterPipe } from './search-filter.pipe';
+import { HighlightHashtagsModule } from './challenges/highlight-hashtags/highlight-hashtags.module';
 
 
 
@@ -82,6 +83,7 @@ import { SearchFilterPipe } from './search-filter.pipe';
     OnboardingModule,
     RippleCursorModule,
     PokeSuggestModule,
+    HighlightHashtagsModule,
     FormsModule,
     ReactiveFormsModule
   ],
