@@ -12,6 +12,38 @@
     
 }
 
+.text {
+    &_backdrop {
+        position: relative;
+        width: 100%;
+        
+    }
+    &_highlights {
+        color: rgba(22, 126, 202, .2);
+        position: absolute;
+        font-family: 'Roboto', sans-serif;
+        font-size: .75rem;
+        top: .28rem;
+        left: .28rem;
+        // max-width: 286px;
+        z-index: 1;
+        max-width: 18rem;
+        overflow-y: scroll;
+        word-break: break-all;
+        &::-webkit-scrollbar {
+            width: .25rem;
+            outline: none;
+            color: transparent;
+            background-color: transparent;
+          }
+    }
+
+    &_span {
+        font-family: 'Roboto', sans-serif;
+        font-size: .75rem;
+    }
+}
+
 .input {
     border: solid 1px rgb(222, 222, 222);
     outline: none;
@@ -24,11 +56,16 @@
     border-radius: .15rem;
     font-family: 'Roboto', sans-serif;
     font-size: .75rem;
+    transition: all .3s;
+    color: rgba(251, 94, 87, .2);
+    z-index: 2;
     
     &::-webkit-scrollbar {
         width: .25rem;
         outline: none;
         border-radius: .15rem;
+        transition: all .3s;
+        cursor: pointer;
       }
     &::-webkit-scrollbar-track {
         box-shadow: inset 0 0 .25rem rgba(0, 0, 0, 0.5);
@@ -37,8 +74,17 @@
       }
     &::-webkit-scrollbar-thumb {
         box-shadow: inset 0 0 .25rem rgba(0, 0, 0, 0.5);
-        background-color: darkgrey;
+        background-color: lightgrey;
         outline: 1px solid slategrey;
         border-radius: .15rem;
+        transition: all .3s;
+        &:hover {
+            background-color: darkgrey;
+        }
     }
+}
+
+:host ::ng-deep .highlight {
+    background-color: blue;
+    color: black;
 }
