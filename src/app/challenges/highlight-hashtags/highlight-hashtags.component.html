@@ -1,20 +1,22 @@
 <div class="container">
     <div class="card">
-        <div class="text_backdrop">   
-            <div
-                [innerHTML]="highlightText()" 
-                class="text_highlights">
-            </div>
-            <textarea 
-                name="input"
-                class="input" 
-                id="input"
-                #input
-                [(ngModel)]="userInput"
-                (keyup)="isHighlight(input.value)" 
-                cols="30" 
-                rows="1"></textarea>
+       
+            <div class="input_background"></div>
+                <textarea 
+                    name="input"
+                    class="input" 
+                    id="input"
+                    #input
+                    [(ngModel)]="userInput"
+                    (keyup)="isHighlight(input.value)" 
+                    cols="30" 
+                    rows="1"></textarea>
             
-        </div>
+            <div class="text_backdrop">   
+                <div
+                    [innerHTML]="highlightText()" 
+                    class="text_highlights">
+                </div>
+            </div>
     </div>
 </div>

@@ -27,7 +27,6 @@ export class HighlightHashtagsComponent implements OnInit {
     }
     return this.userInput.replace(new RegExp(/#[A-Za-z0-9]*/g), 
       (match) => {
-        console.log(match);
         return '<span class="highlight">' + match + '</span>';
     });
     

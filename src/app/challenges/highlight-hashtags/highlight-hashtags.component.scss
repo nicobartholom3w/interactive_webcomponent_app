@@ -9,25 +9,33 @@
 
 .card {
     margin-top: 8rem;
-    
+    min-height: 4rem;
+    max-width: 18rem;
+    min-width: 18rem;
+    position: relative;
 }
 
 .text {
     &_backdrop {
-        position: relative;
-        width: 100%;
-        
+        position: absolute;
+        top: 0;
+        width: 18.335rem;
+        z-index: 1;
     }
     &_highlights {
+        letter-spacing: 1px;
         color: rgba(22, 126, 202, .2);
         position: absolute;
         font-family: 'Roboto', sans-serif;
         font-size: .75rem;
         top: .28rem;
         left: .28rem;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
         // max-width: 286px;
-        z-index: 1;
-        max-width: 18rem;
+        // max-width: 18rem;
+        max-height: 8rem;
         overflow-y: scroll;
         word-break: break-all;
         &::-webkit-scrollbar {
@@ -45,7 +53,9 @@
 }
 
 .input {
+    letter-spacing: 1px;
     border: solid 1px rgb(222, 222, 222);
+    position: relative;
     outline: none;
     overflow-y: scroll;
     height: 8rem;
@@ -58,8 +68,19 @@
     font-size: .75rem;
     transition: all .3s;
     color: rgba(251, 94, 87, .2);
-    z-index: 2;
-    
+    z-index: 5;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    background-color: transparent;
+    &_background {
+        position: absolute;
+        z-index: 1;
+        background-color: white;
+        width: 18.65rem;
+        height: 8.6rem;
+        border-radius: .15rem;
+    }
     &::-webkit-scrollbar {
         width: .25rem;
         outline: none;
@@ -87,4 +108,8 @@
 :host ::ng-deep .highlight {
     background-color: blue;
     color: black;
+}
+
+.test {
+    white-space: pre-wrap;
 }
