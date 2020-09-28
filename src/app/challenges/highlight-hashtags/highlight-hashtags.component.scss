@@ -21,15 +21,15 @@
         top: 0;
         left: 0;
         box-sizing: border-box;
-        padding: .28rem;
+        padding: .28rem 0rem 0rem .28rem;
         line-height: 1rem;
         // top: .28rem;
         // left: .28rem;
         width: 17.69rem;
         height: 8rem;
-
+        white-space: pre-wrap;
         
-        background-color: rgba(22, 126, 202, .2);
+        // background-color: rgba(22, 126, 202, .2);
         z-index: 3;
         overflow-y: scroll;
         

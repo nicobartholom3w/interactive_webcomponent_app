@@ -33,10 +33,17 @@ export class HighlightHashtagsComponent implements OnInit {
     if(!this.userInput) {
       return this.highlightedText;
     }
-    return this.userInput.replace(new RegExp(/#[A-Za-z0-9]*/g), 
+    let textHighlights: string = this.userInput;
+    textHighlights = textHighlights.replace(new RegExp(/\n$/g), 
+      (isReturn) => {
+      return '\n\n';
+    });
+    // this.userInput = this.userInput.replace(new RegExp(/[\r\n]$/), '<br>');
+    textHighlights = textHighlights.replace(new RegExp(/#[A-Za-z0-9]*/g), 
       (match) => {
         return '<span class="highlight">' + match + '</span>';
     });
+    return textHighlights;
   }
 
   scrollEvent(event: Event) {
@@ -49,5 +56,12 @@ export class HighlightHashtagsComponent implements OnInit {
     this.highlightScroll.nativeElement.scrollTop = scroll;
     console.log(scroll + "end scroll   " + this.highlightScroll.nativeElement.scrollTop + " background scroll");
   }
+
+  // isReturn(event: KeyboardEvent) {
+  //   event.stopPropagation();
+  //   if(event.key === "return") {
+  //     this.scrollEvent(event);
+  //   }
+  // }
 }
 
