@@ -19,31 +19,49 @@
     &_backdrop {
         position: absolute;
         top: 0;
-        width: 18.335rem;
-        z-index: 1;
-    }
-    &_highlights {
-        letter-spacing: 1px;
-        color: rgba(22, 126, 202, .2);
-        position: absolute;
-        font-family: 'Roboto', sans-serif;
-        font-size: .75rem;
-        top: .28rem;
-        left: .28rem;
-        white-space: pre-wrap;
-        word-wrap: break-word;
-        overflow-wrap: break-word;
-        // max-width: 286px;
-        // max-width: 18rem;
-        max-height: 8rem;
+        left: 0;
+        box-sizing: border-box;
+        padding: .28rem;
+        line-height: 1rem;
+        // top: .28rem;
+        // left: .28rem;
+        width: 17.69rem;
+        height: 8rem;
+
+        
+        background-color: rgba(22, 126, 202, .2);
+        z-index: 3;
         overflow-y: scroll;
-        word-break: break-all;
+        
         &::-webkit-scrollbar {
             width: .25rem;
             outline: none;
             color: transparent;
             background-color: transparent;
           }
+    }
+    &_highlights {
+        z-index: 1;
+        letter-spacing: 1px;
+        color: rgba(22, 126, 202, .2);
+        position: absolute;
+        font-family: 'Roboto', sans-serif;
+        font-size: .75rem;
+        
+        white-space: pre-wrap;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        // max-width: 286px;
+        // max-width: 18rem;
+        // max-height: 8rem;
+        // overflow-y: scroll;
+        word-break: break-all;
+        // &::-webkit-scrollbar {
+        //     width: .25rem;
+        //     outline: none;
+        //     color: transparent;
+        //     background-color: transparent;
+        //   }
     }
 
     &_span {
@@ -53,7 +71,9 @@
 }
 
 .input {
+    line-height: 1rem;
     letter-spacing: 1px;
+    box-sizing: border-box;
     border: solid 1px rgb(222, 222, 222);
     position: relative;
     outline: none;
@@ -62,7 +82,7 @@
     min-height: 4rem;
     max-width: 18rem;
     min-width: 18rem;
-    padding: .25rem;
+    padding: .25rem .25rem 0 .25rem;
     border-radius: .15rem;
     font-family: 'Roboto', sans-serif;
     font-size: .75rem;
@@ -74,11 +94,12 @@
     overflow-wrap: break-word;
     background-color: transparent;
     &_background {
+        box-sizing: border-box;
         position: absolute;
         z-index: 1;
         background-color: white;
-        width: 18.65rem;
-        height: 8.6rem;
+        width: 18rem;
+        height: 8rem;
         border-radius: .15rem;
     }
     &::-webkit-scrollbar {

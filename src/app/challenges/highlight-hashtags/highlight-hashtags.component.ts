@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { WordCheckHighlight } from './highlight-hashtags';
 
 @Component({
@@ -7,18 +7,26 @@ import { WordCheckHighlight } from './highlight-hashtags';
   styleUrls: ['./highlight-hashtags.component.scss']
 })
 export class HighlightHashtagsComponent implements OnInit {
-  // inputArr: WordCheckHighlight[] = [];
-  // isHash: boolean = false;
+  @ViewChild('input', {static: false}) inputScroll: ElementRef;
+  @ViewChild('backgroundScroll', {static: false}) highlightScroll: ElementRef;
   private highlightedText: string;
   userInput: string;
 
+  // @HostListener ('window:scroll', ['$event']) 
+  //   onScrollEvent(event: Event) {
+      // if(!this.inputScroll || !this.highlightScroll) {
+      //   return;
+      // }
+      // if(event === "") {
+      //   let scroll = this.inputScroll.nativeElement.scrollTop;
+      //   console.log(scroll + "textarea scroll   " + this.highlightScroll.nativeElement.scrollTop + " background scroll");
+      //   this.highlightScroll.nativeElement.scrollTop = scroll;
+      // }
+  //     console.log(event);
+  //  }
   constructor() { }
 
   ngOnInit() {
-  }
-
-  isHighlight(fullText: string) {
-    // this.highlightText = '<div>fullText</div>';
   }
 
   highlightText() {
@@ -29,7 +37,17 @@ export class HighlightHashtagsComponent implements OnInit {
       (match) => {
         return '<span class="highlight">' + match + '</span>';
     });
-    
+  }
+
+  scrollEvent(event: Event) {
+    // if(!this.inputScroll || !this.highlightScroll) {
+    //   return;
+    // }
+    event.stopPropagation();
+    let scroll = this.inputScroll.nativeElement.scrollTop;
+    console.log(scroll + "start scroll   " + this.highlightScroll.nativeElement.scrollTop + " background scroll");
+    this.highlightScroll.nativeElement.scrollTop = scroll;
+    console.log(scroll + "end scroll   " + this.highlightScroll.nativeElement.scrollTop + " background scroll");
   }
 }
 

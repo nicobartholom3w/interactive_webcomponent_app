@@ -1,18 +1,22 @@
 <div class="container">
     <div class="card">
        
-            <div class="input_background"></div>
+            <div 
+                
+                class="input_background"></div>
                 <textarea 
                     name="input"
                     class="input" 
                     id="input"
                     #input
                     [(ngModel)]="userInput"
-                    (keyup)="isHighlight(input.value)" 
+                    (scroll)="scrollEvent($event)"
                     cols="30" 
                     rows="1"></textarea>
             
-            <div class="text_backdrop">   
+            <div
+                #backgroundScroll
+                class="text_backdrop">   
                 <div
                     [innerHTML]="highlightText()" 
                     class="text_highlights">
