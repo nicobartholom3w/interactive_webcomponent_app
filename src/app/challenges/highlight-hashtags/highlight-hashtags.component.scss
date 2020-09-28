@@ -23,13 +23,9 @@
         box-sizing: border-box;
         padding: .28rem 0rem 0rem .28rem;
         line-height: 1rem;
-        // top: .28rem;
-        // left: .28rem;
         width: 17.69rem;
-        height: 8rem;
+        height: 100%;
         white-space: pre-wrap;
-        
-        // background-color: rgba(22, 126, 202, .2);
         z-index: 3;
         overflow-y: scroll;
         
@@ -43,25 +39,14 @@
     &_highlights {
         z-index: 1;
         letter-spacing: 1px;
-        color: rgba(22, 126, 202, .2);
+        color: transparent;
         position: absolute;
         font-family: 'Roboto', sans-serif;
         font-size: .75rem;
-        
         white-space: pre-wrap;
         word-wrap: break-word;
         overflow-wrap: break-word;
-        // max-width: 286px;
-        // max-width: 18rem;
-        // max-height: 8rem;
-        // overflow-y: scroll;
         word-break: break-all;
-        // &::-webkit-scrollbar {
-        //     width: .25rem;
-        //     outline: none;
-        //     color: transparent;
-        //     background-color: transparent;
-        //   }
     }
 
     &_span {
@@ -71,6 +56,7 @@
 }
 
 .input {
+    box-sizing: border-box;
     line-height: 1rem;
     letter-spacing: 1px;
     box-sizing: border-box;
@@ -78,28 +64,27 @@
     position: relative;
     outline: none;
     overflow-y: scroll;
-    height: 8rem;
-    min-height: 4rem;
+    margin-bottom: -.25rem;
+    min-height: 8rem;
     max-width: 18rem;
     min-width: 18rem;
-    padding: .25rem .25rem 0 .25rem;
+    width: 100%;
+    padding: .26rem .26rem 0rem .26rem;
     border-radius: .15rem;
     font-family: 'Roboto', sans-serif;
     font-size: .75rem;
     transition: all .3s;
-    color: rgba(251, 94, 87, .2);
+    color: black;
     z-index: 5;
     white-space: pre-wrap;
     word-wrap: break-word;
     overflow-wrap: break-word;
     background-color: transparent;
     &_background {
+        position: relative;
         box-sizing: border-box;
-        position: absolute;
-        z-index: 1;
         background-color: white;
         width: 18rem;
-        height: 8rem;
         border-radius: .15rem;
     }
     &::-webkit-scrollbar {
@@ -127,10 +112,6 @@
 }
 
 :host ::ng-deep .highlight {
-    background-color: blue;
-    color: black;
-}
-
-.test {
-    white-space: pre-wrap;
+    background-color: rgba(87, 224, 251, .75);
+    border-radius: .15rem;
 }

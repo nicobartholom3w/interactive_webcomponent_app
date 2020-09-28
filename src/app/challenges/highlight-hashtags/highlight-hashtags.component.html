@@ -1,9 +1,7 @@
 <div class="container">
     <div class="card">
        
-            <div 
-                
-                class="input_background"></div>
+            <div class="input_background">
                 <textarea 
                     name="input"
                     class="input" 
@@ -14,13 +12,14 @@
                     (onkeyup)="isReturn($event)"
                     cols="30" 
                     rows="1"></textarea>
-            
-            <div
-                #backgroundScroll
-                class="text_backdrop">   
+           
                 <div
-                    [innerHTML]="highlightText()" 
-                    class="text_highlights">
+                    #backgroundScroll
+                    class="text_backdrop">   
+                    <div
+                        [innerHTML]="highlightText()" 
+                        class="text_highlights">
+                    </div>
                 </div>
             </div>
     </div>
