@@ -31,6 +31,7 @@ import { OnboardingComponent } from './challenges/onboarding/onboarding.componen
 import { RippleCursorComponent } from './challenges/ripple-cursor/ripple-cursor.component';
 import { PokeSuggestComponent } from './challenges/poke-suggest/poke-suggest.component';
 import { HighlightHashtagsComponent } from './challenges/highlight-hashtags/highlight-hashtags.component';
+import { ImageZoomComponent } from './challenges/image-zoom/image-zoom.component';
 
 
 const routes: Routes = [
@@ -161,6 +162,10 @@ const routes: Routes = [
       {
         path: 'highlight-hashtags',
         component: HighlightHashtagsComponent
+      },
+      {
+        path: 'image-zoom',
+        component: ImageZoomComponent
       }
   ]
   }

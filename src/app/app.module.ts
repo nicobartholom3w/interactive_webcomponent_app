@@ -39,6 +39,7 @@ import { RippleCursorModule } from './challenges/ripple-cursor/ripple-cursor.mod
 import { PokeSuggestModule } from './challenges/poke-suggest/poke-suggest.module';
 import { SearchFilterPipe } from './search-filter.pipe';
 import { HighlightHashtagsModule } from './challenges/highlight-hashtags/highlight-hashtags.module';
+import { ImageZoomModule } from './challenges/image-zoom/image-zoom.module';
 
 
 
@@ -84,6 +85,7 @@ import { HighlightHashtagsModule } from './challenges/highlight-hashtags/highlig
     RippleCursorModule,
     PokeSuggestModule,
     HighlightHashtagsModule,
+    ImageZoomModule,
     FormsModule,
     ReactiveFormsModule
   ],

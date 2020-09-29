@@ -40,7 +40,8 @@ export class ChallengesService {
     { name: 'Onboarding', imagePath: 'assets/images/challenges_imgs/onboarding.png', link: 'onboarding' },
     { name: 'Ripple Cursor', imagePath: 'assets/images/challenges_imgs/ripple-cursor.png', link: 'ripple-cursor' },
     { name: 'Poke Suggest', imagePath: 'assets/images/challenges_imgs/poke-suggest.png', link: 'poke-suggest' },
-    { name: 'Highlight Hashtags', imagePath: 'assets/images/challenges_imgs/highlight-hashtags.png', link: 'highlight-hashtags' }
+    { name: 'Highlight Hashtags', imagePath: 'assets/images/challenges_imgs/highlight-hashtags.png', link: 'highlight-hashtags' },
+    { name: 'Image Zoom', imagePath: 'assets/images/challenges_imgs/image-zoom.png', link: 'image-zoom' }
     
   ]
 
