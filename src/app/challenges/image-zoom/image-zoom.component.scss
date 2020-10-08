@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     font-family: 'Roboto', sans-serif;
+    position: relative;
 }
 
 .card {
@@ -26,12 +27,27 @@
         border-radius: 50%;
         border: 2px solid white;
         box-shadow: 0 1px 5px 0px rgba(0, 0, 0, .5); 
+        opacity: 0;
+        // background-image: url(assets/images/image-zoom-use/image-zoom.jpg);
     }
     &-image {
         height: 15rem;
         width: auto;
         border-radius: .15rem;
         box-shadow: 0 2px 3px -1px rgba(0, 0, 0, .5); 
+    }
+    &-lens {
+        transition: opacity .3s;
+        position: absolute;
+        border: 1px solid lightgrey;
+        border-radius: 50%;
+        height: 2rem;
+        width: 2rem;
+        opacity: 0;
+        background-color: transparent;
+    }
 }
 
+.is-zoom {
+    opacity: 1;
 }

@@ -1,8 +1,21 @@
-<div class="container">
+<div 
+    #container
+    class="container">
     <div class="card">
         <img
+            #image
             class="zoom-image" 
-            src="assets/images/image-zoom-use/image-zoom.jpg" alt="">
-            <div class="zoom-view"></div>
+            [src]="imgSrc" alt="">
+        <div 
+            #zoomView
+            [class.is-zoom]="isZoom"
+            class="zoom-view"></div>
+        
     </div>
+    <div
+            #zoomLens
+            [style.left.px]="cursorLeftDistance"
+            [style.top.px]="cursorTopDistance"
+            [class.is-zoom]="isZoom"
+            class="zoom-lens"></div>
 </div>
