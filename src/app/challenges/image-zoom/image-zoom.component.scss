@@ -30,7 +30,6 @@
         background-repeat: no-repeat;
         box-sizing: border-box;
         opacity: 0;
-        // background-image: url(assets/images/image-zoom-use/image-zoom.jpg);
     }
     &-image {
         box-sizing: border-box;
@@ -44,24 +43,20 @@
         position: absolute;
         border: 1px solid lightgrey;
         border-radius: 50%;
-        height: 2rem;
-        width: 2rem;
+        height: 0rem;
+        width: 0rem;
         box-sizing: border-box;
         opacity: 0;
+        visibility: hidden;
         background-color: transparent;
     }
 }
 
 .is-zoom {
     opacity: 1;
-}
-
-.display-data {
-    position: absolute;
-    top: 10rem;
-    left: 20rem;
-    font-size: .5rem;
-    white-space: pre;
-    background-color: white;
-
+    visibility: visible;
+    &-lens {
+        height: 2rem;
+        width: 2rem;
+    }
 }
