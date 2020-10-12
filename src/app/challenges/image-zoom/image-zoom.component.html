@@ -9,13 +9,41 @@
         <div 
             #zoomView
             [class.is-zoom]="isZoom"
-            class="zoom-view"></div>
-        
-    </div>
-    <div
+            [style.backgroundSize]="imageWidthRatioSize"
+            [style.backgroundImage]="'url(assets/images/image-zoom-use/image-zoom.jpg)'"
+            [style.backgroundPosition]="zoomViewInfo"
+            class="zoom-view"></div> 
+        <div
             #zoomLens
+            *ngIf="isZoom"
             [style.left.px]="cursorLeftDistance"
             [style.top.px]="cursorTopDistance"
             [class.is-zoom]="isZoom"
-            class="zoom-lens"></div>
+            class="zoom-lens"></div> 
+            <div class="display-data">
+                <ul>
+                    <li>Image Top: {{ imageRectTop }}</li>
+                    <li>Image Bottom: {{ imageRectBottom }}</li>
+                    <li>MouseX: {{ mouseX }}</li>
+                    <li>MouseY: {{ mouseY }}</li>
+                    <li>Cursor Top Distance: {{ cursorTopDistance }}</li>
+                    <li>Cursor Left Distance: {{ cursorLeftDistance }}</li>
+                    <li>Image offsetTop: </li>
+                    <li>Image offsetLeft: </li>
+                    <li>Zoom Lens Top: </li>
+                    <li>Zoom Lens Left:</li>
+                    <li>Zoom Lens offsetTop: </li>
+                    <li>Zoom Lens offsetLeft:</li>
+                    <li>Zoom Lens Diameter: </li>
+                    <li>Zoom Diameter: </li>
+                    <li>RatioX: {{ ratioX }}</li>
+                    <li>RatioY: {{ ratioY }}</li>
+                    <li>Image Margin-Top: </li>
+                    <li>Zoom Top: {{ zoomTop }}</li>
+                    <li>Zoom Left: {{ zoomLeft }} </li>
+                </ul>
+            </div>
+    </div>
+    
+   
 </div>
