@@ -1,12 +1,9 @@
 :host {
-    // position: relative;
-    
     height: 100%;
     width: 100%;
 }
 .header {
     margin: auto;
-    // max-width: 65rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -17,7 +14,8 @@
     padding: .5rem 0;
     position: fixed;
     background-color: white;
-    z-index: 100;
+    z-index: 1;
+    box-shadow: 0 1px 4px 1px rgba(75, 88, 104, .2);
     
     &__content {
         padding: 0 1rem;
