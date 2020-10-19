@@ -11,11 +11,16 @@
         height: 12.05rem;
         width: 16.75rem;
         box-shadow: 0 1px 6px 0 rgba(75, 88, 104, .5);
-        border-radius: 1px;
+        border-radius: 2px 2px 3px 3px;
+        // border-radius: 2px;
+        background: transparent;
         box-sizing: border-box;
-        overflow: hidden;
+        // overflow: hidden;
         position: relative;
         transition: all .3s;
+        -webkit-background-clip: padding-box; 
+        -moz-background-clip: padding; 
+        background-clip: padding-box;
     }
     &:hover {
         .item {
@@ -49,7 +54,6 @@
 
     &__background {
         // background-color: rgba(121, 143, 160, .55);
-        background-color: transparent;
         height: 12.05rem;
         width: 16.75rem;
         height: 100%;
@@ -61,15 +65,21 @@
         box-sizing: border-box;
         border-radius: 1px;
         // border: 1px solid rgba(248, 127, 114, 1);
-        position: relative;
-        
+        // position: relative;
+        position: absolute;
+        z-index: 2;
+        background-color: transparent;
+        -webkit-background-clip: padding-box; 
+        -moz-background-clip: padding; 
+        background-clip: padding-box;
+        border-radius: 2px 2px 3px 3px;
 
         &-img {
             height: 12.05rem;
             width: 16.75rem;
             height: 100%;
             width: 100%;
-            border-radius: 2px;
+            // border-radius: 4px;
             // height: 20rem;
             transition: all .5s;
             box-sizing: border-box;
@@ -77,6 +87,11 @@
             object-fit: cover;
             object-position: left;
             background-color: transparent;
+            z-index: 0;
+            -webkit-background-clip: padding-box; 
+            -moz-background-clip: padding; 
+            background-clip: padding-box;
+            border-radius: 2px 2px 3px 3px;
         }
     }
 
@@ -84,13 +99,15 @@
         background-color: rgba(251, 249, 255, .95);
         // border: 1px solid rgb(248, 127, 114);
         // margin: 0 -1px -1px -1px;
-        height: 40%;
+        height: 5rem;
         transition: all .3s;
         color: rgb(75, 88, 104);
         font-weight: 600;
         transition: all .5s;
         box-sizing: border-box;
         width: 100%;
+        border-bottom-right-radius: 2px;
+        border-bottom-left-radius: 2px;
         &-desc {
             margin: 1rem; 
         }
