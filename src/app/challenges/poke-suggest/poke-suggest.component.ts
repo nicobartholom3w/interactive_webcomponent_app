@@ -11,7 +11,7 @@ import { SimplePokemonBasePayload, SimplePokemonBase, SimplePokemonBaseDetails }
   templateUrl: './poke-suggest.component.html',
   styleUrls: ['./poke-suggest.component.scss']
 })
-
+  
 export class PokeSuggestComponent implements OnInit {
   pokeMatchesArr: SimplePokemonBase[] = [];
   isMatches: boolean = false;
@@ -28,7 +28,7 @@ export class PokeSuggestComponent implements OnInit {
       distinctUntilChanged())
         .subscribe(value => {
           value = value.toLowerCase();
-          this.searchPokemon(value);
+        this.searchPokemon(value);
           if(value.length === 0) {
             this.isMatches = false;
           }

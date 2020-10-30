@@ -1,7 +1,8 @@
 :host {
     display: block;
-    margin: 2rem 0 0 0;
-    
+    // margin: 2rem 0 0 0;
+    // width: 17.75rem;
+    padding: 2rem 1rem 0 1rem;
 }
 
 .item {
@@ -68,7 +69,7 @@
         // position: relative;
         position: absolute;
         z-index: 2;
-        background-color: transparent;
+        background-color: rgba(75, 88, 104, .5);
         -webkit-background-clip: padding-box; 
         -moz-background-clip: padding; 
         background-clip: padding-box;

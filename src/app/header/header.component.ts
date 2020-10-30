@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { Subject } from 'rxjs';
+import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
+import { Challenge } from '../challenges/challenge/challenge.interface';
+import { HeaderService } from './header.service';
 
 @Component({
   selector: 'app-header',
@@ -7,11 +11,54 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  search = new FormControl('');
-  
-  constructor() { }
+  searchText: string;
+  searchResults: Challenge[] = [];
+  searchTextUpdate = new Subject <string> (); 
+  isMatches: boolean = false;
+
+  constructor(private headerService: HeaderService) {
+    this.searchTextUpdate.pipe(
+      debounceTime(400),
+      distinctUntilChanged())
+        .subscribe(value => {
+          value = value.toLowerCase();
+          this.getSearchResults(value);
+          if(value.length === 0) {
+            this.isMatches = false;
+            this.searchResults = [];
+          }
+        })
+   }
 
   ngOnInit() {
+    
   }
 
+  getSearchResults(input: string) {
+    let challengeArr = this.headerService.getChallengeArr();
+    this.searchResults = [];
+    for(let i = 0; i < challengeArr.length; i++) {
+      let currChallenge: Challenge = challengeArr[i];
+      let currChallengeName: string = currChallenge.name.toLowerCase();
+      for(let k = 0; k < challengeArr.length; k++) {
+        if(input[k] === currChallengeName[k]) {
+          if(k === input.length - 1){
+            this.searchResults.push(currChallenge);
+            if(this.searchResults.length > 0) {
+              this.isMatches = true;
+            }
+            break;
+          } 
+        }
+        else {
+          break;
+        }
+      }
+    }
+    if(this.searchResults.length === 0) {
+      this.isMatches = false;
+    }
+    console.log(this.searchResults);
+    return this.searchResults;
+  }
 }
