@@ -36,8 +36,12 @@
                     </svg>
                 </button> 
                 <div class="search__results">
-                    <a [routerLink]="['']"> <div class="search__results-item">apple pie</div></a>
-                    <a [routerLink]="['']"> <div class="search__results-item">apple pie 2</div></a>
+                    <a 
+                        *ngFor="let result of searchResults" 
+                        [routerLink]="['challenges', result.link]"
+                        [queryParams]="{'challenges': result.link}">
+                        <div class="search__results-item"> {{ result.name }}</div>
+                    </a>
                 </div> 
             </div>    
         </form>
