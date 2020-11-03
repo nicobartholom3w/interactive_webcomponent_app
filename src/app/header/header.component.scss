@@ -67,15 +67,16 @@
             fill: #F87F72;
             position: absolute;
             bottom: 0.55rem;
-            width: 2.1rem;
+            width: 2.25rem;
             // right: 1.05rem;
             height: 1.9rem;
             // top: 1px;
-            bottom: 0;
+            bottom: 1px;
             // left: 14.6rem;
-            left: 13.5rem;
+            left: 14.49rem;
             cursor: pointer;
-            padding: 1rem;
+            // padding: 1rem;
+            padding-right: .15rem;
             border-radius: 0 .15rem .15rem 0;
             border: none;
             display: flex;
@@ -83,6 +84,10 @@
             justify-content: center;
             background-color: transparent;
             transition: all .5s;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            // align-items: center;
             &:hover {
                 background-color: #F0F5FC;
                 // background-color: #E3E8EF;
@@ -161,14 +166,17 @@
     border-radius: 1px;
     
     &__bar {
+        
         // width: 65%;
-        width: 15.59rem;
+        // width: 15.59rem;
+        width: 16.75rem;
         height: 2rem;
         // padding-right: 1.75rem;
         // padding-right: 2.25rem;
         // box-sizing: border-box;
-        margin-left: .1rem;
-        margin-right: 2.19rem;
+        overflow: hidden;
+        // margin-left: .1rem;
+        margin-right: 1.1rem;
         position: relative;
         &-input {
             width: 100%;
