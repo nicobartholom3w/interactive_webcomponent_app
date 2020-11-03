@@ -23,9 +23,9 @@ export class HeaderComponent implements OnInit {
       debounceTime(400),
       distinctUntilChanged())
         .subscribe(value => {
-          value = value.toLowerCase();
-          this.getSearchResults(value);
-          if(value.length === 0) {
+          const searchText = this.searchText.toLowerCase();
+          this.getSearchResults(searchText);
+          if(searchText.length === 0) {
             this.isMatches = false;
           }
         })
@@ -33,6 +33,10 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     
+  }
+
+  handleSearchInput(event: KeyboardEvent) {
+    // change event 
   }
 
   getSearchResults(input: string) {

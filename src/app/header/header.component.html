@@ -27,7 +27,7 @@
             <div class="search__bar">
                 <input 
                     [(ngModel)]="searchText"
-                    (ngModelChange)="this.searchTextUpdate.next(searchText)"
+                    (keyup)="searchTextUpdate.next($event)"
                     name="searchText"
                     class="search__bar-input nav__icon-hover" type="text" placeholder="Search">
                 <button class="nav__icon-search">
