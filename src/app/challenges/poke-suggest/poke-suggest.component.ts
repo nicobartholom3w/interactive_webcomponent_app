@@ -28,7 +28,7 @@ export class PokeSuggestComponent implements OnInit {
       distinctUntilChanged())
         .subscribe(value => {
           value = value.toLowerCase();
-        this.searchPokemon(value);
+          this.searchPokemon(value);
           if(value.length === 0) {
             this.isMatches = false;
           }

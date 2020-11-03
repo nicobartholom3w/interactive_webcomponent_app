@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
@@ -11,10 +11,12 @@ import { HeaderService } from './header.service';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  @Input() challengeItem: Challenge;
   searchText: string;
   searchResults: Challenge[] = [];
   searchTextUpdate = new Subject <string> (); 
   isMatches: boolean = false;
+  isChallengeSelected: boolean = false;
 
   constructor(private headerService: HeaderService) {
     this.searchTextUpdate.pipe(
@@ -25,7 +27,6 @@ export class HeaderComponent implements OnInit {
           this.getSearchResults(value);
           if(value.length === 0) {
             this.isMatches = false;
-            this.searchResults = [];
           }
         })
    }
@@ -58,7 +59,19 @@ export class HeaderComponent implements OnInit {
     if(this.searchResults.length === 0) {
       this.isMatches = false;
     }
-    console.log(this.searchResults);
     return this.searchResults;
   }
+
+  onSearchSelect(result: Challenge) {
+    this.searchText = null;
+    this.searchText = "";
+    this.searchResults = [];
+    this.challengeItem = result;
+  }
+
+  // onFocus() {
+  //   if(this.searchText.length > 0 && this.searchResults.length > 0) {
+  //     this.isMatches = true;
+  //   }
+  // }
 }
