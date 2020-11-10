@@ -1,4 +1,7 @@
-<button class="button">
+<button 
+    (click)="scrollToTop()"
+    [ngClass]="{'show-scrollTop': windowScrolled}"
+    class="button">
     <div class="button__content">
     
         <div class="button__text">to top</div>

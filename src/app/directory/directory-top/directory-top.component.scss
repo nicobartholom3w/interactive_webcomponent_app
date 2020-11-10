@@ -12,7 +12,8 @@
     padding: .5rem 1rem;
     cursor: pointer;
     transition: all .5s;
-
+    opacity: 0;
+    
     &:hover {
         background-color: #4B5868;
         color: white;
@@ -36,4 +37,9 @@
         margin-right: -.55rem;
         transition: all .5s;
     }
+}
+
+.show-scrollTop {
+    opacity: 1;
+    
 }
