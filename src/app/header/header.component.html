@@ -37,11 +37,12 @@
                 </button> 
                 <div 
                     *ngIf="isMatches"
-                    class="search__results">
+                    class="search__results"
+                    >
                     <a 
                         *ngFor="let result of searchResults" 
                         [routerLink]="['challenges', result.link]"
-                        [queryParams]="{'challenges': result.link}"
+                        [queryParams]="{'challenge': result.link}"
                         (click)=onSearchSelect(result)>
                         <div class="search__results-item"> {{ result.name }}</div>
                     </a>

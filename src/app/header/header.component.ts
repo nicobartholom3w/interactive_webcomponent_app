@@ -23,8 +23,10 @@ export class HeaderComponent implements OnInit {
       debounceTime(400),
       distinctUntilChanged())
         .subscribe(value => {
+          
           const searchText = this.searchText.toLowerCase();
           this.getSearchResults(searchText);
+          
           if(searchText.length === 0) {
             this.isMatches = false;
           }
@@ -41,6 +43,7 @@ export class HeaderComponent implements OnInit {
 
   getSearchResults(input: string) {
     let challengeArr = this.headerService.getChallengeArr();
+    
     this.searchResults = [];
     for(let i = 0; i < challengeArr.length; i++) {
       let currChallenge: Challenge = challengeArr[i];
@@ -62,6 +65,12 @@ export class HeaderComponent implements OnInit {
     }
     if(this.searchResults.length === 0) {
       this.isMatches = false;
+    }
+    if(this.isMatches === true) {
+      console.log(this.searchResults);
+    }
+    else {
+      console.log("no more isMatches");
     }
     return this.searchResults;
   }
