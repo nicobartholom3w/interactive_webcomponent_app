@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit, QueryList, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-directory-top',
@@ -6,8 +6,8 @@ import { Component, HostListener, OnInit } from '@angular/core';
   styleUrls: ['./directory-top.component.scss']
 })
 export class DirectoryTopComponent implements OnInit {
-  @HostListener('window:scroll', [])
-    onWindowScroll() {
+  @HostListener('window:scroll', ['$event'])
+    onWindowScroll(event: Event) {
       // console.log(window.pageYOffset);
       // console.log(document.documentElement.scrollTop);
       if(window.pageYOffset > 100 || document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {

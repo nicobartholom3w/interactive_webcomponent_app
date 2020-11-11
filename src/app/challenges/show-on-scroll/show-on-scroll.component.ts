@@ -16,7 +16,7 @@ export class ShowOnScrollComponent implements OnInit, AfterViewInit {
     this.elements.forEach((e) => this.isHidden(e));
   }
 
-  constructor(public el: ElementRef) { }
+  constructor() { }
 
   ngOnInit() {
     
