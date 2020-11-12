@@ -12,7 +12,6 @@ export class DirectoryComponent implements OnInit, AfterViewInit {
   @ViewChildren('challengeItem', { read: ElementRef }) challenges: QueryList<ElementRef>;
   @HostListener('window:scroll', ['$event'])
     onScroll(event: Event) {
-      this.isChallengeHiddenArr = [];
       // this.challenges.forEach((challengeItem) => this.isHidden(challengeItem));
       this.isHidden();
     }
@@ -21,7 +20,7 @@ export class DirectoryComponent implements OnInit, AfterViewInit {
   isChallengeHiddenArr: boolean[] = [];
   isChallengeHiddenArrLength: number;
   challengesRefArr: ElementRef[];
-
+  numDisplayed: number = 0;
   constructor(private challengesService: ChallengesService, private changeRef: ChangeDetectorRef) { }
 
   ngOnInit() {
@@ -32,26 +31,33 @@ export class DirectoryComponent implements OnInit, AfterViewInit {
     this.isChallengeHiddenArrLength = this.challenges.length;
     // this.challenges.forEach((challengeItem) => this.isHidden(challengeItem));
     this.challengesRefArr = this.challenges.toArray();
+    for(let k = 0; k < this.challengesRefArr.length; k++) {
+      this.isChallengeHiddenArr[k] = true;
+    }
     this.isHidden();
     this.changeRef.detectChanges();
   }
 
   isHidden() {
+    
     for(let i = 0; i < this.challengesRefArr.length; i++) {
       if(this.challengesRefArr[i]) {
         let currentChallenge = this.challengesRefArr[i];  
         let challengePosition: ClientRect = currentChallenge.nativeElement.getBoundingClientRect();  
       
-        if((window.innerHeight - challengePosition.top) < 0) {
-          this.isChallengeHidden = true;
-        }
-        else {
+        if((window.innerHeight - challengePosition.top) > 150) {
+          // this.isChallengeHidden = true;
           this.isChallengeHidden = false;
+          this.isChallengeHiddenArr[i] = this.isChallengeHidden;
         }
-        this.isChallengeHiddenArr[i] = this.isChallengeHidden;
       }
     }
-    
+    this.numDisplayed = 0;
+    for(let boolean of this.isChallengeHiddenArr) {
+      if(boolean === false) {
+        this.numDisplayed++;
+      }
+    }
   }
 
 }

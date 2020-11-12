@@ -10,7 +10,7 @@ export class DirectoryTopComponent implements OnInit {
     onWindowScroll(event: Event) {
       // console.log(window.pageYOffset);
       // console.log(document.documentElement.scrollTop);
-      if(window.pageYOffset > 100 || document.documentElement.scrollTop > 100 || document.body.scrollTop > 100) {
+      if(window.pageYOffset > 50 || document.documentElement.scrollTop > 50 || document.body.scrollTop > 50) {
         this.windowScrolled = true;
       }
       else if(this.windowScrolled && window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop < 10) {
@@ -31,7 +31,7 @@ export class DirectoryTopComponent implements OnInit {
       if(currScroll > 0) {
         window.requestAnimationFrame(smoothScroll);
         window.scrollTo(0, currScroll - (currScroll / 8));
-        console.log(currScroll);
+        // console.log(currScroll);
       }
     })();
   }

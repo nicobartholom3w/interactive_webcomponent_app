@@ -1,24 +1,31 @@
+:host {
+    display: block;
+    padding-bottom: 1rem;
+}
+
 .button {
     outline: none;
     border: 1px solid transparent;
-    background-color: rgba(121, 143, 160, .95);
+    background-color: rgba(121, 143, 160, .99);
     color: rgb(251, 249, 255);
     display: flex;
     justify-content: space-between;
     float: right;
-    margin: 2rem;
+    margin: 0rem 2rem 0rem 2rem;
     margin-right: 1.1rem;
     box-sizing: border-box;
     padding: .5rem 1rem;
     cursor: pointer;
     transition: all .5s;
     opacity: 0;
-    
+    border-radius: .1rem;
+    box-shadow: 0 1px 6px 0 rgba(75, 88, 104, .5);
     &:hover {
         background-color: #4B5868;
         color: white;
         border: 1px solid rgba(248, 127, 114, 1);
-        
+        box-shadow: 0 2px 5px 1px rgba(75, 88, 104, .65);
+
         .button__icon {
             fill: white;
         }

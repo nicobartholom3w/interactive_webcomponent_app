@@ -1,19 +1,30 @@
 <div class="directory">
     <div class="directory__container">
         <div class="directory__items">
-            <app-directory-item
-                #challengeItem 
-                [class.hidden]="isChallengeHiddenArr[challengeId]"
-                [routerLink]="['challenges', challenge.link]"
-                [queryParams]="{'challenge': challenge.link}"
-                [challengeItem]= challenge
-                *ngFor="let challenge of challengesArr; let challengeId = index"></app-directory-item>
+            <div
+                *ngFor="let challenge of challengesArr; let challengeId = index" 
+                class="directory__item-container">
+                <app-directory-item
+                    #challengeItem 
+                    class="challenge-display"
+                    [class.hidden]="isChallengeHiddenArr[challengeId]"
+                    [routerLink]="['challenges', challenge.link]"
+                    [queryParams]="{'challenge': challenge.link}"
+                    [challengeItem]= challenge
+                    ></app-directory-item>
+            </div>
             <!-- <app-directory-item [routerLink]="['challenges/static-radio-buttons']"
             *ngFor="let challenge of challengesArr"></app-directory-item> -->
             <!-- <app-directory-item [routerLink]="['challenges']"></app-directory-item>
             <app-directory-item [routerLink]="['challenges']"></app-directory-item>
             <app-directory-item [routerLink]="['challenges']"></app-directory-item>           -->
         </div>
+        <div class="bottom-container">
+            <div class="progress">{{ numDisplayed }} / 30 CHALLENGES LOADED</div>
+            <div class="top-button-container">
+                <app-directory-top [routerLink]="['']"></app-directory-top>
+            </div>
+        </div>
     </div>
-    <app-directory-top [routerLink]="['']"></app-directory-top>
+    
 </div>
