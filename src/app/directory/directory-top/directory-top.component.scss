@@ -11,15 +11,18 @@
     display: flex;
     justify-content: space-between;
     float: right;
-    margin: 0rem 2rem 0rem 2rem;
+    // margin: 0rem 2rem 0rem 2rem;
     margin-right: 1.1rem;
     box-sizing: border-box;
     padding: .5rem 1rem;
     cursor: pointer;
     transition: all .5s;
-    opacity: 0;
+    // opacity: 0;
     border-radius: .1rem;
     box-shadow: 0 1px 6px 0 rgba(75, 88, 104, .5);
+    height: 4rem;
+    width: 10.5rem;
+    min-width: 10.5rem;
     &:hover {
         background-color: #4B5868;
         color: white;
@@ -46,7 +49,87 @@
     }
 }
 
-.show-scrollTop {
-    opacity: 1;
-    
+
+
+.bottom-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    opacity: 0;
+    // margin-top: 1rem;
+    // margin-left: 1.1rem;
+    // margin-right: 1.1rem;
+    // padding: 1rem;
+    position: fixed;
+    margin: auto;
+    bottom: 0;
+    z-index: 10;
+    background-color: rgb(250, 247, 255);
+    box-shadow: 0 1px 6px 0 rgba(75, 88, 104, .5);
+    border-radius: .1rem;
+
+    &-width {
+        width: 100%;
+        max-width: 65rem;
+        margin: auto;
+        display: flex;
+
+        justify-content: space-between;
+    }
 }
+
+.top-button-container {
+    // padding-right: 1.1rem;
+    // width: 16.75rem;
+    // background-color: purple;
+    width: 100%;
+}
+
+.progress {
+    color: rgb(75, 88, 104);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: bold;
+    width: 100%;
+    width: 16.75rem;
+    min-width: 16.75rem;
+    margin-left: 1.1rem;
+    // box-sizing: border-box;
+}
+
+.show-scrollTop {
+    opacity: 1;    
+}
+
+@media screen and (max-width: 613px) {
+    .bottom-container {
+        
+        
+        &-width {
+            width: 16.75rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    .progress {
+        padding: 0 0rem 1rem 0;
+        text-align: center;
+        margin: 0;
+        margin-right: 0.1rem;
+
+    }
+
+    .top-button-container {
+        display: flex;
+        justify-content: center;
+        padding-right: 0;
+        margin: 0;
+    }
+    .button {
+        margin: 0;
+    }
+}
+

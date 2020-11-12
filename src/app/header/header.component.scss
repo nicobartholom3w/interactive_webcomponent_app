@@ -107,7 +107,8 @@
         flex-direction: column;
         justify-content: space-between;
         transition: all .3s;
-
+        width: 16.75rem;
+        border-radius: .1rem;
         &:hover {
             color: #FBF9FF;
             background-color:  #494754;
@@ -238,6 +239,8 @@
 
         &__content {
             flex-direction: column;
+            width: 19rem;
+            // max-width: 16.75rem;
         }
     }
     .search {

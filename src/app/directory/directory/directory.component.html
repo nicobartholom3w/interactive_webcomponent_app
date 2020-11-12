@@ -19,12 +19,9 @@
             <app-directory-item [routerLink]="['challenges']"></app-directory-item>
             <app-directory-item [routerLink]="['challenges']"></app-directory-item>           -->
         </div>
-        <div class="bottom-container">
-            <div class="progress">{{ numDisplayed }} / 30 CHALLENGES LOADED</div>
-            <div class="top-button-container">
-                <app-directory-top [routerLink]="['']"></app-directory-top>
-            </div>
-        </div>
+        
     </div>
-    
 </div>
+<app-directory-top 
+            [challengesLoaded]="numDisplayed"
+            [routerLink]="['']"></app-directory-top>
