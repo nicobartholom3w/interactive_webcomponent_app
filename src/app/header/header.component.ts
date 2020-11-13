@@ -53,7 +53,11 @@ export class HeaderComponent implements OnInit {
   }
 
   handleOnBlur(event) {
-    setTimeout(() => { this.isFocus = false; }, 300);
+    setTimeout(() => { 
+      this.isFocus = false; 
+      this.searchResults = [];
+    }, 300);
+    
   }
 
   getSearchResults(input: string) {
@@ -81,12 +85,6 @@ export class HeaderComponent implements OnInit {
     if(this.searchResults.length === 0) {
       this.isMatches = false;
     }
-    // if(this.isMatches === true) {
-    //   // console.log(this.searchResults);
-    // }
-    // else {
-    //   console.log("no more isMatches");
-    // }
     return this.searchResults;
   }
 
@@ -116,9 +114,4 @@ export class HeaderComponent implements OnInit {
     });
 
   }
-  // onFocus() {
-  //   if(this.searchText.length > 0 && this.searchResults.length > 0) {
-  //     this.isMatches = true;
-  //   }
-  // }
 }
