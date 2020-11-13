@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
@@ -12,11 +12,14 @@ import { HeaderService } from './header.service';
 })
 export class HeaderComponent implements OnInit {
   @Input() challengeItem: Challenge;
+  @ViewChild('input', {static: false}) input: ElementRef;
   searchText: string;
   searchResults: Challenge[] = [];
   searchTextUpdate = new Subject <string> (); 
   isMatches: boolean = false;
   isChallengeSelected: boolean = false;
+  isFocus: boolean = false;
+  allResults: Challenge[] = [];
 
   constructor(private headerService: HeaderService) {
     this.searchTextUpdate.pipe(
@@ -37,8 +40,20 @@ export class HeaderComponent implements OnInit {
     
   }
 
-  handleSearchInput(event: KeyboardEvent) {
-    // change event 
+  handleOnFocus(event) {
+    this.isFocus = true;
+    this.allResults = this.headerService.getChallengeArr();
+    this.allResults.forEach((challenge) => { this.searchResults.push(Object.assign({}, challenge))}); 
+    this.sortChallengesAlpha(this.searchResults);
+  }
+
+  handleOnKeyup(event) {
+    console.log(event);
+    this.searchTextUpdate.next(event);
+  }
+
+  handleOnBlur(event) {
+    setTimeout(() => { this.isFocus = false; }, 300);
   }
 
   getSearchResults(input: string) {
@@ -66,12 +81,12 @@ export class HeaderComponent implements OnInit {
     if(this.searchResults.length === 0) {
       this.isMatches = false;
     }
-    if(this.isMatches === true) {
-      console.log(this.searchResults);
-    }
-    else {
-      console.log("no more isMatches");
-    }
+    // if(this.isMatches === true) {
+    //   // console.log(this.searchResults);
+    // }
+    // else {
+    //   console.log("no more isMatches");
+    // }
     return this.searchResults;
   }
 
@@ -82,6 +97,25 @@ export class HeaderComponent implements OnInit {
     this.challengeItem = result;
   }
 
+  focusInput() {
+    this.input.nativeElement.focus();
+    this.isFocus = true;
+  }
+
+  sortChallengesAlpha(searchDropdownDisplay: Challenge[]) {
+    return searchDropdownDisplay = searchDropdownDisplay.sort((a: Challenge, b: Challenge) => {
+      let nameA = a.name.toUpperCase();
+      let nameB = b.name.toUpperCase();
+      if(nameA < nameB) {
+        return -1;
+      }
+      if(nameA > nameB) {
+        return 1;
+      }
+      return 0;
+    });
+
+  }
   // onFocus() {
   //   if(this.searchText.length > 0 && this.searchResults.length > 0) {
   //     this.isMatches = true;
