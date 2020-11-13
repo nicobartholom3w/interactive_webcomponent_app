@@ -12,11 +12,11 @@ export class DirectoryComponent implements OnInit, AfterViewInit {
   @ViewChildren('challengeItem', { read: ElementRef }) challenges: QueryList<ElementRef>;
   @HostListener('window:scroll', ['$event'])
     onScroll(event: Event) {
-      // this.challenges.forEach((challengeItem) => this.isHidden(challengeItem));
       this.isHidden();
     }
   challengesArr: Challenge[];
   isChallengeHidden: boolean = false;
+  isInit: boolean = true;
   isChallengeHiddenArr: boolean[] = [];
   isChallengeHiddenArrLength: number;
   challengesRefArr: ElementRef[];
@@ -29,12 +29,13 @@ export class DirectoryComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.isChallengeHiddenArrLength = this.challenges.length;
-    // this.challenges.forEach((challengeItem) => this.isHidden(challengeItem));
     this.challengesRefArr = this.challenges.toArray();
     for(let k = 0; k < this.challengesRefArr.length; k++) {
       this.isChallengeHiddenArr[k] = true;
     }
     this.isHidden();
+    this.changeRef.detectChanges();
+    this.isInit = false;
     this.changeRef.detectChanges();
   }
 
@@ -46,7 +47,6 @@ export class DirectoryComponent implements OnInit, AfterViewInit {
         let challengePosition: ClientRect = currentChallenge.nativeElement.getBoundingClientRect();  
       
         if((window.innerHeight - challengePosition.top) > 150) {
-          // this.isChallengeHidden = true;
           this.isChallengeHidden = false;
           this.isChallengeHiddenArr[i] = this.isChallengeHidden;
         }

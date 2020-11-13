@@ -20,22 +20,27 @@
 }
 
 .challenge-display {
-    transition: height .5s;
+    transition: opacity .5s, transform .5s;
     margin-top: 0rem;
-    height: 12rem;
+    transform: translateY(0rem);
 }
 
 
 
 .hidden {
     visibility: hidden;
-    // opacity: 0;
+    opacity: 0;
     height: 0rem;
     margin-top: 0;
     padding: 0;
     padding-top: 0rem;
     padding-bottom: 0rem;
-    // display: none;
+    transform: translateY(6rem);
+}
+
+.is-init {
+    opacity: 0;
+    height: 12rem;
 }
 
 @media screen and (max-width: 613px) {

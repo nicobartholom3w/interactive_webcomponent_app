@@ -8,18 +8,13 @@
                     #challengeItem 
                     class="challenge-display"
                     [class.hidden]="isChallengeHiddenArr[challengeId]"
+                    [class.is-init]="isInit"
                     [routerLink]="['challenges', challenge.link]"
                     [queryParams]="{'challenge': challenge.link}"
                     [challengeItem]= challenge
                     ></app-directory-item>
             </div>
-            <!-- <app-directory-item [routerLink]="['challenges/static-radio-buttons']"
-            *ngFor="let challenge of challengesArr"></app-directory-item> -->
-            <!-- <app-directory-item [routerLink]="['challenges']"></app-directory-item>
-            <app-directory-item [routerLink]="['challenges']"></app-directory-item>
-            <app-directory-item [routerLink]="['challenges']"></app-directory-item>           -->
         </div>
-        
     </div>
 </div>
 <app-directory-top 
