@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'interactive-webcomponents-app';
   isAppOverlayActive: boolean = false;
   isSearchFocus: boolean = false;
+  height: string = "";
 
   constructor(private router: Router) {
    
@@ -21,6 +22,7 @@ export class AppComponent {
         window.scrollTo(0, 0);
       }
     });
+    this.height = window.innerHeight + "px";
   }
   onIsOverlayActive(event: boolean) {
     this.isAppOverlayActive = event;

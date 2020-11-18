@@ -1,7 +1,9 @@
 <div 
     *ngIf="isAppOverlayActive"
     (click)="dismissAppOverlay($event)"
-    class="app-overlay"></div>
+    class="app-overlay"
+    [style.height]="height"
+    ></div>
 <app-header 
     [(isFocus)]="isSearchFocus"
     [(isHeaderOverlayActive)]="isAppOverlayActive"
