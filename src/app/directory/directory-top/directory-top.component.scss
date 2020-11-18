@@ -23,10 +23,11 @@
     height: 4rem;
     width: 10.5rem;
     min-width: 10.5rem;
+    transition: all .3s;
     &:hover {
         background-color: #4B5868;
         color: white;
-        border: 1px solid rgba(248, 127, 114, 1);
+        // border: 1px solid rgba(248, 127, 114, 1);
         box-shadow: 0 2px 5px 1px rgba(75, 88, 104, .65);
 
         .button__icon {
