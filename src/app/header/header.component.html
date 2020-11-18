@@ -4,7 +4,9 @@
     class="overlay-header"></div>
 <div class="nav">
     <div class="nav__content">   
-        <a [routerLink]="['']" class="nav__link">
+        <a 
+            (click)="scrollToTop()"
+            [routerLink]="['']" class="nav__link">
             <div class="nav__title">Interactive Web Challenges</div>
             <div class="nav__bottom">
                 <svg class="nav__icon nav__icon-main" width="50px" height="50px" viewBox="5 0 50 50" version="1.1">

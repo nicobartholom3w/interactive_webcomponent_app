@@ -117,4 +117,14 @@ export class HeaderComponent implements OnInit {
     });
 
   }
+  
+  scrollToTop() {
+    (function smoothScroll() {
+      let currScroll = document.documentElement.scrollTop || document.body.scrollTop;
+      if(currScroll > 0) {
+        window.requestAnimationFrame(smoothScroll);
+        window.scrollTo(0, currScroll - (currScroll / 8));
+      }
+    })();
+  }
 }

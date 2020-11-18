@@ -1,4 +1,5 @@
 import { Component, Output } from '@angular/core';
+import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,17 @@ export class AppComponent {
   isAppOverlayActive: boolean = false;
   isSearchFocus: boolean = false;
 
+  constructor(private router: Router) {
+   
+  }
+
+  ngOnInit() {
+    this.router.events.forEach((event) => {
+      if(event instanceof NavigationStart) {
+        window.scrollTo(0, 0);
+      }
+    });
+  }
   onIsOverlayActive(event: boolean) {
     this.isAppOverlayActive = event;
     this.isSearchFocus = event;
