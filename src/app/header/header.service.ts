@@ -5,10 +5,11 @@ import { ChallengesService } from '../challenges/challenges.service';
   providedIn: 'root'
 })
 export class HeaderService {
-
+  
   constructor(private challengeService: ChallengesService) { }
 
   getChallengeArr() {
     return this.challengeService.challengesArr;
   }
+
 }

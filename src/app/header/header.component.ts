@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
@@ -12,13 +12,17 @@ import { HeaderService } from './header.service';
 })
 export class HeaderComponent implements OnInit {
   @Input() challengeItem: Challenge;
+  @Input() isHeaderOverlayActive: boolean;
+  @Input() isFocus: boolean;
+  @Output() isOverlayActive: EventEmitter<boolean> = new EventEmitter<boolean>();
   @ViewChild('input', {static: false}) input: ElementRef;
+  
   searchText: string;
   searchResults: Challenge[] = [];
   searchTextUpdate = new Subject <string> (); 
   isMatches: boolean = false;
   isChallengeSelected: boolean = false;
-  isFocus: boolean = false;
+  // isFocus: boolean = false;
   allResults: Challenge[] = [];
 
   constructor(private headerService: HeaderService) {
@@ -26,39 +30,59 @@ export class HeaderComponent implements OnInit {
       debounceTime(400),
       distinctUntilChanged())
         .subscribe(value => {
-          
           const searchText = this.searchText.toLowerCase();
           this.getSearchResults(searchText);
           
           if(searchText.length === 0) {
-            this.isMatches = false;
+            this.searchResults = this.allResults;
           }
         })
    }
 
   ngOnInit() {
-    
+    this.allResults = this.headerService.getChallengeArr();
+    this.allResults.forEach((challenge) => { this.searchResults.push(Object.assign({}, challenge))}); 
+    this.allResults = this.sortChallengesAlpha(this.searchResults);
   }
 
   handleOnFocus(event) {
     this.isFocus = true;
-    this.allResults = this.headerService.getChallengeArr();
-    this.allResults.forEach((challenge) => { this.searchResults.push(Object.assign({}, challenge))}); 
-    this.sortChallengesAlpha(this.searchResults);
-  }
-
-  handleOnKeyup(event) {
-    console.log(event);
-    this.searchTextUpdate.next(event);
-  }
-
-  handleOnBlur(event) {
-    setTimeout(() => { 
-      this.isFocus = false; 
-      this.searchResults = [];
-    }, 300);
+    // this.allResults = this.headerService.getChallengeArr();
     
+    this.isHeaderOverlayActive = true;
+    this.isOverlayActive.emit(this.isHeaderOverlayActive);
   }
+
+  handleOnKeyup(event: KeyboardEvent) {
+    console.log(event);
+    this.searchTextUpdate.next(event.key);
+  }
+
+  dismissHeaderOverlay(event: any) {
+    this.isHeaderOverlayActive = false;
+    this.isFocus = false;
+    // this.searchResults = [];
+    // setTimeout(() => { 
+    //   this.isFocus = false; 
+    //   this.searchResults = [];
+    // }, 300);
+    this.isOverlayActive.emit(this.isHeaderOverlayActive);
+  
+  }
+  // handleTab(event: KeyboardEvent) {
+    
+  //   console.log(event);
+  // }
+
+  // handleOnBlur(event: FocusEvent) {
+
+  //   console.log(event);
+  //   setTimeout(() => { 
+  //     this.isFocus = false; 
+  //     this.searchResults = [];
+  //   }, 300);
+    
+  // }
 
   getSearchResults(input: string) {
     let challengeArr = this.headerService.getChallengeArr();
@@ -85,19 +109,23 @@ export class HeaderComponent implements OnInit {
     if(this.searchResults.length === 0) {
       this.isMatches = false;
     }
+    this.sortChallengesAlpha(this.searchResults);
     return this.searchResults;
   }
 
   onSearchSelect(result: Challenge) {
     this.searchText = null;
     this.searchText = "";
-    this.searchResults = [];
+    this.searchResults = this.allResults;
     this.challengeItem = result;
+    this.dismissHeaderOverlay(result);
   }
 
-  focusInput() {
-    this.input.nativeElement.focus();
-    this.isFocus = true;
+  focusInput(event: FocusEvent) {
+    this.handleOnFocus(event);
+    // this.input.nativeElement.focus();
+    // this.isFocus = true;
+    // this.isOverlayActive.emit(true);
   }
 
   sortChallengesAlpha(searchDropdownDisplay: Challenge[]) {

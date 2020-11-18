@@ -1,4 +1,12 @@
-<app-header></app-header>
+<div 
+    *ngIf="isAppOverlayActive"
+    (click)="dismissAppOverlay($event)"
+    class="app-overlay"></div>
+<!-- <app-overlay></app-overlay> -->
+<app-header 
+    [(isFocus)]="isSearchFocus"
+    [(isHeaderOverlayActive)]="isAppOverlayActive"
+    (isOverlayActive)="onIsOverlayActive($event)"></app-header>
 <div class="router">
     <router-outlet></router-outlet>
 </div>
