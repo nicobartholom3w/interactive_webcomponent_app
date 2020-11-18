@@ -9,8 +9,6 @@ export class DirectoryTopComponent implements OnInit {
   @Input() challengesLoaded: number;
   @HostListener('window:scroll', ['$event'])
     onWindowScroll(event: Event) {
-      // console.log(window.pageYOffset);
-      // console.log(document.documentElement.scrollTop);
       if(window.pageYOffset > 50 || document.documentElement.scrollTop > 50 || document.body.scrollTop > 50) {
         this.windowScrolled = true;
       }
@@ -32,7 +30,6 @@ export class DirectoryTopComponent implements OnInit {
       if(currScroll > 0) {
         window.requestAnimationFrame(smoothScroll);
         window.scrollTo(0, currScroll - (currScroll / 8));
-        // console.log(currScroll);
       }
     })();
   }

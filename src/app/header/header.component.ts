@@ -22,7 +22,6 @@ export class HeaderComponent implements OnInit {
   searchTextUpdate = new Subject <string> (); 
   isMatches: boolean = false;
   isChallengeSelected: boolean = false;
-  // isFocus: boolean = false;
   allResults: Challenge[] = [];
 
   constructor(private headerService: HeaderService) {
@@ -47,8 +46,6 @@ export class HeaderComponent implements OnInit {
 
   handleOnFocus(event) {
     this.isFocus = true;
-    // this.allResults = this.headerService.getChallengeArr();
-    
     this.isHeaderOverlayActive = true;
     this.isOverlayActive.emit(this.isHeaderOverlayActive);
   }
@@ -61,28 +58,9 @@ export class HeaderComponent implements OnInit {
   dismissHeaderOverlay(event: any) {
     this.isHeaderOverlayActive = false;
     this.isFocus = false;
-    // this.searchResults = [];
-    // setTimeout(() => { 
-    //   this.isFocus = false; 
-    //   this.searchResults = [];
-    // }, 300);
     this.isOverlayActive.emit(this.isHeaderOverlayActive);
-  
   }
-  // handleTab(event: KeyboardEvent) {
-    
-  //   console.log(event);
-  // }
 
-  // handleOnBlur(event: FocusEvent) {
-
-  //   console.log(event);
-  //   setTimeout(() => { 
-  //     this.isFocus = false; 
-  //     this.searchResults = [];
-  //   }, 300);
-    
-  // }
 
   getSearchResults(input: string) {
     let challengeArr = this.headerService.getChallengeArr();
@@ -123,9 +101,6 @@ export class HeaderComponent implements OnInit {
 
   focusInput(event: FocusEvent) {
     this.handleOnFocus(event);
-    // this.input.nativeElement.focus();
-    // this.isFocus = true;
-    // this.isOverlayActive.emit(true);
   }
 
   sortChallengesAlpha(searchDropdownDisplay: Challenge[]) {
