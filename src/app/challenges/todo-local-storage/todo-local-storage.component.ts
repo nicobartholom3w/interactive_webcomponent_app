@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Form, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -11,7 +11,7 @@ export class TodoLocalStorageComponent implements OnInit {
   localStorage = window.localStorage;
   amtInStorage: number = 0;
   todoArr: string[] = [];
-
+  @Input() todoInput: string;
   constructor() { }
 
   ngOnInit() {

@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild, ViewEncapsulation, Input } from '@angular/core';
 
 @Component({
   selector: 'app-boiling-timers',
@@ -8,7 +8,7 @@ import { Component, OnInit, ElementRef, ViewChild, ViewEncapsulation } from '@an
 })
 export class BoilingTimersComponent implements OnInit {
   @ViewChild('timers', {static: false}) timers: ElementRef;
-  
+  @Input() timer: number;
   constructor() { }
 
   ngOnInit() {
