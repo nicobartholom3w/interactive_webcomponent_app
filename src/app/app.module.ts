@@ -40,7 +40,6 @@ import { PokeSuggestModule } from './challenges/poke-suggest/poke-suggest.module
 import { SearchFilterPipe } from './search-filter.pipe';
 import { HighlightHashtagsModule } from './challenges/highlight-hashtags/highlight-hashtags.module';
 import { ImageZoomModule } from './challenges/image-zoom/image-zoom.module';
-import { OverlayComponent } from './overlay/overlay.component';
 
 
 
@@ -49,7 +48,6 @@ import { OverlayComponent } from './overlay/overlay.component';
     AppComponent,
     HeaderComponent,
     SearchFilterPipe,
-    OverlayComponent
   ],
   imports: [
     BrowserModule,
