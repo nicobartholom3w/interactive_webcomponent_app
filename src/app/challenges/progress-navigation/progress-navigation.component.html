@@ -17,7 +17,7 @@
                         [class.menu__option-text-active]=option.active>{{ option.name }}</div>
                 </div>
             </div>
-            <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+            <form #f="ngForm">
                 <div
                     *ngIf="!theEnd" 
                     class="form">

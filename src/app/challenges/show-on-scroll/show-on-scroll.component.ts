@@ -12,7 +12,7 @@ export class ShowOnScrollComponent implements OnInit, AfterViewInit {
   @ViewChildren ('element') elements: QueryList<ElementRef>;
 
   @HostListener('document:scroll', ['$event'])
-  onScroll() {
+  onScroll(event) {
     this.elements.forEach((e) => this.isHidden(e));
   }
 

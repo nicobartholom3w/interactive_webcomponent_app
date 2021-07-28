@@ -9,7 +9,7 @@ export class StickyComponent implements OnInit {
   isSticky: boolean = false;
   @ViewChild('small', {static: false}) small: ElementRef;
   @HostListener('document:scroll', ['$event'])
-  onScroll(){
+  onScroll(event){
     let smallTop = this.small.nativeElement.getBoundingClientRect().top;
     if((smallTop - window.pageYOffset) <= window.pageYOffset){
       this.isSticky = true;

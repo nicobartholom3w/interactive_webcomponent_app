@@ -54,6 +54,7 @@
 
 .timers {
     display: flex;
+    flex-wrap: wrap;
 
     &__boiler {
         height: 1.75rem;
@@ -67,7 +68,7 @@
         align-items: center;
         animation: 1s infinite ease-in-out;
         animation-name: boil;
-        margin-right: .5rem;
+        margin: .5rem;
         transition: all .5s;
     }
 }
